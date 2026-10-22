@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<title>Podgląd Zabezpieczenia Trasy (Live GPS)</title>
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f6f9;
+}
+
+#panel {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 340px;
+    bottom: 0;
+    background: white;
+    overflow-y: auto;
+    border-right: 1px solid #ccc;
+    padding: 15px;
+    box-sizing: border-box;
+    z-index: 9999;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+#map {
+    position: absolute;
+    left: 340px;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+}
+
+#toggle-view-btn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 10000;
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 30px;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.section-title {
+    margin-top: 15px;
+    margin-bottom: 8px;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #555;
+    letter-spacing: 0.5px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 3px;
+}
+
+/* Stylizacja markerów na mapie */
+.custom-marker-icon {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 26px !important;
+    height: 26px !important;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.4);
+    color: white !important;
+    font-size: 12px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.custom-marker-icon img, .custom-marker-icon svg {
+    width: 16px;
+    height: 16px;
+    display: block;
+}
+
+.icon-wolontariusz { background: #ffffff; border: 2px solid #007bff !important; }
+.icon-lider       { background: #ffffff; border: 2px solid #dc3545 !important; }
+.icon-ochrona      { background: #ffffff; border: 2px solid #d2d826 !important; }
+.icon-ruchem       { background: #ffffff; border: 2px solid #e84824 !important; }
+.icon-medyczny     { background: #28a745; }
+.icon-ploty        { background: #343a40; border-color: #f8f9fa; }
+.icon-toaleta      { background: #6f42c1; }
+.icon-zywieniowy   { background: #fd7e14; }
+.icon-sedzia       { background: #e0a800; }
+.icon-sluza        { background: #ffffff; border: 2px solid #20c997 !important; }
+
+/* Styl dla użytkowników z aktywnym GPS Live */
+.icon-live-user {
+    background: #e83e8c;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    color: white;
+    box-shadow: 0 0 10px rgba(232, 62, 140, 0.8);
+    animation: pulse-live 2s infinite;
+}
+
+@keyframes pulse-live {
+    0% { box-shadow: 0 0 0 0 rgba(232, 62, 140, 0.7); }
+    70% { box-shadow: 0 0 0 10px rgba(232, 62, 140, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(232, 62, 140, 0); }
+}
+
+.filter-item {
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    margin-bottom: 4px;
+}
+.filter-item input { margin-right: 6px; }
+
+.stat-table {
+    width: 100%;
+    font-size: 12px;
+    border-collapse: collapse;
+    margin-top: 5px;
+}
+.stat-table th, .stat-table td {
+    border: 1px solid #eee;
+    padding: 4px;
+    text-align: left;
+}
+.stat-table th { background: #f8f9fa; }
+
+.search-box, .input-box {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    margin-bottom: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 13px;
+}
+
+.gps-box {
+    background: #eef9ff;
+    border: 1px solid #b8daff;
+    padding: 10px;
+    border-radius: 6px;
+    margin-bottom: 12px;
+}
+
+.pointItem {
+    border: 1px solid #ddd;
+    margin-bottom: 6px;
+    padding: 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    background: #fff;
+    font-size: 13px;
+    transition: background 0.2s;
+}
+.pointItem:hover { background: #f1f3f5; }
+
+#loading-status {
+    background: #fff3cd;
+    color: #856404;
+    padding: 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    margin-bottom: 10px;
+    border: 1px solid #ffeeba;
+}
+
+#live-sync-badge {
+    float: right;
+    font-size: 11px;
+    background: #e6f4ea;
+    color: #137333;
+    padding: 2px 6px;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+@media (max-width: 767px) {
+    #panel {
+        width: 100%;
+        top: auto;
+        bottom: 0;
+        height: 45vh;
+        border-right: none;
+        border-top: 2px solid #ccc;
+        box-shadow: 0 -2px 10px rgba(0,0,0,0.15);
+        z-index: 999;
+    }
+    #map {
+        left: 0;
+        width: 100%;
+        height: 55vh;
+    }
+    #toggle-view-btn { display: block; }
+    .panel-expanded #panel { height: 90vh; }
+    .panel-expanded #map { height: 10vh; }
+}
+</style>
+</head>
+
+<body>
+
+<button id="toggle-view-btn" onclick="toggleMobileView()"><i class="fa-solid fa-list"></i> Pokaż Listę</button>
+
+<div id="panel">
+    <span id="live-sync-badge"><i class="fa-solid fa-rotate"></i> Live: OK</span>
+    <h2 id="projectTitle" style="margin-top:0; margin-bottom:10px; font-size:18px; color:#333;">Ładowanie...</h2>
+    
+    <div id="loading-status">Trwa pobieranie danych z GitHub...</div>
+
+    <!-- MODUŁ UDOSTĘPNIANIA POZYCJI LIVE -->
+    <div class="gps-box">
+        <div style="font-weight:bold; font-size:12px; margin-bottom:5px; color:#004085;">
+            <i class="fa-solid fa-satellite-dish"></i> Śledzenie pozycji Live (RODO)
+        </div>
+        <input type="text" id="userGpsName" class="input-box" placeholder="Twój identyfikator (np. Patrol 1 / Jan)">
+        <button id="locate-btn" onclick="toggleGPS()" style="width: 100%; padding: 10px; background: #28a745; color: white; border: none; border-radius: 4px; cursor: pointer; font-weight: bold; font-size: 13px;">
+            <i class="fa-solid fa-crosshairs"></i> Udostępnij swoją pozycję
+        </button>
+        <small style="display:block; margin-top:5px; font-size:10px; color:#666;">
+            Klikając przycisk wyrażasz zgodę na udostępnienie lokalizacji dla sztabu.
+        </small>
+    </div>
+
+    <div class="section-title">Legenda tras</div>
+    <div id="routeLegendContainer" style="font-size:12px; padding: 5px; background: #f8f9fa; border-radius: 4px; border: 1px solid #ddd;"></div>
+
+    <div class="section-title">Filtrowanie punktów</div>
+    <div id="filterContainer" style="max-height: 160px; overflow-y: auto; background:#f8f9fa; padding:5px; border-radius:4px; border:1px solid #ddd;"></div>
+
+    <div class="section-title">Wyszukiwarka</div>
+    <input type="text" id="searchPointInput" class="search-box" placeholder="Szukaj numeru np. LID-002..." oninput="searchPoints()">
+
+    <div class="section-title">Statystyki Live</div>
+    <table class="stat-table">
+        <thead>
+            <tr><th>Typ</th><th>Ilość</th><th>Obsada (os.)</th></tr>
+        </thead>
+        <tbody id="statTableBody"></tbody>
+    </table>
+
+    <div class="section-title">Lista punktów (<span id="pointsCount">0</span>)</div>
+    <div id="pointList" style="max-height:250px; overflow-y:auto; margin-top:5px;"></div>
+</div>
+
+<div id="map"></div>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/togeojson/0.16.0/togeojson.min.js"></script>
+
+<script>
+const BACKEND_URL = "https://twoj-serwer.pl"; 
+
+function escapeHtml(str) {
+    if (typeof str !== 'string') return str;
+    return str.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#039;");
+}
+
+// 1. Czarna ikona SVG dla Służby Informacyjnej
+const SVG_INFORMACYJNA_BLACK = `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 119 168'><path d='M684.825,274.427C682.043,274.454 679.888,278.598 680.48,282.056C680.48,282.056 680.48,291.417 688.989,291.417C697.499,291.417 697.499,282.056 697.499,282.056C697.499,280.638 697.728,275.102 694.412,274.713M677.075,301.144L677.075,316.947L697.087,293.359C696.611,293.219 696.119,293.119 695.598,293.119L682.182,293.119C675.276,293.4 677.407,297.416 677.075,301.144ZM697.087,293.359L677.075,316.947L700.904,316.947L700.904,298.425C701.572,293.292 697.988,293.774 697.087,293.359ZM689.108,294.246C692.008,294.246 694.635,295.431 696.537,297.346C698.44,299.259 699.616,301.899 699.616,304.812C699.616,307.724 698.44,310.364 696.537,312.278C694.635,314.192 692.008,315.377 689.108,315.377C686.207,315.377 683.581,314.192 681.678,312.278C679.776,310.364 678.6,307.724 678.6,304.812C678.6,301.899 679.776,299.259 681.678,297.346C683.581,295.431 686.207,294.246 689.108,294.246ZM694.819,299.055C693.359,297.586 691.339,296.678 689.108,296.678C686.876,296.678 684.856,297.586 683.397,299.055C681.935,300.526 681.031,302.561 681.031,304.812C681.031,307.062 681.935,309.097 683.397,310.568C684.856,312.037 686.876,312.945 689.108,312.945C691.339,312.945 693.359,312.037 694.819,310.568C696.28,309.097 697.184,307.062 697.184,304.812C697.184,302.561 696.28,300.526 694.819,299.055ZM687.604,299.4L690.612,299.4L690.612,301.441L687.604,301.441L687.604,299.4ZM687.604,302.378L690.612,302.378L690.612,310.223L687.604,310.223L687.604,302.378Z' fill='#000000' transform='matrix(3.51264,0,0,3.92445,-2361.91,-1077.12)'/></svg>`;
+
+// 2. Pomarańczowo-czerwona ikona SVG dla Służby Kierowania Ruchem
+const SVG_RUCHEM_ORANGE = `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 119 168'><path d='M642.638,109.482L658.992,109.482C656.224,108.391 653.665,106.211 650.69,106.211C647.793,106.211 645.322,108.391 642.638,109.482ZM642.638,111.117L642.638,115.205C642.638,115.205 642.638,124.2 650.815,124.2C658.992,124.2 658.992,115.205 658.992,115.205L658.992,111.117L642.638,111.117ZM629.504,115.978C627.7,116.006 626.26,117.49 626.284,119.294L626.284,132.377C626.284,134.47 628.221,136.024 630.265,135.571L639.368,133.546L639.368,147.137C641.899,143.92 655.945,125.835 655.665,125.835L644.274,125.835L632.826,128.301L632.826,119.294C632.851,117.45 631.348,115.949 629.504,115.978ZM659.775,126.333L642.462,148.731L662.263,148.731L662.263,130.933C662.905,126.001 660.641,126.733 659.775,126.333' fill='#e84824' transform='matrix(3.57579,0,0,3.995,-2244.93,-425.452)'/></svg>`;
+
+// 3. Żółto-czarna ikona SVG dla Służby Porządkowej
+const SVG_PORZADKOWA = `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 119 168'><g transform='matrix(3.53411,0,0,3.90062,-1655.02,-315.577)'><g transform='matrix(1,0,0,1,0,-390.34)'><path d='M485.478,471.54C477.903,471.424 475.748,475.568 476.339,479.026C476.339,479.026 476.339,488.386 484.849,488.386C493.359,488.386 493.359,479.026 493.359,479.026C493.359,477.607 493.588,472.072 485.478,471.54ZM492.577,490.021L478.041,490.088C471.136,490.369 473.267,494.385 472.936,498.113L472.898,513.916L496.763,513.916L496.763,495.394C497.432,490.261 494.598,490.368 492.577,490.021Z' fill='#d2d826' stroke='#0d070c' stroke-width='1.12px'/></g><g transform='matrix(1,0,0,1,0,-351.934)'><rect x='472.908' y='471.424' width='23.855' height='4.086' fill='#0d070c' stroke='#1c1917' stroke-width='0.63px'/></g><g transform='matrix(1,0,0,1,0,-375.78)'><rect x='484.001' y='475.501' width='2.251' height='19.779' fill='#0d070c' stroke='#1c1917' stroke-width='0.63px'/></g><text x='488.821px' y='108.702px' style="font-family:'Arial-Black', 'Arial', sans-serif;font-weight:900;font-size:9.713px;" fill='#1c1917'>S</text><g transform='matrix(1,0,0,1,0,-375.78)'><path d='M472.908,495.27L484.077,495.279L484.001,475.501' fill='none' stroke='#1c1917' stroke-width='0.63px'/></g><g transform='matrix(1,0,0,1,0,-375.79)'><path d='M496.679,495.27L486.252,495.289L486.177,475.501' fill='none' stroke='#1c1917' stroke-width='0.63px'/></g></g></svg>`;
+
+// 4. Biało-czerwona ikona taśmy ogrodzeniowej/zabezpieczającej (ostrzegawcza)
+const SVG_TASMA = `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><g transform='rotate(-25 50 50)'><rect x='0' y='35' width='100' height='30' fill='#ffffff' stroke='#dc3545' stroke-width='2'/><path d='M 10 35 L 25 35 L 10 65 Z M 30 35 L 50 35 L 30 65 L 10 65 Z M 55 35 L 75 35 L 55 65 L 35 65 Z M 80 35 L 100 35 L 80 65 L 60 65 Z M 100 45 L 100 65 L 85 65 Z' fill='#dc3545'/></g></svg>`;
+
+// 5. Ikona Śluzy - dwie przeciwbieżne strzałki dla ruchu samochodowego
+const SVG_SLUZA = `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><g fill='#20c997'><path d='M 15 35 L 55 35 L 55 20 L 85 42.5 L 55 65 L 55 50 L 15 50 Z'/><path d='M 85 65 L 45 65 L 45 50 L 15 72.5 L 45 95 L 45 80 L 85 80 Z'/></g></svg>`;
+
+const CONFIG_TYPES = {
+    "Służba informacyjna":    { className: "icon-wolontariusz", svgContent: SVG_INFORMACYJNA_BLACK, color: "#007bff" },
+    "Taśma":                  { className: "icon-lider",        svgContent: SVG_TASMA,               color: "#dc3545" },
+    "Służba porządkowa":      { className: "icon-ochrona",      svgContent: SVG_PORZADKOWA,          color: "#d2d826" },
+    "Służba kierowania ruchem": { className: "icon-ruchem",     svgContent: SVG_RUCHEM_ORANGE,       color: "#e84824" },
+    "Medyczny":               { className: "icon-medyczny",     faIcon: "fa-solid fa-heart-pulse",   color: "#28a745" },
+    "Barierki":               { className: "icon-ploty",        faIcon: "fa-solid fa-road-barrier",  color: "#343a40" },
+    "Toaleta":                { className: "icon-toaleta",      faIcon: "fa-solid fa-restroom",      color: "#6f42c1" },
+    "Punkt żywieniowy":       { className: "icon-zywieniowy",   faIcon: "fa-solid fa-droplet",       color: "#fd7e14" },
+    "Sędzia":                 { className: "icon-sedzia",       faIcon: "fa-solid fa-bullhorn",      color: "#e0a800" },
+    "Śluza":                  { className: "icon-sluza",        svgContent: SVG_SLUZA,               color: "#20c997" }
+};
+
+const CONFIG_ROUTES = {
+    "5K":  { file: "trasa_5K.gpx",  color: "#6f42c1", layer: null },
+    "10K": { file: "trasa_10K.gpx", color: "#ffc107", layer: null },
+    "SM":  { file: "trasa_sm.gpx",  color: "#007bff", layer: null },
+    "HM":  { file: "trasa_hm.gpx",  color: "#dc3545", layer: null },
+    "UM":  { file: "trasa_um.gpx",  color: "#20c997", layer: null }
+};
+
+const map = L.map('map', { tap: false }).setView([50.2649, 19.0238], 13);
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 19 }).addTo(map);
+
+const legendContainer = document.getElementById("routeLegendContainer");
+Object.keys(CONFIG_ROUTES).forEach(key => {
+    CONFIG_ROUTES[key].layer = L.geoJSON(null, { style: { color: CONFIG_ROUTES[key].color, weight: 5 } }).addTo(map);
+    if (legendContainer) {
+        legendContainer.innerHTML += `<div style="color:${CONFIG_ROUTES[key].color}; font-weight:bold;"><i class="fa-solid fa-route"></i> Trasa ${key}</div>`;
+    }
+});
+
+let pointsMap = new Map();
+let activeFilters = {};
+let isFirstLoad = true;
+
+let watchId = null;
+let liveUsersMarkers = new Map();
+
+function getIconHtml(cfg) {
+    if (cfg.svgContent) {
+        return cfg.svgContent;
+    } else if (cfg.faIcon) {
+        return `<i class="${cfg.faIcon}"></i>`;
+    }
+    return `<i class="fa-solid fa-location-dot"></i>`;
+}
+
+function toggleGPS() {
+    const btn = document.getElementById("locate-btn");
+    const nameInput = document.getElementById("userGpsName");
+    const userId = nameInput.value.trim();
+
+    if (!userId && watchId === null) {
+        alert("Podaj swój identyfikator (np. Patrol 1), aby udostępnić pozycję.");
+        return;
+    }
+
+    if (watchId !== null) {
+        navigator.geolocation.clearWatch(watchId);
+        watchId = null;
+        btn.innerHTML = `<i class="fa-solid fa-crosshairs"></i> Udostępnij swoją pozycję`;
+        btn.style.background = "#28a745";
+        nameInput.disabled = false;
+    } else {
+        if (!navigator.geolocation) {
+            alert("Twoje urządzenie nie obsługuje geolokalizacji.");
+            return;
+        }
+
+        btn.innerHTML = `<i class="fa-solid fa-spinner fa-spin"></i> Pobieranie GPS...`;
+        nameInput.disabled = true;
+
+        watchId = navigator.geolocation.watchPosition(
+            (pos) => {
+                const lat = pos.coords.latitude;
+                const lng = pos.coords.longitude;
+                const accuracy = pos.coords.accuracy;
+
+                btn.innerHTML = `<i class="fa-solid fa-location-dot"></i> Wyłącz udostępnianie`;
+                btn.style.background = "#dc3545";
+
+                sendGpsToServer(userId, lat, lng, accuracy);
+            },
+            (err) => {
+                alert("Nie udało się pobrać lokalizacji GPS.");
+                toggleGPS();
+            },
+            { enableHighAccuracy: true, maximumAge: 5000, timeout: 10000 }
+        );
+    }
+}
+
+async function sendGpsToServer(userId, lat, lng, accuracy) {
+    try {
+        await fetch(`${BACKEND_URL}/api/gps-update`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ userId, lat, lng, accuracy })
+        });
+    } catch (e) {
+        console.error("Błąd wysyłania pozycji na serwer", e);
+    }
+}
+
+async function fetchLiveGpsUsers() {
+    try {
+        const res = await fetch(`${BACKEND_URL}/api/gps-locations`);
+        if (!res.ok) return;
+        const users = await res.json();
+
+        const activeUserIds = new Set();
+
+        users.forEach(u => {
+            activeUserIds.add(u.userId);
+
+            if (liveUsersMarkers.has(u.userId)) {
+                const marker = liveUsersMarkers.get(u.userId);
+                marker.setLatLng([u.lat, u.lng]);
+            } else {
+                const customIcon = L.divIcon({
+                    className: 'custom-marker-icon icon-live-user',
+                    html: `<i class="fa-solid fa-walkie-talkie"></i>`,
+                    iconSize: [26, 26],
+                    iconAnchor: [13, 13]
+                });
+
+                const marker = L.marker([u.lat, u.lng], { icon: customIcon }).addTo(map);
+                marker.bindPopup(`<b><i class="fa-solid fa-satellite"></i> ${escapeHtml(u.userId)}</b><br>Aktywny Patrol (GPS Live)`);
+                liveUsersMarkers.set(u.userId, marker);
+            }
+        });
+
+        liveUsersMarkers.forEach((marker, id) => {
+            if (!activeUserIds.has(id)) {
+                map.removeLayer(marker);
+                liveUsersMarkers.delete(id);
+            }
+        });
+
+    } catch (e) { }
+}
+
+function toggleMobileView() {
+    const body = document.body;
+    const btn = document.getElementById("toggle-view-btn");
+    if (body.classList.contains("panel-expanded")) {
+        body.classList.remove("panel-expanded");
+        btn.innerHTML = `<i class="fa-solid fa-list"></i> Pokaż Listę`;
+    } else {
+        body.classList.add("panel-expanded");
+        btn.innerHTML = `<i class="fa-solid fa-map"></i> Pokaż Mapę`;
+    }
+    setTimeout(() => { map.invalidateSize(); }, 320);
+}
+
+function initFilters() {
+    const container = document.getElementById("filterContainer");
+    container.innerHTML = "";
+    Object.keys(CONFIG_TYPES).forEach(type => {
+        activeFilters[type] = true;
+        const cfg = CONFIG_TYPES[type];
+        const iconContent = getIconHtml(cfg);
+
+        const div = document.createElement("div");
+        div.className = "filter-item";
+        div.innerHTML = `
+            <input type="checkbox" id="filter_${type}" checked onchange="toggleFilter('${type}', this.checked)">
+            <span style="display:inline-flex; align-items:center; justify-content:center; width:16px; height:16px; margin-right:5px; color:${cfg.color};">${iconContent}</span>
+            <label for="filter_${type}" style="cursor:pointer; font-weight:bold;">${type}</label>
+        `;
+        container.appendChild(div);
+    });
+}
+initFilters();
+
+function toggleFilter(type, isVisible) {
+    activeFilters[type] = isVisible;
+    pointsMap.forEach(p => {
+        if (p.typ === type) {
+            if (isVisible) { if (!map.hasLayer(p.marker)) p.marker.addTo(map); }
+            else { if (map.hasLayer(p.marker)) map.removeLayer(p.marker); }
+        }
+    });
+    refreshList();
+    updateStats();
+}
+
+async function loadGpxRoutes() {
+    for (const key of Object.keys(CONFIG_ROUTES)) {
+        try {
+            const response = await fetch(`${CONFIG_ROUTES[key].file}?v=${Math.random()}`);
+            if (!response.ok) throw new Error();
+            const gpxText = await response.text();
+            const parser = new DOMParser();
+            const gpxXml = parser.parseFromString(gpxText, "text/xml");
+            const geojson = toGeoJSON.gpx(gpxXml);
+            CONFIG_ROUTES[key].layer.clearLayers();
+            CONFIG_ROUTES[key].layer.addData(geojson);
+        } catch (e) { }
+    }
+}
+
+async function syncPointsData() {
+    try {
+        const response = await fetch(`punkty.json?nocache=${Math.random()}`);
+        if (!response.ok) throw new Error();
+        const data = await response.json();
+        
+        if (data.projectName) document.getElementById("projectTitle").innerText = data.projectName;
+
+        const pointsArray = data.points || (Array.isArray(data) ? data : []);
+        const incomingIds = new Set();
+
+        pointsArray.forEach((p, index) => {
+            let typ = p.typ;
+            
+            // Mapowanie ze starych nazw z pliku punkty.json na nowe etykiety
+            if (typ === "Wolontariusz") typ = "Służba informacyjna";
+            if (typ === "Ochrona") typ = "Służba porządkowa";
+            if (typ === "Kierowanie ruchem" || typ === "Policja") typ = "Służba kierowania ruchem";
+            if (typ === "Płoty") typ = "Barierki";
+            if (typ === "Lider" || typ === "Koordynator") typ = "Taśma";
+
+            if (!CONFIG_TYPES[typ]) return;
+            const pointId = p.id || p.numer || `pt_${index}`;
+            incomingIds.add(pointId);
+
+            const safeData = {
+                id: pointId, typ: typ, numer: escapeHtml(p.numer || ""),
+                sektor: escapeHtml(p.sektor || ""), liczba_osob: Number(p.liczba_osob) || 0,
+                telefon: escapeHtml(p.telefon || ""), uwagi: escapeHtml(p.uwagi || ""),
+                lat: Number(p.lat), lng: Number(p.lng)
+            };
+
+            if (pointsMap.has(pointId)) updateExistingMarker(pointId, safeData);
+            else createNewMarker(pointId, safeData);
+        });
+
+        pointsMap.forEach((point, id) => {
+            if (!incomingIds.has(id)) {
+                map.removeLayer(point.marker);
+                pointsMap.delete(id);
+            }
+        });
+
+        document.getElementById("loading-status").style.display = "none";
+        refreshList();
+        updateStats();
+
+        if (isFirstLoad) {
+            fitMapToAll();
+            isFirstLoad = false;
+        }
+    } catch (e) { }
+}
+
+function createNewMarker(id, p) {
+    const cfg = CONFIG_TYPES[p.typ];
+    const iconContent = getIconHtml(cfg);
+
+    const customIcon = L.divIcon({
+        className: `custom-marker-icon ${cfg.className}`,
+        html: iconContent,
+        iconSize: [26, 26],
+        iconAnchor: [13, 13]
+    });
+
+    const marker = L.marker([p.lat, p.lng], { icon: customIcon });
+    marker.bindPopup(`<b>${p.typ}</b> - ${p.numer}<br>Obsada: ${p.liczba_osob} os.`);
+
+    if (activeFilters[p.typ]) marker.addTo(map);
+    pointsMap.set(id, { ...p, marker });
+}
+
+function updateExistingMarker(id, p) {
+    const existing = pointsMap.get(id);
+    if (existing.lat !== p.lat || existing.lng !== p.lng) existing.marker.setLatLng([p.lat, p.lng]);
+    pointsMap.set(id, { ...p, marker: existing.marker });
+}
+
+function fitMapToAll() {
+    const bounds = L.latLngBounds([]);
+    let hasData = false;
+    Object.keys(CONFIG_ROUTES).forEach(key => {
+        if (CONFIG_ROUTES[key].layer.getLayers().length > 0) {
+            bounds.extend(CONFIG_ROUTES[key].layer.getBounds());
+            hasData = true;
+        }
+    });
+    if (hasData) map.fitBounds(bounds);
+}
+
+function refreshList() {
+    let html = "";
+    const searchVal = document.getElementById("searchPointInput").value.toLowerCase().trim();
+
+    pointsMap.forEach((p, id) => {
+        if (!activeFilters[p.typ]) return;
+        if (searchVal && !p.numer.toLowerCase().includes(searchVal)) return;
+
+        const cfg = CONFIG_TYPES[p.typ];
+        const iconContent = getIconHtml(cfg);
+
+        html += `
+        <div class="pointItem" onclick="focusPoint('${id}')" style="border-left: 5px solid ${cfg.color}; display:flex; align-items:center;">
+            <span style="display:inline-flex; align-items:center; justify-content:center; width:16px; height:16px; margin-right:8px; color:${cfg.color};">${iconContent}</span>
+            <div>
+                <b>${p.typ}</b> - <span>${p.numer}</span>
+            </div>
+        </div>`;
+    });
+    document.getElementById("pointList").innerHTML = html;
+}
+
+function focusPoint(id) {
+    const point = pointsMap.get(id);
+    if (!point) return;
+    map.setView([point.lat, point.lng], 17);
+    point.marker.openPopup();
+}
+
+function searchPoints() { refreshList(); }
+
+function updateStats() {
+    let html = "";
+    Object.keys(CONFIG_TYPES).forEach(type => {
+        let countPoints = 0;
+        pointsMap.forEach(p => { if (p.typ === type) countPoints++; });
+        if (countPoints > 0) {
+            html += `<tr><td>${type}</td><td><b>${countPoints}</b></td><td>-</td></tr>`;
+        }
+    });
+    document.getElementById("statTableBody").innerHTML = html;
+}
+
+window.onload = async function() {
+    await loadGpxRoutes();
+    await syncPointsData();
+    
+    setInterval(syncPointsData, 30000);
+    setInterval(fetchLiveGpsUsers, 5000);
+};
+</script>
+</body>
+</html>

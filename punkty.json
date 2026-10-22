@@ -1,0 +1,7621 @@
+{
+  "projectName": "Silesia Marathon 2026",
+  "generatedAt": "2026-09-17T17:47:48.294Z",
+  "drawnRoutes": {
+    "SM": [],
+    "HM": [],
+    "UM": []
+  },
+  "points": [
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-001",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 2",
+      "lat": 50.28569580303365,
+      "lng": 18.980021774768833
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-002",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 2",
+      "lat": 50.28556554834823,
+      "lng": 18.98020955279812
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-003",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 3",
+      "lat": 50.28445324598423,
+      "lng": 18.98194494109482
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-004",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 4",
+      "lat": 50.28238286602426,
+      "lng": 18.98641884326935
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-005",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 5",
+      "lat": 50.280279811191654,
+      "lng": 18.989785015583042
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-006",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 6",
+      "lat": 50.27794514542276,
+      "lng": 18.993574836531742
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-007",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 6",
+      "lat": 50.27824508044272,
+      "lng": 18.99417295135941
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-009",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 7",
+      "lat": 50.2758060114296,
+      "lng": 18.997987210750583
+    },
+    {
+      "typ": "Ochrona",
+      "numer": "OCHR-001",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 7A",
+      "lat": 50.27495578218506,
+      "lng": 18.996742658280223
+    },
+    {
+      "typ": "Punkt żywieniowy",
+      "numer": "ZYW-001",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "",
+      "lat": 50.26446349751752,
+      "lng": 19.024543642408105
+    },
+    {
+      "typ": "Toaleta",
+      "numer": "TOAL-001",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "",
+      "lat": 50.26463490550555,
+      "lng": 19.024447116577015
+    },
+    {
+      "typ": "Toaleta",
+      "numer": "TOAL-002",
+      "sektor": "Odcinek 2",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "",
+      "lat": 50.237283072781345,
+      "lng": 19.042817677495563
+    },
+    {
+      "typ": "Punkt żywieniowy",
+      "numer": "ZYW-002",
+      "sektor": "Odcinek 2",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "",
+      "lat": 50.23713208321867,
+      "lng": 19.042739879395203
+    },
+    {
+      "typ": "Punkt żywieniowy",
+      "numer": "ZYW-004",
+      "sektor": "Odcinek 2",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "",
+      "lat": 50.23854625003046,
+      "lng": 19.104452840741082
+    },
+    {
+      "typ": "Toaleta",
+      "numer": "TOAL-004",
+      "sektor": "Odcinek 2",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "",
+      "lat": 50.23880705912343,
+      "lng": 19.103868188434593
+    },
+    {
+      "typ": "Toaleta",
+      "numer": "TOAL-005",
+      "sektor": "Odcinek 3",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "",
+      "lat": 50.25638964531467,
+      "lng": 19.093637466430668
+    },
+    {
+      "typ": "Punkt żywieniowy",
+      "numer": "ZYW-005",
+      "sektor": "Odcinek 3",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "",
+      "lat": 50.256135744018415,
+      "lng": 19.093680381774902
+    },
+    {
+      "typ": "Toaleta",
+      "numer": "TOAL-007",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "",
+      "lat": 50.299442113081476,
+      "lng": 19.03843224048615
+    },
+    {
+      "typ": "Punkt żywieniowy",
+      "numer": "ZYW-007",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "",
+      "lat": 50.299342739901924,
+      "lng": 19.03864145278931
+    },
+    {
+      "typ": "Toaleta",
+      "numer": "TOAL-003",
+      "sektor": "Odcinek 2",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "",
+      "lat": 50.24749179940976,
+      "lng": 19.05054834187205
+    },
+    {
+      "typ": "Punkt żywieniowy",
+      "numer": "ZYW-003",
+      "sektor": "Odcinek 2",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "",
+      "lat": 50.24642765215205,
+      "lng": 19.050816607698128
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-010",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 7",
+      "lat": 50.27589511955532,
+      "lng": 18.99827425391162
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-011",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 9",
+      "lat": 50.276949584178176,
+      "lng": 19.000027349776378
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-012",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 8",
+      "lat": 50.276306311286056,
+      "lng": 18.998984483358715
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-013",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 9",
+      "lat": 50.277009002728896,
+      "lng": 18.999998434176586
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-015",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 10",
+      "lat": 50.278825943402175,
+      "lng": 19.002918541791814
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-016",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 11",
+      "lat": 50.27838176158531,
+      "lng": 19.004420835284744
+    },
+    {
+      "typ": "Kierowanie ruchem",
+      "numer": "RUCH-001",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 11",
+      "lat": 50.278375153035405,
+      "lng": 19.00452602358417
+    },
+    {
+      "typ": "Kierowanie ruchem",
+      "numer": "RUCH-002",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 11",
+      "lat": 50.27826538911182,
+      "lng": 19.004461673030125
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-017",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 12",
+      "lat": 50.27796720330594,
+      "lng": 19.00548345521135
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-018",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 12",
+      "lat": 50.27795726367067,
+      "lng": 19.005988240242008
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-019",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 13",
+      "lat": 50.278073536805024,
+      "lng": 19.00846503088283
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-020",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 13",
+      "lat": 50.27795348173999,
+      "lng": 19.00857228180625
+    },
+    {
+      "typ": "Kierowanie ruchem",
+      "numer": "RUCH-003",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 13",
+      "lat": 50.27814750535785,
+      "lng": 19.0089467832364
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-021",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 14",
+      "lat": 50.27632612418932,
+      "lng": 19.008384628255552
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-022",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 14",
+      "lat": 50.27682865554957,
+      "lng": 19.008545504640686
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-023",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 14",
+      "lat": 50.27614431972841,
+      "lng": 19.008518691909853
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-024",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 14",
+      "lat": 50.27659368420865,
+      "lng": 19.008524054456014
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-025",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 15",
+      "lat": 50.27487305857837,
+      "lng": 19.00827649194321
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-026",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 15",
+      "lat": 50.274999982135945,
+      "lng": 19.00848563124393
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-027",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 15",
+      "lat": 50.27526379488443,
+      "lng": 19.008481582742153
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-028",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 15",
+      "lat": 50.27543859238691,
+      "lng": 19.008481582742153
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-029",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 15",
+      "lat": 50.275610009464515,
+      "lng": 19.008481582742153
+    },
+    {
+      "typ": "Kierowanie ruchem",
+      "numer": "RUCH-004",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 15",
+      "lat": 50.27483236274328,
+      "lng": 19.009271267819962
+    },
+    {
+      "typ": "Kierowanie ruchem",
+      "numer": "RUCH-005",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 16",
+      "lat": 50.27348548352374,
+      "lng": 19.00816938328103
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-030",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 17",
+      "lat": 50.2728816470395,
+      "lng": 19.008691961212918
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-031",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 17",
+      "lat": 50.2723143375572,
+      "lng": 19.008883891632074
+    },
+    {
+      "typ": "Ochrona",
+      "numer": "OCHR-002",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 17",
+      "lat": 50.27268542505287,
+      "lng": 19.008771321215203
+    },
+    {
+      "typ": "Ochrona",
+      "numer": "OCHR-003",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 17",
+      "lat": 50.27214339261574,
+      "lng": 19.00787577600454
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-032",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 18",
+      "lat": 50.27105984961429,
+      "lng": 19.009275484788976
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-033",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 18",
+      "lat": 50.270322255069445,
+      "lng": 19.009388098258565
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-034",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 18",
+      "lat": 50.27016101194945,
+      "lng": 19.01025146819219
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-035",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 19",
+      "lat": 50.26930276978076,
+      "lng": 19.00886584619365
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-036",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 19",
+      "lat": 50.26946452705058,
+      "lng": 19.00878532751117
+    },
+    {
+      "typ": "Ochrona",
+      "numer": "OCHR-004",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 20",
+      "lat": 50.26838379407445,
+      "lng": 19.008066746324175
+    },
+    {
+      "typ": "Ochrona",
+      "numer": "OCHR-005",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 20",
+      "lat": 50.26836320903882,
+      "lng": 19.00822226016314
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-037",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 21",
+      "lat": 50.26748548217973,
+      "lng": 19.012128205859945
+    },
+    {
+      "typ": "Kierowanie ruchem",
+      "numer": "RUCH-006",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 21",
+      "lat": 50.266813020395674,
+      "lng": 19.01233198261445
+    },
+    {
+      "typ": "Kierowanie ruchem",
+      "numer": "RUCH-007",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 21",
+      "lat": 50.266699798855214,
+      "lng": 19.01220864405249
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-038",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 21",
+      "lat": 50.26674783226889,
+      "lng": 19.0120960305829
+    },
+    {
+      "typ": "Kierowanie ruchem",
+      "numer": "RUCH-008",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 21A",
+      "lat": 50.270079174400436,
+      "lng": 19.01514731935459
+    },
+    {
+      "typ": "Ochrona",
+      "numer": "OCHR-006",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 22",
+      "lat": 50.266421163443745,
+      "lng": 19.015481573610586
+    },
+    {
+      "typ": "Kierowanie ruchem",
+      "numer": "RUCH-009",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 23",
+      "lat": 50.26574164377768,
+      "lng": 19.01897312090419
+    },
+    {
+      "typ": "Kierowanie ruchem",
+      "numer": "RUCH-010",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 23",
+      "lat": 50.26527540648911,
+      "lng": 19.018894082861483
+    },
+    {
+      "typ": "Ochrona",
+      "numer": "OCHR-007",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 23",
+      "lat": 50.26551214921081,
+      "lng": 19.01915684762387
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-039",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 23",
+      "lat": 50.26565661254885,
+      "lng": 19.01920296274591
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-040",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 23",
+      "lat": 50.26563772144008,
+      "lng": 19.01881149687535
+    },
+    {
+      "typ": "Kierowanie ruchem",
+      "numer": "RUCH-011",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 23",
+      "lat": 50.2650980008514,
+      "lng": 19.01920880448776
+    },
+    {
+      "typ": "Kierowanie ruchem",
+      "numer": "RUCH-012",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 24",
+      "lat": 50.26398699993852,
+      "lng": 19.024074409322875
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-041",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 24",
+      "lat": 50.26441016930564,
+      "lng": 19.024379207784346
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-042",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 24",
+      "lat": 50.264878498041,
+      "lng": 19.02320766740052
+    },
+    {
+      "typ": "Ochrona",
+      "numer": "OCHR-008",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 24",
+      "lat": 50.26476329098435,
+      "lng": 19.023717109286796
+    },
+    {
+      "typ": "Kierowanie ruchem",
+      "numer": "RUCH-013",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 24A",
+      "lat": 50.26730738320703,
+      "lng": 19.02401204932627
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-043",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 25",
+      "lat": 50.26384550388896,
+      "lng": 19.026744650331626
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-044",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 25",
+      "lat": 50.26371683500982,
+      "lng": 19.026943064540006
+    },
+    {
+      "typ": "Kierowanie ruchem",
+      "numer": "RUCH-014",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 25",
+      "lat": 50.263648211465465,
+      "lng": 19.02687067016667
+    },
+    {
+      "typ": "Ochrona",
+      "numer": "OCHR-009",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 25",
+      "lat": 50.263826632475094,
+      "lng": 19.026951108359256
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-045",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 26",
+      "lat": 50.26240266539281,
+      "lng": 19.035218954086307
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-046",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 26",
+      "lat": 50.26193284551854,
+      "lng": 19.034993648529056
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-047",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 26",
+      "lat": 50.26239237741601,
+      "lng": 19.03542280197144
+    },
+    {
+      "typ": "Kierowanie ruchem",
+      "numer": "RUCH-015",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 26",
+      "lat": 50.26248839844655,
+      "lng": 19.035471081733707
+    },
+    {
+      "typ": "Kierowanie ruchem",
+      "numer": "RUCH-016",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 26",
+      "lat": 50.26201515006491,
+      "lng": 19.03505265712738
+    },
+    {
+      "typ": "Ochrona",
+      "numer": "OCHR-010",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 26",
+      "lat": 50.262028860562786,
+      "lng": 19.03418898582459
+    },
+    {
+      "typ": "Ochrona",
+      "numer": "OCHR-011",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 26",
+      "lat": 50.26235465481535,
+      "lng": 19.037590026855472
+    },
+    {
+      "typ": "Kierowanie ruchem",
+      "numer": "RUCH-017",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 26A",
+      "lat": 50.26532093176542,
+      "lng": 19.03584122657776
+    },
+    {
+      "typ": "Kierowanie ruchem",
+      "numer": "RUCH-018",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 26A",
+      "lat": 50.26354804624978,
+      "lng": 19.035707116127018
+    },
+    {
+      "typ": "Kierowanie ruchem",
+      "numer": "RUCH-019",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 27",
+      "lat": 50.260068952402335,
+      "lng": 19.035202860832218
+    },
+    {
+      "typ": "Kierowanie ruchem",
+      "numer": "RUCH-020",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 27",
+      "lat": 50.26012896849643,
+      "lng": 19.035430848598484
+    },
+    {
+      "typ": "Kierowanie ruchem",
+      "numer": "RUCH-021",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 27",
+      "lat": 50.25961625714188,
+      "lng": 19.03550058603287
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-048",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 27",
+      "lat": 50.259993503490996,
+      "lng": 19.035235047340397
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-049",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 28",
+      "lat": 50.25851365182242,
+      "lng": 19.03590559959412
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-050",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 28",
+      "lat": 50.25901265676914,
+      "lng": 19.03599947690964
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-051",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 28",
+      "lat": 50.25738869594453,
+      "lng": 19.03590822190369
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-052",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 28",
+      "lat": 50.2583696081852,
+      "lng": 19.035945832729343
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-053",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 28",
+      "lat": 50.25761851644885,
+      "lng": 19.035825133323673
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-054",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 28",
+      "lat": 50.257652813133184,
+      "lng": 19.036079943180088
+    },
+    {
+      "typ": "Kierowanie ruchem",
+      "numer": "RUCH-022",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 28",
+      "lat": 50.25764769779773,
+      "lng": 19.036262231376828
+    },
+    {
+      "typ": "Kierowanie ruchem",
+      "numer": "RUCH-023",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 28",
+      "lat": 50.25743843511838,
+      "lng": 19.035658884097124
+    },
+    {
+      "typ": "Kierowanie ruchem",
+      "numer": "RUCH-027",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 29",
+      "lat": 50.255169684924496,
+      "lng": 19.0355088610266
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-066",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 30",
+      "lat": 50.25416471390293,
+      "lng": 19.03456181287766
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-067",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 31",
+      "lat": 50.25302253741605,
+      "lng": 19.033692777156833
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-068",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 31",
+      "lat": 50.25291620863969,
+      "lng": 19.033974409103397
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-069",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 31",
+      "lat": 50.25280987690851,
+      "lng": 19.034462571144108
+    },
+    {
+      "typ": "Ochrona",
+      "numer": "OCHR-012",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 31",
+      "lat": 50.25283217200626,
+      "lng": 19.03412461280823
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-070",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 32",
+      "lat": 50.251180591528914,
+      "lng": 19.03293371200562
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-071",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 32",
+      "lat": 50.2510382398192,
+      "lng": 19.033258257424556
+    },
+    {
+      "typ": "Kierowanie ruchem",
+      "numer": "RUCH-028",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 32",
+      "lat": 50.25153389393116,
+      "lng": 19.02977138757706
+    },
+    {
+      "typ": "Kierowanie ruchem",
+      "numer": "RUCH-029",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 32",
+      "lat": 50.25123375856272,
+      "lng": 19.033204615116123
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-072",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 33",
+      "lat": 50.24985311151842,
+      "lng": 19.032909572124485
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-073",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 33",
+      "lat": 50.24953752943448,
+      "lng": 19.03266549110413
+    },
+    {
+      "typ": "Ochrona",
+      "numer": "OCHR-013",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 33",
+      "lat": 50.24954438993677,
+      "lng": 19.03212368488312
+    },
+    {
+      "typ": "Ochrona",
+      "numer": "OCHR-014",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 34",
+      "lat": 50.24873312869163,
+      "lng": 19.033711552619938
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-075",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 34",
+      "lat": 50.248758856004464,
+      "lng": 19.033969044685367
+    },
+    {
+      "typ": "Kierowanie ruchem",
+      "numer": "RUCH-030",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 35",
+      "lat": 50.2466628920596,
+      "lng": 19.037195742130283
+    },
+    {
+      "typ": "Kierowanie ruchem",
+      "numer": "RUCH-031",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 35",
+      "lat": 50.24656512389704,
+      "lng": 19.037096500396732
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-076",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 36",
+      "lat": 50.24611916131349,
+      "lng": 19.038373231887817
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-077",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 36A",
+      "lat": 50.245558271677965,
+      "lng": 19.037345945835117
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-078",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 36A",
+      "lat": 50.2454656470664,
+      "lng": 19.038096964359287
+    },
+    {
+      "typ": "Kierowanie ruchem",
+      "numer": "RUCH-032",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 36A",
+      "lat": 50.24566633349723,
+      "lng": 19.03685510158539
+    },
+    {
+      "typ": "Kierowanie ruchem",
+      "numer": "RUCH-033",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 36A",
+      "lat": 50.24494420144955,
+      "lng": 19.038013815879822
+    },
+    {
+      "typ": "Kierowanie ruchem",
+      "numer": "RUCH-034",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 37",
+      "lat": 50.24596993444027,
+      "lng": 19.04014348983765
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-079",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 37",
+      "lat": 50.24573665931152,
+      "lng": 19.040451943874363
+    },
+    {
+      "typ": "Kierowanie ruchem",
+      "numer": "RUCH-035",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 38",
+      "lat": 50.24372118326255,
+      "lng": 19.039759933948517
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-080",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 38",
+      "lat": 50.2437005992377,
+      "lng": 19.039934277534485
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-081",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 39",
+      "lat": 50.24243294924403,
+      "lng": 19.039588272571564
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-082",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 39",
+      "lat": 50.24254787965891,
+      "lng": 19.039714336395267
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-084",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 40",
+      "lat": 50.24288923851097,
+      "lng": 19.04255747795105
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-085",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 40",
+      "lat": 50.242432952161515,
+      "lng": 19.04273184961488
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-087",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 28",
+      "lat": 50.25772141906619,
+      "lng": 19.03652251047534
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-088",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa P2",
+      "lat": 50.25776225709104,
+      "lng": 19.037272910350413
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-089",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa P2",
+      "lat": 50.257870316513866,
+      "lng": 19.03805316081837
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-090",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa P2",
+      "lat": 50.258046982127944,
+      "lng": 19.03944206027685
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-091",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa P3",
+      "lat": 50.258165271466375,
+      "lng": 19.040236317040772
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-092",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa P3",
+      "lat": 50.258281877781876,
+      "lng": 19.04139773226281
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-093",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa P4",
+      "lat": 50.25863354591765,
+      "lng": 19.04414345323931
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-094",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa P4",
+      "lat": 50.258753450404974,
+      "lng": 19.04537562044282
+    },
+    {
+      "typ": "Kierowanie ruchem",
+      "numer": "RUCH-037",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa P4",
+      "lat": 50.258648720503416,
+      "lng": 19.044249485746768
+    },
+    {
+      "typ": "Kierowanie ruchem",
+      "numer": "RUCH-038",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa P4",
+      "lat": 50.25852690068352,
+      "lng": 19.04428970484306
+    },
+    {
+      "typ": "Kierowanie ruchem",
+      "numer": "RUCH-039",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa P4A",
+      "lat": 50.259050208972255,
+      "lng": 19.04754477036926
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-096",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa P5",
+      "lat": 50.25911009219214,
+      "lng": 19.05027784776254
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-097",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa P5",
+      "lat": 50.25927820169343,
+      "lng": 19.051504393167544
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-098",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa P6",
+      "lat": 50.259319284338495,
+      "lng": 19.05253668330559
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-099",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa P6",
+      "lat": 50.25934842867592,
+      "lng": 19.053271983883217
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-100",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa P6",
+      "lat": 50.2593775798006,
+      "lng": 19.05374120667324
+    },
+    {
+      "typ": "Ochrona",
+      "numer": "OCHR-015",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa P6",
+      "lat": 50.259211582241996,
+      "lng": 19.053551852703094
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-107",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa U16",
+      "lat": 50.28650737526373,
+      "lng": 18.982405959085764
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-108",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 140",
+      "lat": 50.29118480338646,
+      "lng": 18.980794268747776
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-109",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa U14",
+      "lat": 50.290794156533835,
+      "lng": 18.978130817413334
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-001",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 6",
+      "lat": 50.27788684450446,
+      "lng": 18.993628491943177
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-002",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 6",
+      "lat": 50.27805483234309,
+      "lng": 18.99380548778844
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-003",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 6",
+      "lat": 50.278013685201024,
+      "lng": 18.99374119151825
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-004",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 6",
+      "lat": 50.27816801522464,
+      "lng": 18.993993265817686
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-005",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 6",
+      "lat": 50.27810964849892,
+      "lng": 18.993896714716527
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-006",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 6",
+      "lat": 50.278296639229616,
+      "lng": 18.994221419243395
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-007",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 7",
+      "lat": 50.27571704599442,
+      "lng": 18.997960222065057
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-008",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 7A",
+      "lat": 50.274917370785815,
+      "lng": 18.99672366100195
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-009",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 9",
+      "lat": 50.277043949185234,
+      "lng": 18.99996819236533
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-010",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 9",
+      "lat": 50.27689579279691,
+      "lng": 19.000081491870947
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-011",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 9A",
+      "lat": 50.275834617982966,
+      "lng": 19.000778904587925
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-012",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 12",
+      "lat": 50.277903466625546,
+      "lng": 19.005428738456388
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-013",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 13",
+      "lat": 50.278153839900526,
+      "lng": 19.009021644391396
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-014",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 13",
+      "lat": 50.27803021301602,
+      "lng": 19.008566814436012
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-015",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 14",
+      "lat": 50.276836508108,
+      "lng": 19.008695515544144
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-016",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 14",
+      "lat": 50.276321970899055,
+      "lng": 19.00823969911954
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-017",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 14",
+      "lat": 50.27613330586242,
+      "lng": 19.008647252628602
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-018",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 15",
+      "lat": 50.274864085273904,
+      "lng": 19.008143173288452
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-019",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 15",
+      "lat": 50.274836642292854,
+      "lng": 19.00918350724575
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-020",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 16",
+      "lat": 50.27348848637437,
+      "lng": 19.00807346018824
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-021",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 17",
+      "lat": 50.272826400915946,
+      "lng": 19.00862043989773
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-022",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 17",
+      "lat": 50.272661325821,
+      "lng": 19.00866964810164
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-023",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 17",
+      "lat": 50.272335424322605,
+      "lng": 19.009002125964276
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-024",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 17",
+      "lat": 50.27217075745409,
+      "lng": 19.00795642946081
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-025",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 18",
+      "lat": 50.27010940936209,
+      "lng": 19.010326903235363
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-026",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 19",
+      "lat": 50.26941640004954,
+      "lng": 19.00867523901449
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-027",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 19",
+      "lat": 50.269253190731604,
+      "lng": 19.00898631161705
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-028",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 20",
+      "lat": 50.268422935727685,
+      "lng": 19.00798887802912
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-029",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 20",
+      "lat": 50.26834125653846,
+      "lng": 19.008273291393184
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-030",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 20",
+      "lat": 50.26834297195923,
+      "lng": 19.00805342700013
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-031",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 21",
+      "lat": 50.267497474892515,
+      "lng": 19.012177199736062
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-032",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 21",
+      "lat": 50.26667919764432,
+      "lng": 19.01215038700522
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-033",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 21",
+      "lat": 50.26680957399654,
+      "lng": 19.01228445065948
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-034",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 22",
+      "lat": 50.266372412357725,
+      "lng": 19.015674015047008
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-035",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 23",
+      "lat": 50.26504460325863,
+      "lng": 19.019336634082272
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-036",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 24A",
+      "lat": 50.267234240424244,
+      "lng": 19.024001941011164
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-037",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 24",
+      "lat": 50.26490733656825,
+      "lng": 19.023340769855658
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-038",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 24",
+      "lat": 50.26402553853713,
+      "lng": 19.024161239419907
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-039",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 25",
+      "lat": 50.2639431908058,
+      "lng": 19.02693367579067
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-040",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 25",
+      "lat": 50.26385362396129,
+      "lng": 19.026961823156388
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-041",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 25",
+      "lat": 50.26367520305278,
+      "lng": 19.0268813849638
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-042",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 26",
+      "lat": 50.2625346942314,
+      "lng": 19.035390620142916
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-043",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 26",
+      "lat": 50.26236605087943,
+      "lng": 19.037379387260504
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-044",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 26",
+      "lat": 50.26196287470678,
+      "lng": 19.034971604029433
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-045",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 26",
+      "lat": 50.26248442961816,
+      "lng": 19.035655328666298
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-046",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 26",
+      "lat": 50.262080330088125,
+      "lng": 19.034242601927026
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-047",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 26A",
+      "lat": 50.26535040583721,
+      "lng": 19.035840802601907
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-048",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 27",
+      "lat": 50.259621415040435,
+      "lng": 19.035393301415997
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-049",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 28",
+      "lat": 50.25768417583842,
+      "lng": 19.036106191545727
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-050",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 28",
+      "lat": 50.25755845538769,
+      "lng": 19.036045054808376
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-051",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 28",
+      "lat": 50.257462446779506,
+      "lng": 19.03569645374192
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-057",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 30",
+      "lat": 50.25418759356129,
+      "lng": 19.034523326958325
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-058",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 31",
+      "lat": 50.253029326335316,
+      "lng": 19.033619737928404
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-059",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 31",
+      "lat": 50.252794237549864,
+      "lng": 19.03453137077758
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-060",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 31",
+      "lat": 50.25279252156906,
+      "lng": 19.03410504835693
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-061",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "mapa 33",
+      "lat": 50.24982296568878,
+      "lng": 19.032960228046978
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-062",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 33",
+      "lat": 50.2495249770906,
+      "lng": 19.032064494714554
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-063",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 34",
+      "lat": 50.24882137150891,
+      "lng": 19.033860947682058
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-064",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 34",
+      "lat": 50.24874414587337,
+      "lng": 19.03375101548555
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-065",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 36",
+      "lat": 50.24625088607929,
+      "lng": 19.038416801282832
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-066",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 36",
+      "lat": 50.24607411546121,
+      "lng": 19.038360494547998
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-067",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 36A",
+      "lat": 50.245495744876344,
+      "lng": 19.03819693688978
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-068",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 36A",
+      "lat": 50.24498945032427,
+      "lng": 19.038030697958437
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-069",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 37",
+      "lat": 50.24600922481817,
+      "lng": 19.040167074712862
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-070",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 38",
+      "lat": 50.24367617803733,
+      "lng": 19.03978365640528
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-071",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 39",
+      "lat": 50.24268070834952,
+      "lng": 19.03968981184727
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-072",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 39",
+      "lat": 50.24260004006759,
+      "lng": 19.039660317843357
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-074",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 44A",
+      "lat": 50.241919407537104,
+      "lng": 19.036104559449107
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-075",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa P1",
+      "lat": 50.25771630179373,
+      "lng": 19.036385716879646
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-076",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa P2",
+      "lat": 50.25778802424947,
+      "lng": 19.037270153267055
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-077",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa P2",
+      "lat": 50.257896038893485,
+      "lng": 19.038061128827383
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-078",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa P2",
+      "lat": 50.25808471494532,
+      "lng": 19.039428610858675
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-079",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa P3",
+      "lat": 50.25831623912426,
+      "lng": 19.041384048862355
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-080",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa P3",
+      "lat": 50.258196002996634,
+      "lng": 19.040258283858297
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-081",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa P4",
+      "lat": 50.25876392485118,
+      "lng": 19.045457272371756
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-082",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa P4A",
+      "lat": 50.2590810867275,
+      "lng": 19.047579816913004
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-083",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa P5",
+      "lat": 50.259146176466444,
+      "lng": 19.050278584338702
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-084",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa P5",
+      "lat": 50.25930220173359,
+      "lng": 19.051504472721504
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-085",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa P6",
+      "lat": 50.25935550552784,
+      "lng": 19.052529567927944
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-086",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa P6",
+      "lat": 50.25929865163795,
+      "lng": 19.053116860326657
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-087",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa P6",
+      "lat": 50.259302083130834,
+      "lng": 19.053489557285594
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-088",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa P6",
+      "lat": 50.25932610357419,
+      "lng": 19.053864935517613
+    },
+    {
+      "typ": "Ochrona",
+      "numer": "OCHR-016",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 5",
+      "lat": 50.28007412652589,
+      "lng": 18.99010955913012
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-089",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 6",
+      "lat": 50.27790190606125,
+      "lng": 18.994110909578655
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-090",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 6",
+      "lat": 50.278272361117594,
+      "lng": 18.994086778120906
+    },
+    {
+      "typ": "Ochrona",
+      "numer": "OCHR-017",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 10",
+      "lat": 50.27852113109446,
+      "lng": 19.002605407501235
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-111",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 26",
+      "lat": 50.26190994906089,
+      "lng": 19.03519203465954
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-091",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 28",
+      "lat": 50.257522108391655,
+      "lng": 19.035808002124252
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-092",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 28",
+      "lat": 50.2575169609599,
+      "lng": 19.036148523806144
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-093",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 28",
+      "lat": 50.25748950798109,
+      "lng": 19.03596351596326
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-112",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 28",
+      "lat": 50.259110384811564,
+      "lng": 19.035738846837752
+    },
+    {
+      "typ": "Kierowanie ruchem",
+      "numer": "RUCH-040",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 29",
+      "lat": 50.25521677328523,
+      "lng": 19.034734325786417
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-094",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 32",
+      "lat": 50.25153048132496,
+      "lng": 19.02988145735515
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-095",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 39",
+      "lat": 50.24245588316046,
+      "lng": 19.039601372888196
+    },
+    {
+      "typ": "Kierowanie ruchem",
+      "numer": "RUCH-041",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 39A",
+      "lat": 50.24193239260053,
+      "lng": 19.036225650073117
+    },
+    {
+      "typ": "Kierowanie ruchem",
+      "numer": "RUCH-042",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa P6",
+      "lat": 50.259257448427896,
+      "lng": 19.053307099685682
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-114",
+      "sektor": "Odcinek 2",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 41",
+      "lat": 50.23720646540031,
+      "lng": 19.042851191923436
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-115",
+      "sektor": "Odcinek 2",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 42",
+      "lat": 50.2337263231525,
+      "lng": 19.027599616440654
+    },
+    {
+      "typ": "Ochrona",
+      "numer": "OCHR-018",
+      "sektor": "Odcinek 2",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 42",
+      "lat": 50.233648661719954,
+      "lng": 19.02749340781488
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-096",
+      "sektor": "Odcinek 2",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 42",
+      "lat": 50.23369363945113,
+      "lng": 19.027445494936774
+    },
+    {
+      "typ": "Kierowanie ruchem",
+      "numer": "RUCH-043",
+      "sektor": "Odcinek 2",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 43",
+      "lat": 50.23399233884532,
+      "lng": 19.026255009686672
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-097",
+      "sektor": "Odcinek 2",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 43",
+      "lat": 50.23395956768116,
+      "lng": 19.026415612780536
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-098",
+      "sektor": "Odcinek 2",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 43",
+      "lat": 50.233906737373545,
+      "lng": 19.026651981300535
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-099",
+      "sektor": "Odcinek 2",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 43",
+      "lat": 50.23380850145093,
+      "lng": 19.026970636309315
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-100",
+      "sektor": "Odcinek 2",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 43",
+      "lat": 50.2340162173941,
+      "lng": 19.026206473479856
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-116",
+      "sektor": "Odcinek 2",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 44",
+      "lat": 50.23666265800212,
+      "lng": 19.045145223595178
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-117",
+      "sektor": "Odcinek 2",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 44",
+      "lat": 50.23636131629422,
+      "lng": 19.045249539772396
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-118",
+      "sektor": "Odcinek 2",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 45",
+      "lat": 50.24100156164814,
+      "lng": 19.046896518123816
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-119",
+      "sektor": "Odcinek 2",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 45",
+      "lat": 50.24096551712041,
+      "lng": 19.04708152596674
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-120",
+      "sektor": "Odcinek 2",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 45",
+      "lat": 50.24139290048069,
+      "lng": 19.04723167725954
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-121",
+      "sektor": "Odcinek 2",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 46",
+      "lat": 50.243039928791035,
+      "lng": 19.04708475288647
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-122",
+      "sektor": "Odcinek 2",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 46",
+      "lat": 50.24355310930712,
+      "lng": 19.047044533790178
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-123",
+      "sektor": "Odcinek 2",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 46",
+      "lat": 50.243765561201705,
+      "lng": 19.047232229457705
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-124",
+      "sektor": "Odcinek 2",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 47",
+      "lat": 50.24869364316823,
+      "lng": 19.04836921185278
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-125",
+      "sektor": "Odcinek 2",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 48",
+      "lat": 50.25024382538895,
+      "lng": 19.048071822650677
+    },
+    {
+      "typ": "Kierowanie ruchem",
+      "numer": "RUCH-044",
+      "sektor": "Odcinek 2",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 48",
+      "lat": 50.25044802689726,
+      "lng": 19.048235380308896
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-101",
+      "sektor": "Odcinek 2",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 48",
+      "lat": 50.25047022003276,
+      "lng": 19.048374806509358
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-102",
+      "sektor": "Odcinek 2",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 48",
+      "lat": 50.250456478874696,
+      "lng": 19.048581264536992
+    },
+    {
+      "typ": "Kierowanie ruchem",
+      "numer": "PLOT-103",
+      "sektor": "Odcinek 2",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 48A",
+      "lat": 50.25193672083534,
+      "lng": 19.04717620069384
+    },
+    {
+      "typ": "Kierowanie ruchem",
+      "numer": "RUCH-045",
+      "sektor": "Odcinek 2",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 49",
+      "lat": 50.25042679723039,
+      "lng": 19.049626860896048
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-126",
+      "sektor": "Odcinek 2",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 49",
+      "lat": 50.250214004567695,
+      "lng": 19.050034414405108
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-103",
+      "sektor": "Odcinek 2",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 49",
+      "lat": 50.25043709362546,
+      "lng": 19.049672442538508
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-104",
+      "sektor": "Odcinek 2",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 49",
+      "lat": 50.250420821679825,
+      "lng": 19.049466851181208
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-105",
+      "sektor": "Odcinek 2",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 49",
+      "lat": 50.250432827335686,
+      "lng": 19.049185217362783
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-106",
+      "sektor": "Odcinek 2",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 50",
+      "lat": 50.24836531989434,
+      "lng": 19.04989566862504
+    },
+    {
+      "typ": "Kierowanie ruchem",
+      "numer": "RUCH-046",
+      "sektor": "Odcinek 2",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 50",
+      "lat": 50.24842023635123,
+      "lng": 19.04990103117121
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-127",
+      "sektor": "Odcinek 2",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 50",
+      "lat": 50.24878577240499,
+      "lng": 19.050697369277707
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-128",
+      "sektor": "Odcinek 2",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 51",
+      "lat": 50.24683342670057,
+      "lng": 19.050718977634414
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-129",
+      "sektor": "Odcinek 2",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 51",
+      "lat": 50.24489923519987,
+      "lng": 19.051550172291037
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-130",
+      "sektor": "Odcinek 2",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 52",
+      "lat": 50.246100708798345,
+      "lng": 19.061176730721474
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-131",
+      "sektor": "Odcinek 2",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 52",
+      "lat": 50.246151438880794,
+      "lng": 19.061654312902473
+    },
+    {
+      "typ": "Kierowanie ruchem",
+      "numer": "RUCH-047",
+      "sektor": "Odcinek 2",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 52",
+      "lat": 50.246208044934264,
+      "lng": 19.06135132904379
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-107",
+      "sektor": "Odcinek 2",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 52",
+      "lat": 50.24613078297386,
+      "lng": 19.061278934670458
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-108",
+      "sektor": "Odcinek 2",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 52",
+      "lat": 50.24622860745536,
+      "lng": 19.06137277922846
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-109",
+      "sektor": "Odcinek 2",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 52",
+      "lat": 50.24618225789904,
+      "lng": 19.06163554399089
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-110",
+      "sektor": "Odcinek 2",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 52",
+      "lat": 50.24602951417379,
+      "lng": 19.061536336886718
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-111",
+      "sektor": "Odcinek 2",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 52A",
+      "lat": 50.247266820042526,
+      "lng": 19.072018539156417
+    },
+    {
+      "typ": "Kierowanie ruchem",
+      "numer": "RUCH-048",
+      "sektor": "Odcinek 2",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 52A",
+      "lat": 50.24738352012777,
+      "lng": 19.072007814064083
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-132",
+      "sektor": "Odcinek 2",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 53",
+      "lat": 50.23912904007969,
+      "lng": 19.06382203102112
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-133",
+      "sektor": "Odcinek 2",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 53",
+      "lat": 50.2388639468776,
+      "lng": 19.06435765295025
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-134",
+      "sektor": "Odcinek 2",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 53",
+      "lat": 50.24012726118697,
+      "lng": 19.070417330124254
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-135",
+      "sektor": "Odcinek 2",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 53",
+      "lat": 50.24071461570353,
+      "lng": 19.074517321603537
+    },
+    {
+      "typ": "Ochrona",
+      "numer": "OCHR-019",
+      "sektor": "Odcinek 2",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 54",
+      "lat": 50.240870615644205,
+      "lng": 19.07577136373987
+    },
+    {
+      "typ": "Kierowanie ruchem",
+      "numer": "RUCH-049",
+      "sektor": "Odcinek 2",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 54",
+      "lat": 50.24132374576979,
+      "lng": 19.078559887749133
+    },
+    {
+      "typ": "Kierowanie ruchem",
+      "numer": "RUCH-050",
+      "sektor": "Odcinek 2",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 54",
+      "lat": 50.24093193177563,
+      "lng": 19.07849643943069
+    },
+    {
+      "typ": "Kierowanie ruchem",
+      "numer": "RUCH-051",
+      "sektor": "Odcinek 2",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 55",
+      "lat": 50.24132028769647,
+      "lng": 19.079233017551466
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-136",
+      "sektor": "Odcinek 2",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 55",
+      "lat": 50.2414473006801,
+      "lng": 19.079174029543587
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-137",
+      "sektor": "Odcinek 2",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 55",
+      "lat": 50.241663565251855,
+      "lng": 19.079629845968196
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-138",
+      "sektor": "Odcinek 2",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 55",
+      "lat": 50.24148869823608,
+      "lng": 19.079582243818532
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-139",
+      "sektor": "Odcinek 2",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 55",
+      "lat": 50.2419692844235,
+      "lng": 19.080306187551734
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-140",
+      "sektor": "Odcinek 2",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 55",
+      "lat": 50.24179404119508,
+      "lng": 19.080204299174436
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-141",
+      "sektor": "Odcinek 2",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 56",
+      "lat": 50.24215791170868,
+      "lng": 19.080670840691376
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-142",
+      "sektor": "Odcinek 2",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 56",
+      "lat": 50.242374066081496,
+      "lng": 19.08116955748536
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-143",
+      "sektor": "Odcinek 2",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 56",
+      "lat": 50.24221260580796,
+      "lng": 19.081158832393026
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-144",
+      "sektor": "Odcinek 2",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 56",
+      "lat": 50.24276183842814,
+      "lng": 19.082279604542908
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-145",
+      "sektor": "Odcinek 2",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 56",
+      "lat": 50.24290235848607,
+      "lng": 19.082585269674677
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-112",
+      "sektor": "Odcinek 2",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 56",
+      "lat": 50.24285422128202,
+      "lng": 19.08270324569047
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-146",
+      "sektor": "Odcinek 2",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 57",
+      "lat": 50.24325927549956,
+      "lng": 19.082059740149862
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-147",
+      "sektor": "Odcinek 2",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 57",
+      "lat": 50.243605769439824,
+      "lng": 19.082333230004625
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-148",
+      "sektor": "Odcinek 2",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 57",
+      "lat": 50.243660494941814,
+      "lng": 19.082419030743377
+    },
+    {
+      "typ": "Ochrona",
+      "numer": "OCHR-020",
+      "sektor": "Odcinek 2",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 57",
+      "lat": 50.24355405250306,
+      "lng": 19.08189350121852
+    },
+    {
+      "typ": "Ochrona",
+      "numer": "OCHR-021",
+      "sektor": "Odcinek 2",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 57",
+      "lat": 50.2437119530856,
+      "lng": 19.082108003065404
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-113",
+      "sektor": "Odcinek 2",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 57",
+      "lat": 50.2435561509992,
+      "lng": 19.081813673251723
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-114",
+      "sektor": "Odcinek 2",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 57",
+      "lat": 50.243614505620684,
+      "lng": 19.081902155263517
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-115",
+      "sektor": "Odcinek 2",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 57",
+      "lat": 50.24365739879791,
+      "lng": 19.08200940618698
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-116",
+      "sektor": "Odcinek 2",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 57",
+      "lat": 50.243734608364626,
+      "lng": 19.082148832387446
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-117",
+      "sektor": "Odcinek 2",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 58",
+      "lat": 50.244714202141466,
+      "lng": 19.08301260664241
+    },
+    {
+      "typ": "Kierowanie ruchem",
+      "numer": "RUCH-052",
+      "sektor": "Odcinek 2",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 58",
+      "lat": 50.24470199666479,
+      "lng": 19.08310376992733
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-149",
+      "sektor": "Odcinek 2",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 58",
+      "lat": 50.24417338190008,
+      "lng": 19.083154714115956
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-150",
+      "sektor": "Odcinek 2",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 58",
+      "lat": 50.243972230178635,
+      "lng": 19.083765284405168
+    },
+    {
+      "typ": "Ochrona",
+      "numer": "OCHR-022",
+      "sektor": "Odcinek 2",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 58",
+      "lat": 50.24424340456461,
+      "lng": 19.083711658943454
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-151",
+      "sektor": "Odcinek 2",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 59",
+      "lat": 50.24359596805751,
+      "lng": 19.084233641624454
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-152",
+      "sektor": "Odcinek 2",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 59",
+      "lat": 50.24384522392305,
+      "lng": 19.085213171871487
+    },
+    {
+      "typ": "Ochrona",
+      "numer": "OCHR-023",
+      "sektor": "Odcinek 2",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 59",
+      "lat": 50.2441781855494,
+      "lng": 19.085658263203758
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-118",
+      "sektor": "Odcinek 2",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 59",
+      "lat": 50.24414759959877,
+      "lng": 19.08580431358275
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-119",
+      "sektor": "Odcinek 2",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 59",
+      "lat": 50.243972537478,
+      "lng": 19.08604562816047
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-120",
+      "sektor": "Odcinek 2",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 59",
+      "lat": 50.24415103218295,
+      "lng": 19.08556299900503
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-153",
+      "sektor": "Odcinek 2",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 60",
+      "lat": 50.243014833319414,
+      "lng": 19.087547141088542
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-154",
+      "sektor": "Odcinek 2",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 60",
+      "lat": 50.24267499818591,
+      "lng": 19.088061945521027
+    },
+    {
+      "typ": "Ochrona",
+      "numer": "OCHR-024",
+      "sektor": "Odcinek 2",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 60",
+      "lat": 50.24206397538673,
+      "lng": 19.08904865401661
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-155",
+      "sektor": "Odcinek 2",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 60",
+      "lat": 50.24165204548392,
+      "lng": 19.089761872657444
+    },
+    {
+      "typ": "Kierowanie ruchem",
+      "numer": "RUCH-053",
+      "sektor": "Odcinek 2",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 60",
+      "lat": 50.2415765246156,
+      "lng": 19.090003187235162
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-121",
+      "sektor": "Odcinek 2",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 60",
+      "lat": 50.241768759317814,
+      "lng": 19.089735059926603
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-122",
+      "sektor": "Odcinek 2",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 60",
+      "lat": 50.24218755366338,
+      "lng": 19.088989666008736
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-123",
+      "sektor": "Odcinek 2",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 60",
+      "lat": 50.24249649795332,
+      "lng": 19.08846413648392
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-124",
+      "sektor": "Odcinek 2",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 60",
+      "lat": 50.24283385472047,
+      "lng": 19.087918440869064
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-125",
+      "sektor": "Odcinek 2",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 59",
+      "lat": 50.24321125729876,
+      "lng": 19.087248122597614
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-126",
+      "sektor": "Odcinek 2",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 59",
+      "lat": 50.24368131432229,
+      "lng": 19.08655099159529
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-156",
+      "sektor": "Odcinek 2",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 61",
+      "lat": 50.24215275289199,
+      "lng": 19.092791463386888
+    },
+    {
+      "typ": "Kierowanie ruchem",
+      "numer": "RUCH-054",
+      "sektor": "Odcinek 2",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 61",
+      "lat": 50.24232953805426,
+      "lng": 19.093421562562085
+    },
+    {
+      "typ": "Kierowanie ruchem",
+      "numer": "RUCH-055",
+      "sektor": "Odcinek 2",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 61",
+      "lat": 50.24215504454578,
+      "lng": 19.093390703201297
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-157",
+      "sektor": "Odcinek 2",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 61",
+      "lat": 50.24258027245423,
+      "lng": 19.095355335117407
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-158",
+      "sektor": "Odcinek 2",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 61",
+      "lat": 50.242892741204926,
+      "lng": 19.09643991156634
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-127",
+      "sektor": "Odcinek 2",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 61",
+      "lat": 50.24253189569095,
+      "lng": 19.09537541526559
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-128",
+      "sektor": "Odcinek 2",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 61",
+      "lat": 50.24216136680373,
+      "lng": 19.092862731065285
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-129",
+      "sektor": "Odcinek 2",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 61",
+      "lat": 50.24290954864457,
+      "lng": 19.096503997252498
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-130",
+      "sektor": "Odcinek 2",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 62",
+      "lat": 50.243613174408914,
+      "lng": 19.09782586488381
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-131",
+      "sektor": "Odcinek 2",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 62",
+      "lat": 50.24376895977692,
+      "lng": 19.097917775976025
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-132",
+      "sektor": "Odcinek 2",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 62",
+      "lat": 50.24368133960655,
+      "lng": 19.097877556879734
+    },
+    {
+      "typ": "Kierowanie ruchem",
+      "numer": "RUCH-056",
+      "sektor": "Odcinek 2",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 62",
+      "lat": 50.24371564243366,
+      "lng": 19.097909732156776
+    },
+    {
+      "typ": "Ochrona",
+      "numer": "OCHR-025",
+      "sektor": "Odcinek 2",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 63",
+      "lat": 50.24455963629873,
+      "lng": 19.09764438158606
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-133",
+      "sektor": "Odcinek 2",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 63",
+      "lat": 50.244456656631385,
+      "lng": 19.09712957715358
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-134",
+      "sektor": "Odcinek 2",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 63",
+      "lat": 50.24440688445579,
+      "lng": 19.097352108780743
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-135",
+      "sektor": "Odcinek 2",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 63",
+      "lat": 50.24458194498122,
+      "lng": 19.097628279908587
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-136",
+      "sektor": "Odcinek 2",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 63",
+      "lat": 50.24443261604909,
+      "lng": 19.097582698266127
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-137",
+      "sektor": "Odcinek 2",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 63",
+      "lat": 50.24449611843657,
+      "lng": 19.0976497300933
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-138",
+      "sektor": "Odcinek 2",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 63",
+      "lat": 50.24448753703781,
+      "lng": 19.097960757771233
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-139",
+      "sektor": "Odcinek 2",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 63",
+      "lat": 50.24446179283225,
+      "lng": 19.098314685818583
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-160",
+      "sektor": "Odcinek 2",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 63",
+      "lat": 50.24438456013205,
+      "lng": 19.097507622619748
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-161",
+      "sektor": "Odcinek 2",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 64",
+      "lat": 50.24441888579203,
+      "lng": 19.098944784993737
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-162",
+      "sektor": "Odcinek 2",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 64",
+      "lat": 50.244168400289674,
+      "lng": 19.09923476961613
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-140",
+      "sektor": "Odcinek 2",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 64",
+      "lat": 50.24439323393285,
+      "lng": 19.098746777914524
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-141",
+      "sektor": "Odcinek 2",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 64",
+      "lat": 50.24420787497555,
+      "lng": 19.099350064358845
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-142",
+      "sektor": "Odcinek 2",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 64",
+      "lat": 50.244127209278275,
+      "lng": 19.099583335117316
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-143",
+      "sektor": "Odcinek 2",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 65",
+      "lat": 50.24399677084061,
+      "lng": 19.100277784846554
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-144",
+      "sektor": "Odcinek 2",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 65",
+      "lat": 50.243866571273266,
+      "lng": 19.100227188823506
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-145",
+      "sektor": "Odcinek 2",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 65",
+      "lat": 50.24342204691262,
+      "lng": 19.10035857120472
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-146",
+      "sektor": "Odcinek 2",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 65",
+      "lat": 50.24380478435151,
+      "lng": 19.10050067867827
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-147",
+      "sektor": "Odcinek 2",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 65",
+      "lat": 50.24367606134064,
+      "lng": 19.101034252022377
+    },
+    {
+      "typ": "Kierowanie ruchem",
+      "numer": "RUCH-057",
+      "sektor": "Odcinek 2",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 65",
+      "lat": 50.24366233086563,
+      "lng": 19.101106646395674
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-163",
+      "sektor": "Odcinek 2",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 65",
+      "lat": 50.24379963543777,
+      "lng": 19.100280814285213
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-164",
+      "sektor": "Odcinek 2",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 65",
+      "lat": 50.2440279034135,
+      "lng": 19.10028349555834
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-165",
+      "sektor": "Odcinek 2",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 65",
+      "lat": 50.24344777417525,
+      "lng": 19.100444371943475
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-148",
+      "sektor": "Odcinek 2",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 66",
+      "lat": 50.239359879542796,
+      "lng": 19.102962827690938
+    },
+    {
+      "typ": "Ochrona",
+      "numer": "OCHR-026",
+      "sektor": "Odcinek 2",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 66",
+      "lat": 50.23932078208592,
+      "lng": 19.10293605146134
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-167",
+      "sektor": "Odcinek 3",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 67",
+      "lat": 50.234529426867866,
+      "lng": 19.111134543321267
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-168",
+      "sektor": "Odcinek 3",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 67",
+      "lat": 50.23444893651042,
+      "lng": 19.110310055204927
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-169",
+      "sektor": "Odcinek 3",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 68",
+      "lat": 50.232342225715726,
+      "lng": 19.11194613906084
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-170",
+      "sektor": "Odcinek 3",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 68",
+      "lat": 50.23247612947071,
+      "lng": 19.113259962872906
+    },
+    {
+      "typ": "Kierowanie ruchem",
+      "numer": "RUCH-058",
+      "sektor": "Odcinek 3",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 68",
+      "lat": 50.23245896234364,
+      "lng": 19.113455695808167
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-149",
+      "sektor": "Odcinek 3",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 68",
+      "lat": 50.23246582919519,
+      "lng": 19.113605847101002
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-150",
+      "sektor": "Odcinek 3",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 68",
+      "lat": 50.232407198705694,
+      "lng": 19.113394618034363
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-151",
+      "sektor": "Odcinek 3",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 69",
+      "lat": 50.23173450394786,
+      "lng": 19.11439950393438
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-152",
+      "sektor": "Odcinek 3",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 69",
+      "lat": 50.23166240085122,
+      "lng": 19.114302978103286
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-171",
+      "sektor": "Odcinek 3",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 69",
+      "lat": 50.23177398893075,
+      "lng": 19.11435928483812
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-172",
+      "sektor": "Odcinek 3",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 69",
+      "lat": 50.2316727013003,
+      "lng": 19.114225221183826
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-173",
+      "sektor": "Odcinek 3",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 70",
+      "lat": 50.231029456983094,
+      "lng": 19.11703437192385
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-174",
+      "sektor": "Odcinek 3",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 70",
+      "lat": 50.231210895648196,
+      "lng": 19.116037761789833
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-153",
+      "sektor": "Odcinek 3",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 70",
+      "lat": 50.23099286689024,
+      "lng": 19.117013745193088
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-154",
+      "sektor": "Odcinek 3",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 70",
+      "lat": 50.23108900567804,
+      "lng": 19.117064689381714
+    },
+    {
+      "typ": "Kierowanie ruchem",
+      "numer": "RUCH-059",
+      "sektor": "Odcinek 3",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 70",
+      "lat": 50.23110617329832,
+      "lng": 19.116989613735335
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-155",
+      "sektor": "Odcinek 3",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 71",
+      "lat": 50.24434865236176,
+      "lng": 19.094527603234653
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-175",
+      "sektor": "Odcinek 3",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 71",
+      "lat": 50.24431604099241,
+      "lng": 19.094479340319108
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-176",
+      "sektor": "Odcinek 3",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 71",
+      "lat": 50.24424395692238,
+      "lng": 19.09527031587944
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-177",
+      "sektor": "Odcinek 3",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 71",
+      "lat": 50.24418557584259,
+      "lng": 19.095109439494266
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-178",
+      "sektor": "Odcinek 3",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 71",
+      "lat": 50.24433836729316,
+      "lng": 19.096342806395157
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-179",
+      "sektor": "Odcinek 3",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 71",
+      "lat": 50.24473481879189,
+      "lng": 19.093910966580637
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-180",
+      "sektor": "Odcinek 3",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 71",
+      "lat": 50.24446681233777,
+      "lng": 19.09451946582247
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-181",
+      "sektor": "Odcinek 3",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 72",
+      "lat": 50.24528688791895,
+      "lng": 19.092588284691058
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-182",
+      "sektor": "Odcinek 3",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 72",
+      "lat": 50.24534009167412,
+      "lng": 19.092754523622357
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-183",
+      "sektor": "Odcinek 3",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 72",
+      "lat": 50.244912742732915,
+      "lng": 19.09353209281727
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-184",
+      "sektor": "Odcinek 3",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 72",
+      "lat": 50.24548952473092,
+      "lng": 19.092467742521453
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-156",
+      "sektor": "Odcinek 3",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 72",
+      "lat": 50.245252477309386,
+      "lng": 19.092529411802417
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-157",
+      "sektor": "Odcinek 3",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 72",
+      "lat": 50.245364033582426,
+      "lng": 19.09278949529176
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-158",
+      "sektor": "Odcinek 3",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 73",
+      "lat": 50.24751535430143,
+      "lng": 19.089399583674584
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-159",
+      "sektor": "Odcinek 3",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 73",
+      "lat": 50.24744808227946,
+      "lng": 19.088669956371575
+    },
+    {
+      "typ": "Kierowanie ruchem",
+      "numer": "RUCH-060",
+      "sektor": "Odcinek 3",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 73",
+      "lat": 50.247446366106125,
+      "lng": 19.088720820070304
+    },
+    {
+      "typ": "Kierowanie ruchem",
+      "numer": "RUCH-061",
+      "sektor": "Odcinek 3",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 73",
+      "lat": 50.24745837931815,
+      "lng": 19.089383094522503
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-185",
+      "sektor": "Odcinek 3",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 73",
+      "lat": 50.24721811450266,
+      "lng": 19.089538608361472
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-186",
+      "sektor": "Odcinek 3",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 73",
+      "lat": 50.24695963744971,
+      "lng": 19.08950685425253
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-187",
+      "sektor": "Odcinek 3",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 74",
+      "lat": 50.251783389043446,
+      "lng": 19.091187712816385
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-189",
+      "sektor": "Odcinek 3",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 75",
+      "lat": 50.25262766201328,
+      "lng": 19.092185146404308
+    },
+    {
+      "typ": "Kierowanie ruchem",
+      "numer": "RUCH-062",
+      "sektor": "Odcinek 3",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 75",
+      "lat": 50.252778668609636,
+      "lng": 19.09174541761824
+    },
+    {
+      "typ": "Kierowanie ruchem",
+      "numer": "RUCH-063",
+      "sektor": "Odcinek 3",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 76",
+      "lat": 50.253742781525276,
+      "lng": 19.092253476528704
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-160",
+      "sektor": "Odcinek 3",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 76",
+      "lat": 50.253837509378236,
+      "lng": 19.092347557713108
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-161",
+      "sektor": "Odcinek 3",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 76A",
+      "lat": 50.252725561322706,
+      "lng": 19.09693789723608
+    },
+    {
+      "typ": "Kierowanie ruchem",
+      "numer": "RUCH-064",
+      "sektor": "Odcinek 3",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 76A",
+      "lat": 50.25278047275483,
+      "lng": 19.09654138329152
+    },
+    {
+      "typ": "Kierowanie ruchem",
+      "numer": "RUCH-065",
+      "sektor": "Odcinek 3",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 77",
+      "lat": 50.25472292395172,
+      "lng": 19.09345255669666
+    },
+    {
+      "typ": "Kierowanie ruchem",
+      "numer": "RUCH-066",
+      "sektor": "Odcinek 3",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 77",
+      "lat": 50.254807782300176,
+      "lng": 19.093079457451882
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-190",
+      "sektor": "Odcinek 3",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 78",
+      "lat": 50.25678853596453,
+      "lng": 19.09354620861692
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-162",
+      "sektor": "Odcinek 3",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 78",
+      "lat": 50.255759598249746,
+      "lng": 19.09341483372316
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-163",
+      "sektor": "Odcinek 3",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 78",
+      "lat": 50.25643869450156,
+      "lng": 19.093565033684268
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-164",
+      "sektor": "Odcinek 3",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 78",
+      "lat": 50.25698908245876,
+      "lng": 19.09369921135824
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-165",
+      "sektor": "Odcinek 3",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 78",
+      "lat": 50.25756260340459,
+      "lng": 19.093796455982833
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-166",
+      "sektor": "Odcinek 3",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 79",
+      "lat": 50.25842017354823,
+      "lng": 19.094010957829717
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-167",
+      "sektor": "Odcinek 3",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 79",
+      "lat": 50.25863218293916,
+      "lng": 19.094472249111966
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-168",
+      "sektor": "Odcinek 3",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 79",
+      "lat": 50.25873785684939,
+      "lng": 19.094106357901797
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-169",
+      "sektor": "Odcinek 3",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 79",
+      "lat": 50.25893516961207,
+      "lng": 19.094143895725004
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-191",
+      "sektor": "Odcinek 3",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 79",
+      "lat": 50.25864690168378,
+      "lng": 19.094420066852855
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-192",
+      "sektor": "Odcinek 3",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 79",
+      "lat": 50.25867501020791,
+      "lng": 19.093937928124234
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-170",
+      "sektor": "Odcinek 3",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 80",
+      "lat": 50.260204088611495,
+      "lng": 19.094272513535447
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-171",
+      "sektor": "Odcinek 3",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 80",
+      "lat": 50.26010628018118,
+      "lng": 19.094419983555163
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-172",
+      "sektor": "Odcinek 3",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 80",
+      "lat": 50.25965847582976,
+      "lng": 19.09430200753937
+    },
+    {
+      "typ": "Kierowanie ruchem",
+      "numer": "RUCH-067",
+      "sektor": "Odcinek 3",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 80",
+      "lat": 50.26022981167526,
+      "lng": 19.094267150989282
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-173",
+      "sektor": "Odcinek 3",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 80",
+      "lat": 50.2598815060868,
+      "lng": 19.094360995547284
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-193",
+      "sektor": "Odcinek 3",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 81",
+      "lat": 50.26109079141591,
+      "lng": 19.09478695295559
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-194",
+      "sektor": "Odcinek 3",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 81",
+      "lat": 50.26149377277151,
+      "lng": 19.094774030465473
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-195",
+      "sektor": "Odcinek 3",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 81",
+      "lat": 50.26101830207057,
+      "lng": 19.094586341349466
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-196",
+      "sektor": "Odcinek 3",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 82",
+      "lat": 50.26274905611685,
+      "lng": 19.09510205924869
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-197",
+      "sektor": "Odcinek 3",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 82",
+      "lat": 50.26235583580153,
+      "lng": 19.094969980536284
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-198",
+      "sektor": "Odcinek 3",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 82",
+      "lat": 50.262506811565004,
+      "lng": 19.09467504049685
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-199",
+      "sektor": "Odcinek 3",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 82",
+      "lat": 50.26273842118105,
+      "lng": 19.094361331545795
+    },
+    {
+      "typ": "Kierowanie ruchem",
+      "numer": "RUCH-068",
+      "sektor": "Odcinek 3",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 82",
+      "lat": 50.26271094690922,
+      "lng": 19.094739391050894
+    },
+    {
+      "typ": "Kierowanie ruchem",
+      "numer": "RUCH-069",
+      "sektor": "Odcinek 3",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 82A",
+      "lat": 50.26253537069965,
+      "lng": 19.096391939561087
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-174",
+      "sektor": "Odcinek 3",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 82A",
+      "lat": 50.262543267519945,
+      "lng": 19.096496731190268
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-175",
+      "sektor": "Odcinek 3",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 83",
+      "lat": 50.263454608960956,
+      "lng": 19.090728431909756
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-176",
+      "sektor": "Odcinek 3",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 83",
+      "lat": 50.263266884451255,
+      "lng": 19.090633384846534
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-200",
+      "sektor": "Odcinek 3",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 83",
+      "lat": 50.263551436609724,
+      "lng": 19.09075677956426
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-201",
+      "sektor": "Odcinek 3",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 83",
+      "lat": 50.26316746877061,
+      "lng": 19.090590480733475
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-202",
+      "sektor": "Odcinek 3",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 84",
+      "lat": 50.26380397897117,
+      "lng": 19.089130393150594
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-177",
+      "sektor": "Odcinek 3",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 84",
+      "lat": 50.263893084285286,
+      "lng": 19.089151843335262
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-203",
+      "sektor": "Odcinek 3",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 85",
+      "lat": 50.26418865516663,
+      "lng": 19.086368777336922
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-204",
+      "sektor": "Odcinek 3",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 85",
+      "lat": 50.26398621743184,
+      "lng": 19.08732867310164
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-178",
+      "sektor": "Odcinek 3",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 85A",
+      "lat": 50.26592134972975,
+      "lng": 19.08694256977729
+    },
+    {
+      "typ": "Kierowanie ruchem",
+      "numer": "RUCH-070",
+      "sektor": "Odcinek 3",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 85A",
+      "lat": 50.26597180598675,
+      "lng": 19.086861622439336
+    },
+    {
+      "typ": "Ochrona",
+      "numer": "OCHR-027",
+      "sektor": "Odcinek 3",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 87",
+      "lat": 50.26374933686864,
+      "lng": 19.078795737155815
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-205",
+      "sektor": "Odcinek 3",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 87",
+      "lat": 50.263793942089016,
+      "lng": 19.07883863752515
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-206",
+      "sektor": "Odcinek 3",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 87",
+      "lat": 50.263708162781995,
+      "lng": 19.077766128290847
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-207",
+      "sektor": "Odcinek 3",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 88",
+      "lat": 50.26259846120696,
+      "lng": 19.074088961828963
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-208",
+      "sektor": "Odcinek 3",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 88",
+      "lat": 50.26211053804912,
+      "lng": 19.072350325086187
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-209",
+      "sektor": "Odcinek 3",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 88",
+      "lat": 50.26221409101522,
+      "lng": 19.071729205659338
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-210",
+      "sektor": "Odcinek 3",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 88",
+      "lat": 50.261952628435274,
+      "lng": 19.071840879456143
+    },
+    {
+      "typ": "Kierowanie ruchem",
+      "numer": "RUCH-071",
+      "sektor": "Odcinek 3",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 88",
+      "lat": 50.26838776057203,
+      "lng": 19.080586099097033
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-179",
+      "sektor": "Odcinek 3",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 88",
+      "lat": 50.26204832372753,
+      "lng": 19.07165276730021
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-211",
+      "sektor": "Odcinek 3",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 89",
+      "lat": 50.25989782535298,
+      "lng": 19.070843663003775
+    },
+    {
+      "typ": "Kierowanie ruchem",
+      "numer": "RUCH-072",
+      "sektor": "Odcinek 3",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 89",
+      "lat": 50.2599630228556,
+      "lng": 19.071229766328123
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-180",
+      "sektor": "Odcinek 3",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 89",
+      "lat": 50.25994929707297,
+      "lng": 19.071476443452013
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-181",
+      "sektor": "Odcinek 3",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 89",
+      "lat": 50.25989439390299,
+      "lng": 19.071117152858534
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-182",
+      "sektor": "Odcinek 3",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 89",
+      "lat": 50.26001449450519,
+      "lng": 19.071229766328123
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-183",
+      "sektor": "Odcinek 3",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 89",
+      "lat": 50.259976748634266,
+      "lng": 19.07135846743625
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-184",
+      "sektor": "Odcinek 3",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 89A",
+      "lat": 50.25838110037086,
+      "lng": 19.07681217689285
+    },
+    {
+      "typ": "Kierowanie ruchem",
+      "numer": "RUCH-073",
+      "sektor": "Odcinek 3",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 89A",
+      "lat": 50.25843600528501,
+      "lng": 19.0767263761541
+    },
+    {
+      "typ": "Kierowanie ruchem",
+      "numer": "RUCH-074",
+      "sektor": "Odcinek 3",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 90",
+      "lat": 50.25919617725957,
+      "lng": 19.070404185046666
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-212",
+      "sektor": "Odcinek 3",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 90",
+      "lat": 50.25974782707454,
+      "lng": 19.06764726352583
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-185",
+      "sektor": "Odcinek 3",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 90",
+      "lat": 50.259123081321384,
+      "lng": 19.070579855616398
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-186",
+      "sektor": "Odcinek 3",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 91",
+      "lat": 50.25819656578192,
+      "lng": 19.068847753202938
+    },
+    {
+      "typ": "Kierowanie ruchem",
+      "numer": "RUCH-075",
+      "sektor": "Odcinek 3",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 91",
+      "lat": 50.2581828394903,
+      "lng": 19.06899254194957
+    },
+    {
+      "typ": "Kierowanie ruchem",
+      "numer": "RUCH-076",
+      "sektor": "Odcinek 3",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 92",
+      "lat": 50.259782625796404,
+      "lng": 19.062612336972748
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-213",
+      "sektor": "Odcinek 3",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 92",
+      "lat": 50.2597242618077,
+      "lng": 19.062545316376756
+    },
+    {
+      "typ": "Ochrona",
+      "numer": "OCHR-028",
+      "sektor": "Odcinek 3",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 92",
+      "lat": 50.259582883362555,
+      "lng": 19.062604014246638
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-214",
+      "sektor": "Odcinek 3",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 92",
+      "lat": 50.25971671060375,
+      "lng": 19.063311870341302
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-215",
+      "sektor": "Odcinek 3",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 92",
+      "lat": 50.25951768533962,
+      "lng": 19.063773049312072
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-216",
+      "sektor": "Odcinek 3",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 92",
+      "lat": 50.25959317777909,
+      "lng": 19.063944650789537
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-187",
+      "sektor": "Odcinek 3",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 92",
+      "lat": 50.25957945188987,
+      "lng": 19.062952579747787
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-188",
+      "sektor": "Odcinek 3",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 92",
+      "lat": 50.25959317777909,
+      "lng": 19.063360133256843
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-189",
+      "sektor": "Odcinek 3",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 92",
+      "lat": 50.25963092395393,
+      "lng": 19.063837399866117
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-190",
+      "sektor": "Odcinek 3",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 92",
+      "lat": 50.25965151276399,
+      "lng": 19.06426104101368
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-191",
+      "sektor": "Odcinek 3",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 92",
+      "lat": 50.25965494423146,
+      "lng": 19.064690044707408
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-192",
+      "sektor": "Odcinek 3",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 93",
+      "lat": 50.2598506045468,
+      "lng": 19.062016937111615
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-217",
+      "sektor": "Odcinek 3",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 93",
+      "lat": 50.259821670499505,
+      "lng": 19.061965511855444
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-218",
+      "sektor": "Odcinek 3",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 93",
+      "lat": 50.25979765030605,
+      "lng": 19.062126388240614
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-219",
+      "sektor": "Odcinek 3",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 93",
+      "lat": 50.25967754915711,
+      "lng": 19.061938699124603
+    },
+    {
+      "typ": "Ochrona",
+      "numer": "OCHR-029",
+      "sektor": "Odcinek 3",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 93",
+      "lat": 50.259859787851646,
+      "lng": 19.062083946476474
+    },
+    {
+      "typ": "Kierowanie ruchem",
+      "numer": "RUCH-077",
+      "sektor": "Odcinek 3",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 94",
+      "lat": 50.2596274710975,
+      "lng": 19.05936438495233
+    },
+    {
+      "typ": "Kierowanie ruchem",
+      "numer": "RUCH-078",
+      "sektor": "Odcinek 3",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 94",
+      "lat": 50.25949364360558,
+      "lng": 19.059359022406166
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-220",
+      "sektor": "Odcinek 3",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 95",
+      "lat": 50.25953825281133,
+      "lng": 19.05648469765811
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-221",
+      "sektor": "Odcinek 3",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 96",
+      "lat": 50.26026858770286,
+      "lng": 19.053441417912666
+    },
+    {
+      "typ": "Kierowanie ruchem",
+      "numer": "RUCH-079",
+      "sektor": "Odcinek 3",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 96",
+      "lat": 50.26025829343231,
+      "lng": 19.053259091342824
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-193",
+      "sektor": "Odcinek 3",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 96",
+      "lat": 50.26018280204692,
+      "lng": 19.053178653150276
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-194",
+      "sektor": "Odcinek 3",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 97",
+      "lat": 50.2625192700848,
+      "lng": 19.053026131312834
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-195",
+      "sektor": "Odcinek 3",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 97",
+      "lat": 50.26243868593135,
+      "lng": 19.05303151070573
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-196",
+      "sektor": "Odcinek 3",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 97",
+      "lat": 50.26229934322262,
+      "lng": 19.05299117649016
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-222",
+      "sektor": "Odcinek 3",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 97",
+      "lat": 50.26238684070215,
+      "lng": 19.053050119573456
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-197",
+      "sektor": "Odcinek 3",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 97A",
+      "lat": 50.262578999242386,
+      "lng": 19.049998087674087
+    },
+    {
+      "typ": "Kierowanie ruchem",
+      "numer": "RUCH-080",
+      "sektor": "Odcinek 3",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 97A",
+      "lat": 50.262582364397076,
+      "lng": 19.05009163086292
+    },
+    {
+      "typ": "Kierowanie ruchem",
+      "numer": "RUCH-081",
+      "sektor": "Odcinek 3",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 98",
+      "lat": 50.26340571291607,
+      "lng": 19.05296160744822
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-223",
+      "sektor": "Odcinek 3",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 98",
+      "lat": 50.26359567068623,
+      "lng": 19.053149243379938
+    },
+    {
+      "typ": "Kierowanie ruchem",
+      "numer": "RUCH-082",
+      "sektor": "Odcinek 3",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 99",
+      "lat": 50.26361968896449,
+      "lng": 19.055243317659958
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-198",
+      "sektor": "Odcinek 3",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 99",
+      "lat": 50.26364027605049,
+      "lng": 19.05530238054218
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-199",
+      "sektor": "Odcinek 3",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 100",
+      "lat": 50.26721547532823,
+      "lng": 19.05139533044913
+    },
+    {
+      "typ": "Kierowanie ruchem",
+      "numer": "RUCH-083",
+      "sektor": "Odcinek 3",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 100",
+      "lat": 50.26718977256083,
+      "lng": 19.05135242820789
+    },
+    {
+      "typ": "Kierowanie ruchem",
+      "numer": "RUCH-084",
+      "sektor": "Odcinek 3",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 101",
+      "lat": 50.271286459377336,
+      "lng": 19.049225490742934
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-200",
+      "sektor": "Odcinek 3",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 101",
+      "lat": 50.271343799386486,
+      "lng": 19.049244227832975
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-201",
+      "sektor": "Odcinek 3",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 101",
+      "lat": 50.27127008656576,
+      "lng": 19.0492898216425
+    },
+    {
+      "typ": "Punkt żywieniowy",
+      "numer": "ZYW-006",
+      "sektor": "Odcinek 3",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "",
+      "lat": 50.27145094356532,
+      "lng": 19.049539947337657
+    },
+    {
+      "typ": "Toaleta",
+      "numer": "TOAL-006",
+      "sektor": "Odcinek 3",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "",
+      "lat": 50.27172634852835,
+      "lng": 19.04929534797625
+    },
+    {
+      "typ": "Medyczny",
+      "numer": "MED-001",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "",
+      "lat": 50.264687835899956,
+      "lng": 19.024304736748128
+    },
+    {
+      "typ": "Medyczny",
+      "numer": "MED-002",
+      "sektor": "Odcinek 2",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "",
+      "lat": 50.23717500952119,
+      "lng": 19.04278010129929
+    },
+    {
+      "typ": "Medyczny",
+      "numer": "MED-003",
+      "sektor": "Odcinek 2",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "",
+      "lat": 50.24583950061349,
+      "lng": 19.051226377487186
+    },
+    {
+      "typ": "Medyczny",
+      "numer": "MED-004",
+      "sektor": "Odcinek 2",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "",
+      "lat": 50.23847343558126,
+      "lng": 19.104597175562137
+    },
+    {
+      "typ": "Medyczny",
+      "numer": "MED-005",
+      "sektor": "Odcinek 3",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "",
+      "lat": 50.2720969060657,
+      "lng": 19.049016735173186
+    },
+    {
+      "typ": "Medyczny",
+      "numer": "MED-006",
+      "sektor": "Odcinek 3",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "",
+      "lat": 50.25586126432481,
+      "lng": 19.093658924102787
+    },
+    {
+      "typ": "Medyczny",
+      "numer": "MED-007",
+      "sektor": "",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "",
+      "lat": 50.295566644695356,
+      "lng": 19.008223891605166
+    },
+    {
+      "typ": "Kierowanie ruchem",
+      "numer": "RUCH-085",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 102",
+      "lat": 50.272622699728586,
+      "lng": 19.048072399182978
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-225",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 102",
+      "lat": 50.27253362240966,
+      "lng": 19.048575621212105
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-202",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 102",
+      "lat": 50.27274631538665,
+      "lng": 19.04838256954993
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-203",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 102",
+      "lat": 50.272416983922135,
+      "lng": 19.048253868441797
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-204",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 102",
+      "lat": 50.27210137246447,
+      "lng": 19.048554171027398
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-205",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 103",
+      "lat": 50.2739100850908,
+      "lng": 19.05180037021637
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-206",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 103",
+      "lat": 50.27408640023357,
+      "lng": 19.052145878200953
+    },
+    {
+      "typ": "Kierowanie ruchem",
+      "numer": "RUCH-086",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 103",
+      "lat": 50.273968373572906,
+      "lng": 19.051693081855777
+    },
+    {
+      "typ": "Ochrona",
+      "numer": "OCHR-030",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 103",
+      "lat": 50.27365980689277,
+      "lng": 19.05239045619965
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-207",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 103",
+      "lat": 50.27371809771857,
+      "lng": 19.05235826969147
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-226",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 103",
+      "lat": 50.2740880318681,
+      "lng": 19.05222631639354
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-227",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 105",
+      "lat": 50.27402285272809,
+      "lng": 19.05478156964433
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-228",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 104",
+      "lat": 50.27415320897518,
+      "lng": 19.055811178509302
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-229",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 104",
+      "lat": 50.27403653752469,
+      "lng": 19.05583642653045
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-230",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 104",
+      "lat": 50.27361802307099,
+      "lng": 19.055965127638544
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-208",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 104",
+      "lat": 50.27404198638939,
+      "lng": 19.05476931821538
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-209",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 104",
+      "lat": 50.2741823938005,
+      "lng": 19.05581501471885
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-210",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 104",
+      "lat": 50.273978203635984,
+      "lng": 19.055849871268972
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-211",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 104",
+      "lat": 50.27364201977323,
+      "lng": 19.055938353280812
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-212",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 105",
+      "lat": 50.27607492994404,
+      "lng": 19.06215308772404
+    },
+    {
+      "typ": "Ochrona",
+      "numer": "OCHR-031",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 105",
+      "lat": 50.27607822611837,
+      "lng": 19.0622014610792
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-231",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 105",
+      "lat": 50.275977030684516,
+      "lng": 19.06278061606577
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-232",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 106",
+      "lat": 50.27662020598684,
+      "lng": 19.065384132232104
+    },
+    {
+      "typ": "Kierowanie ruchem",
+      "numer": "RUCH-087",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 106",
+      "lat": 50.2766116303733,
+      "lng": 19.06552355843257
+    },
+    {
+      "typ": "Kierowanie ruchem",
+      "numer": "RUCH-088",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 106",
+      "lat": 50.27672139810999,
+      "lng": 19.065963287218633
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-213",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 106",
+      "lat": 50.276647647939804,
+      "lng": 19.065504789520986
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-214",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 106",
+      "lat": 50.27674026441423,
+      "lng": 19.06594451830705
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-215",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 106",
+      "lat": 50.276709392276096,
+      "lng": 19.065740741552535
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-216",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 106",
+      "lat": 50.27669567131938,
+      "lng": 19.06560667789824
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-233",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 107",
+      "lat": 50.27752921226208,
+      "lng": 19.06538949477827
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-234",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 107",
+      "lat": 50.277580664928465,
+      "lng": 19.065558414982696
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-235",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 107",
+      "lat": 50.27790996067629,
+      "lng": 19.065547689890362
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-236",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 108",
+      "lat": 50.27984082887802,
+      "lng": 19.066211400993637
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-237",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 108",
+      "lat": 50.28042221253921,
+      "lng": 19.066549241402445
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-238",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 108",
+      "lat": 50.280476612987414,
+      "lng": 19.06683613107115
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-217",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 108",
+      "lat": 50.27884275749816,
+      "lng": 19.06920431853468
+    },
+    {
+      "typ": "Kierowanie ruchem",
+      "numer": "RUCH-089",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 108",
+      "lat": 50.27887534329417,
+      "lng": 19.0691614181653
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-239",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 109",
+      "lat": 50.28259582215642,
+      "lng": 19.06396293973322
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-240",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 109",
+      "lat": 50.283819083133885,
+      "lng": 19.062456795991814
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-241",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 109",
+      "lat": 50.28425619925767,
+      "lng": 19.06159308444409
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-242",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 109",
+      "lat": 50.28327926642412,
+      "lng": 19.062800091603794
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-243",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 110",
+      "lat": 50.286321340253764,
+      "lng": 19.059197902679447
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-244",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 110",
+      "lat": 50.285889557916676,
+      "lng": 19.060012148642823
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-245",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 111",
+      "lat": 50.29322748659287,
+      "lng": 19.0479004055512
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-246",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 111",
+      "lat": 50.292206215697504,
+      "lng": 19.049118128443965
+    },
+    {
+      "typ": "Kierowanie ruchem",
+      "numer": "RUCH-090",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 111",
+      "lat": 50.293683899400264,
+      "lng": 19.04771673779504
+    },
+    {
+      "typ": "Kierowanie ruchem",
+      "numer": "RUCH-091",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 112",
+      "lat": 50.294047089989824,
+      "lng": 19.046429726713807
+    },
+    {
+      "typ": "Ochrona",
+      "numer": "OCHR-032",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 112",
+      "lat": 50.29413566086704,
+      "lng": 19.045534720598308
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-218",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 112",
+      "lat": 50.29402651604962,
+      "lng": 19.045346492387136
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-247",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 112",
+      "lat": 50.29379641183837,
+      "lng": 19.04672026259844
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-248",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 113",
+      "lat": 50.29647475247108,
+      "lng": 19.043962955474857
+    },
+    {
+      "typ": "Kierowanie ruchem",
+      "numer": "RUCH-092",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 113",
+      "lat": 50.29660504723705,
+      "lng": 19.0440273060289
+    },
+    {
+      "typ": "Ochrona",
+      "numer": "OCHR-033",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 113",
+      "lat": 50.29652275584741,
+      "lng": 19.043308724841907
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-219",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 113",
+      "lat": 50.29659133201534,
+      "lng": 19.04341597576533
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-249",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 114",
+      "lat": 50.29699914058046,
+      "lng": 19.04303508898222
+    },
+    {
+      "typ": "Ochrona",
+      "numer": "OCHR-034",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 114",
+      "lat": 50.29695799524429,
+      "lng": 19.042943925697298
+    },
+    {
+      "typ": "Ochrona",
+      "numer": "OCHR-035",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 115",
+      "lat": 50.297664318577205,
+      "lng": 19.042214619417965
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-250",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 115",
+      "lat": 50.29772125089594,
+      "lng": 19.04216539436733
+    },
+    {
+      "typ": "Kierowanie ruchem",
+      "numer": "RUCH-093",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 115",
+      "lat": 50.29788922507264,
+      "lng": 19.042336995844842
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-220",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 115",
+      "lat": 50.297930274409616,
+      "lng": 19.042369171121884
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-221",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 115",
+      "lat": 50.29776910148105,
+      "lng": 19.0421707569135
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-251",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 116",
+      "lat": 50.29914913002461,
+      "lng": 19.03932809829712
+    },
+    {
+      "typ": "Medyczny",
+      "numer": "MED-008",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "",
+      "lat": 50.299265646677576,
+      "lng": 19.038797013424723
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-252",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 117",
+      "lat": 50.29997988162044,
+      "lng": 19.037375852583754
+    },
+    {
+      "typ": "Kierowanie ruchem",
+      "numer": "RUCH-094",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 117",
+      "lat": 50.30044226702384,
+      "lng": 19.037809174326842
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-222",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 117",
+      "lat": 50.30037686268522,
+      "lng": 19.037750186318963
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-253",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 118",
+      "lat": 50.300350176497844,
+      "lng": 19.03601825798833
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-254",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 118",
+      "lat": 50.3006237164264,
+      "lng": 19.035825032243327
+    },
+    {
+      "typ": "Kierowanie ruchem",
+      "numer": "RUCH-095",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 118",
+      "lat": 50.30094278582271,
+      "lng": 19.035970053100367
+    },
+    {
+      "typ": "Kierowanie ruchem",
+      "numer": "RUCH-096",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 118",
+      "lat": 50.29998435133579,
+      "lng": 19.035712217548983
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-223",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 118",
+      "lat": 50.30001520837812,
+      "lng": 19.035736349006772
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-224",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 118",
+      "lat": 50.30097348100702,
+      "lng": 19.035988388676827
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-225",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 119",
+      "lat": 50.30247169009149,
+      "lng": 19.03512768784918
+    },
+    {
+      "typ": "Kierowanie ruchem",
+      "numer": "RUCH-097",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 119",
+      "lat": 50.30242970059591,
+      "lng": 19.035124605062556
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-255",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 119",
+      "lat": 50.30105832678104,
+      "lng": 19.034725095372742
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-256",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 120",
+      "lat": 50.301759817615356,
+      "lng": 19.032340767858678
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-257",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 120",
+      "lat": 50.30187981263294,
+      "lng": 19.032831440833366
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-226",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 120",
+      "lat": 50.30198948616094,
+      "lng": 19.032769589982166
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-227",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 120",
+      "lat": 50.301903713500444,
+      "lng": 19.032394211750148
+    },
+    {
+      "typ": "Kierowanie ruchem",
+      "numer": "RUCH-098",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 120",
+      "lat": 50.30186771504503,
+      "lng": 19.03241029938865
+    },
+    {
+      "typ": "Medyczny",
+      "numer": "MED-009",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "",
+      "lat": 50.30171343564185,
+      "lng": 19.032705239428118
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-258",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 121",
+      "lat": 50.30066195652925,
+      "lng": 19.03097794532717
+    },
+    {
+      "typ": "Ochrona",
+      "numer": "OCHR-036",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 121",
+      "lat": 50.30045491269048,
+      "lng": 19.031353390946087
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-228",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 121",
+      "lat": 50.300523483190126,
+      "lng": 19.031278315299666
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-229",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 121",
+      "lat": 50.30011891581333,
+      "lng": 19.030935112344686
+    },
+    {
+      "typ": "Kierowanie ruchem",
+      "numer": "RUCH-099",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 121",
+      "lat": 50.299995487793,
+      "lng": 19.031171064376245
+    },
+    {
+      "typ": "Kierowanie ruchem",
+      "numer": "RUCH-100",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 123",
+      "lat": 50.29917506614487,
+      "lng": 19.027172645257526
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-230",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 123",
+      "lat": 50.29914671634881,
+      "lng": 19.02761147742357
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-231",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 123",
+      "lat": 50.29903014306665,
+      "lng": 19.02719856136834
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-232",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 123",
+      "lat": 50.299122715990556,
+      "lng": 19.027407700669016
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-259",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 123",
+      "lat": 50.29895471314363,
+      "lng": 19.027713365800825
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-260",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 124",
+      "lat": 50.298532989097495,
+      "lng": 19.026624768927977
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-261",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 124",
+      "lat": 50.298433926795,
+      "lng": 19.026796110217173
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-262",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 124",
+      "lat": 50.29798819720122,
+      "lng": 19.0264850825392
+    },
+    {
+      "typ": "Kierowanie ruchem",
+      "numer": "RUCH-101",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 124",
+      "lat": 50.29794362401214,
+      "lng": 19.02639391925432
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-233",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 124",
+      "lat": 50.29801545781809,
+      "lng": 19.026275943238524
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-234",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 124",
+      "lat": 50.29824175169638,
+      "lng": 19.026442182169866
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-235",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 124",
+      "lat": 50.298618905768066,
+      "lng": 19.02683901058655
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-236",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 124",
+      "lat": 50.29886233999008,
+      "lng": 19.027037424794898
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-237",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 125",
+      "lat": 50.29709077133048,
+      "lng": 19.025674885077645
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-238",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 125",
+      "lat": 50.297498565900604,
+      "lng": 19.02593759368431
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-239",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 125",
+      "lat": 50.29618182194585,
+      "lng": 19.025138574304727
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-240",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 126",
+      "lat": 50.29501038919686,
+      "lng": 19.024430317632422
+    },
+    {
+      "typ": "Ochrona",
+      "numer": "OCHR-037",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 126",
+      "lat": 50.2950513827325,
+      "lng": 19.024264125497567
+    },
+    {
+      "typ": "Ochrona",
+      "numer": "OCHR-038",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 126",
+      "lat": 50.29460562144562,
+      "lng": 19.02448398989062
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-241",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 126",
+      "lat": 50.2946467688163,
+      "lng": 19.024585878267875
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-242",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 127",
+      "lat": 50.29357692561293,
+      "lng": 19.023561631949075
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-263",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 127",
+      "lat": 50.293041994989984,
+      "lng": 19.023164803532346
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-264",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 127",
+      "lat": 50.293474826142486,
+      "lng": 19.023523521337285
+    },
+    {
+      "typ": "Kierowanie ruchem",
+      "numer": "RUCH-102",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 127",
+      "lat": 50.29356398085291,
+      "lng": 19.023432358052364
+    },
+    {
+      "typ": "Kierowanie ruchem",
+      "numer": "RUCH-103",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 128",
+      "lat": 50.29166202157407,
+      "lng": 19.018583583047498
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-243",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 128",
+      "lat": 50.291710029806424,
+      "lng": 19.01862112087071
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-244",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 129",
+      "lat": 50.29292079464011,
+      "lng": 19.01368618011475
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-245",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 129",
+      "lat": 50.29292050708575,
+      "lng": 19.015017489843327
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-246",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 129",
+      "lat": 50.29307824406669,
+      "lng": 19.014282821017794
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-247",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 129",
+      "lat": 50.29321197718436,
+      "lng": 19.013719753669765
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-248",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 129",
+      "lat": 50.29331141951538,
+      "lng": 19.0132961125222
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-249",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 129",
+      "lat": 50.29350678903773,
+      "lng": 19.012522129480146
+    },
+    {
+      "typ": "Ochrona",
+      "numer": "OCHR-039",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 129",
+      "lat": 50.29285878377694,
+      "lng": 19.013666128208055
+    },
+    {
+      "typ": "Kierowanie ruchem",
+      "numer": "RUCH-104",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 129",
+      "lat": 50.29294108150421,
+      "lng": 19.015097928035914
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-265",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 129",
+      "lat": 50.2930062337707,
+      "lng": 19.015055027666538
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-266",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 129",
+      "lat": 50.29339371645975,
+      "lng": 19.013237124514326
+    },
+    {
+      "typ": "Punkt żywieniowy",
+      "numer": "ZYW-008",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "",
+      "lat": 50.293434864878535,
+      "lng": 19.012883196467016
+    },
+    {
+      "typ": "Medyczny",
+      "numer": "MED-010",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "",
+      "lat": 50.29336285512227,
+      "lng": 19.013047793778757
+    },
+    {
+      "typ": "Toaleta",
+      "numer": "TOAL-008",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "",
+      "lat": 50.293476013261746,
+      "lng": 19.012647244435463
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-250",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 129",
+      "lat": 50.29291707801515,
+      "lng": 19.013585690015503
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-251",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 129A",
+      "lat": 50.28588319622667,
+      "lng": 19.017709078084575
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-267",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 129A",
+      "lat": 50.285983681627265,
+      "lng": 19.017619499936195
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-252",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 130",
+      "lat": 50.29371230296732,
+      "lng": 19.011636410215335
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-253",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 130",
+      "lat": 50.29394486912603,
+      "lng": 19.01062547809596
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-254",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 130",
+      "lat": 50.29415939076614,
+      "lng": 19.00978334979846
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-255",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 130",
+      "lat": 50.29443005705079,
+      "lng": 19.008686226166958
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-256",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 130",
+      "lat": 50.294750627945895,
+      "lng": 19.007257107612222
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-257",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 130",
+      "lat": 50.29523029612971,
+      "lng": 19.00530416556766
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-258",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 131",
+      "lat": 50.29537259543365,
+      "lng": 19.004507827461165
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-259",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 131",
+      "lat": 50.29543759088678,
+      "lng": 19.004566495381326
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-268",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 131",
+      "lat": 50.29541010925261,
+      "lng": 19.004890929424715
+    },
+    {
+      "typ": "Ochrona",
+      "numer": "OCHR-040",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 131",
+      "lat": 50.29542553925987,
+      "lng": 19.004633527208455
+    },
+    {
+      "typ": "Kierowanie ruchem",
+      "numer": "RUCH-105",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 131",
+      "lat": 50.295398108132396,
+      "lng": 19.004483375915655
+    },
+    {
+      "typ": "Kierowanie ruchem",
+      "numer": "RUCH-106",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 131",
+      "lat": 50.29471918268736,
+      "lng": 19.004663021212412
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-260",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 131",
+      "lat": 50.29518551635816,
+      "lng": 19.00456917665441
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-261",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 131",
+      "lat": 50.29466774854673,
+      "lng": 19.00468715267017
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-269",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 132",
+      "lat": 50.29394252124458,
+      "lng": 19.002319588535382
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-270",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 133",
+      "lat": 50.292298457025076,
+      "lng": 18.999306484150228
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-262",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 133",
+      "lat": 50.292183492146876,
+      "lng": 18.99928503396552
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-263",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 133",
+      "lat": 50.292200637761795,
+      "lng": 18.999381559796607
+    },
+    {
+      "typ": "Ochrona",
+      "numer": "OCHR-041",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 133",
+      "lat": 50.29214920089849,
+      "lng": 18.999218002138388
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-271",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 135",
+      "lat": 50.29508671714056,
+      "lng": 18.993218202877134
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-272",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 135",
+      "lat": 50.29502314715451,
+      "lng": 18.99213469806698
+    },
+    {
+      "typ": "Punkt żywieniowy",
+      "numer": "ZYW-009",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "",
+      "lat": 50.29500620256553,
+      "lng": 18.99396456531795
+    },
+    {
+      "typ": "Toaleta",
+      "numer": "TOAL-009",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "",
+      "lat": 50.29506792308855,
+      "lng": 18.993557011808885
+    },
+    {
+      "typ": "Medyczny",
+      "numer": "MED-011",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "",
+      "lat": 50.29495133981121,
+      "lng": 18.99432921845759
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-273",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 136",
+      "lat": 50.29539165057182,
+      "lng": 18.98895079803924
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-264",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 137",
+      "lat": 50.296988077142316,
+      "lng": 18.98294989548129
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-265",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 137",
+      "lat": 50.29706263205373,
+      "lng": 18.982581974077387
+    },
+    {
+      "typ": "Ochrona",
+      "numer": "OCHR-042",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 137",
+      "lat": 50.29715173730027,
+      "lng": 18.982667774816143
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-274",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 137",
+      "lat": 50.29617104973789,
+      "lng": 18.983139678879244
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-266",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 137",
+      "lat": 50.296253341735884,
+      "lng": 18.983161129063916
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-275",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 138",
+      "lat": 50.29504637816582,
+      "lng": 18.983686658588734
+    },
+    {
+      "typ": "Ochrona",
+      "numer": "OCHR-043",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 138",
+      "lat": 50.29393658893442,
+      "lng": 18.983107301441517
+    },
+    {
+      "typ": "Ochrona",
+      "numer": "OCHR-044",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 139",
+      "lat": 50.2931547711363,
+      "lng": 18.98246379590094
+    },
+    {
+      "typ": "Ochrona",
+      "numer": "OCHR-045",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 139",
+      "lat": 50.29228485606334,
+      "lng": 18.981980762424126
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-267",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 139",
+      "lat": 50.29223684841094,
+      "lng": 18.982259614825054
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-268",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 140",
+      "lat": 50.29110945137385,
+      "lng": 18.980845179242955
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-269",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 140",
+      "lat": 50.29073419428841,
+      "lng": 18.98092297734332
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-270",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 140",
+      "lat": 50.2910297829458,
+      "lng": 18.98109057975962
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-276",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 140",
+      "lat": 50.290586802345224,
+      "lng": 18.98108393141059
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-277",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 141",
+      "lat": 50.29077359793647,
+      "lng": 18.97781163454056
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-271",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 141",
+      "lat": 50.29074109549054,
+      "lng": 18.977502508506788
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-272",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 141",
+      "lat": 50.29090564761001,
+      "lng": 18.977481047090944
+    },
+    {
+      "typ": "Ochrona",
+      "numer": "OCHR-046",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 141",
+      "lat": 50.29099478964742,
+      "lng": 18.97744350552405
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-273",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 142",
+      "lat": 50.29074002877051,
+      "lng": 18.975533381487068
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-278",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 142",
+      "lat": 50.290818900940664,
+      "lng": 18.9755119313024
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-274",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 142",
+      "lat": 50.29063029335978,
+      "lng": 18.975613819679655
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-279",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 143",
+      "lat": 50.2905548501181,
+      "lng": 18.973206036448584
+    },
+    {
+      "typ": "Ochrona",
+      "numer": "OCHR-048",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 143",
+      "lat": 50.290407392527655,
+      "lng": 18.972996863454455
+    },
+    {
+      "typ": "Ochrona",
+      "numer": "OCHR-049",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 143",
+      "lat": 50.29028532469899,
+      "lng": 18.972852267509197
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-280",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 143",
+      "lat": 50.290239302554134,
+      "lng": 18.97269638117044
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-281",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa U1",
+      "lat": 50.280253731644095,
+      "lng": 18.9900662029633
+    },
+    {
+      "typ": "Ochrona",
+      "numer": "OCHR-050",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa U1",
+      "lat": 50.28011312932966,
+      "lng": 18.990186815327558
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-282",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa U2",
+      "lat": 50.27968609323258,
+      "lng": 18.989484321779067
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-283",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa U2",
+      "lat": 50.27839092479721,
+      "lng": 18.987421989440918
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-284",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa U2",
+      "lat": 50.27725613067937,
+      "lng": 18.985313773155216
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-285",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa U2",
+      "lat": 50.277129341409335,
+      "lng": 18.985887765884403
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-286",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa U2",
+      "lat": 50.27800349678106,
+      "lng": 18.986805081367493
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-287",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa U3",
+      "lat": 50.277895168198796,
+      "lng": 18.993550314791545
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-288",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa U3",
+      "lat": 50.27819702072714,
+      "lng": 18.994239401974582
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-289",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa U4",
+      "lat": 50.28039383904084,
+      "lng": 18.997588312058824
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-290",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa U5",
+      "lat": 50.28351421847391,
+      "lng": 19.000609823240044
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-291",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa U6",
+      "lat": 50.29162403092007,
+      "lng": 18.998386345132808
+    },
+    {
+      "typ": "Ochrona",
+      "numer": "OCHR-051",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa U6",
+      "lat": 50.292286064584886,
+      "lng": 18.99947466684252
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-292",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa U8",
+      "lat": 50.295151777669524,
+      "lng": 18.9922446012497
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-293",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa U9",
+      "lat": 50.29535321389149,
+      "lng": 18.988833696181185
+    },
+    {
+      "typ": "Ochrona",
+      "numer": "OCHR-052",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa U10",
+      "lat": 50.29705984439432,
+      "lng": 18.982775461882483
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-294",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa U10",
+      "lat": 50.29609977656036,
+      "lng": 18.98298996372937
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-295",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa U11",
+      "lat": 50.29513052169718,
+      "lng": 18.983805256061416
+    },
+    {
+      "typ": "Ochrona",
+      "numer": "OCHR-053",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa U11",
+      "lat": 50.293906361332695,
+      "lng": 18.98296333631246
+    },
+    {
+      "typ": "Ochrona",
+      "numer": "OCHR-054",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa U12",
+      "lat": 50.29314168831367,
+      "lng": 18.982657671180693
+    },
+    {
+      "typ": "Ochrona",
+      "numer": "OCHR-055",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa U12",
+      "lat": 50.29223298018148,
+      "lng": 18.982116054017332
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-275",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa U13",
+      "lat": 50.291019985068175,
+      "lng": 18.980920107012587
+    },
+    {
+      "typ": "Ochrona",
+      "numer": "OCHR-056",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa U13",
+      "lat": 50.29105256252785,
+      "lng": 18.981016632843673
+    },
+    {
+      "typ": "Ochrona",
+      "numer": "OCHR-057",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa U14",
+      "lat": 50.29096723389485,
+      "lng": 18.977535367012027
+    },
+    {
+      "typ": "Ochrona",
+      "numer": "OCHR-058",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa U14",
+      "lat": 50.29064968945558,
+      "lng": 18.975486128438995
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-296",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa U14",
+      "lat": 50.29072218833645,
+      "lng": 18.977562189102173
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-297",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa U15",
+      "lat": 50.29055207179255,
+      "lng": 18.981021675302085
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-298",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa U15",
+      "lat": 50.28953213557924,
+      "lng": 18.98096548836622
+    },
+    {
+      "typ": "Ochrona",
+      "numer": "OCHR-059",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa U16",
+      "lat": 50.28656910681155,
+      "lng": 18.982625190790753
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-276",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa U16",
+      "lat": 50.28669256966696,
+      "lng": 18.982534027505874
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-277",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa U16",
+      "lat": 50.28647992344899,
+      "lng": 18.982523302413497
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-278",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa U17",
+      "lat": 50.28566070066891,
+      "lng": 18.98030309598695
+    },
+    {
+      "typ": "Ochrona",
+      "numer": "OCHR-060",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 9A",
+      "lat": 50.27585814418104,
+      "lng": 19.000799979465047
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-299",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 28",
+      "lat": 50.25769014669411,
+      "lng": 19.035910788057496
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-300",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 8",
+      "lat": 50.275970595755396,
+      "lng": 18.998488759502195
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-279",
+      "sektor": "Odcinek 3",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 67",
+      "lat": 50.234454978259244,
+      "lng": 19.111027833364837
+    },
+    {
+      "typ": "Kierowanie ruchem",
+      "numer": "RUCH-107",
+      "sektor": "Odcinek 3",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 82",
+      "lat": 50.26258361633999,
+      "lng": 19.094966436336627
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-280",
+      "sektor": "Odcinek 3",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 82",
+      "lat": 50.262689985169004,
+      "lng": 19.095277464014565
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-281",
+      "sektor": "Odcinek 3",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 82",
+      "lat": 50.26252528494578,
+      "lng": 19.094864547959336
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-282",
+      "sektor": "Odcinek 3",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 82",
+      "lat": 50.262689985169004,
+      "lng": 19.09554022877699
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-301",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 121",
+      "lat": 50.2996543346253,
+      "lng": 19.03041243553162
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-302",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 123",
+      "lat": 50.299448024202526,
+      "lng": 19.0283616161744
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-303",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 141",
+      "lat": 50.290715319168996,
+      "lng": 18.977500498294834
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-304",
+      "sektor": "Odcinek 2",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 41",
+      "lat": 50.234008464663724,
+      "lng": 19.02947602807776
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-305",
+      "sektor": "Odcinek 2",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 41",
+      "lat": 50.234646461609806,
+      "lng": 19.033114275285108
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-306",
+      "sektor": "Odcinek 2",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 41",
+      "lat": 50.23409026886661,
+      "lng": 19.03039010182989
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-307",
+      "sektor": "Odcinek 2",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 41",
+      "lat": 50.23517518202924,
+      "lng": 19.036514129557975
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-283",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa U2",
+      "lat": 50.27892823247591,
+      "lng": 18.988301753997806
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-284",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa U2",
+      "lat": 50.27866831206585,
+      "lng": 18.987899422645572
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-285",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa U2",
+      "lat": 50.27843857969813,
+      "lng": 18.98749172687531
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-286",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa U2",
+      "lat": 50.277639651041355,
+      "lng": 18.986295461654667
+    },
+    {
+      "typ": "Płoty",
+      "numer": "PLOT-287",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa U2",
+      "lat": 50.27730361695685,
+      "lng": 18.985775113105777
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-308",
+      "sektor": "Odcirnek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa U8",
+      "lat": 50.29498210653322,
+      "lng": 18.99208635091782
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-309",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa U13",
+      "lat": 50.29097204725531,
+      "lng": 18.980955183506016
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-310",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa U14",
+      "lat": 50.29079227046674,
+      "lng": 18.975550532341003
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-311",
+      "sektor": "Odcinek",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa U17",
+      "lat": 50.28569198670499,
+      "lng": 18.980252444744114
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-312",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa U17",
+      "lat": 50.285520570040994,
+      "lng": 18.980241715908054
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-313",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 121",
+      "lat": 50.29942466486238,
+      "lng": 19.03016030788422
+    },
+    {
+      "typ": "Ochrona",
+      "numer": "OCHR-061",
+      "sektor": "Odcienek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 121",
+      "lat": 50.2996134463409,
+      "lng": 19.02885675430298
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-314",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 122",
+      "lat": 50.29960631341707,
+      "lng": 19.028497338294986
+    },
+    {
+      "typ": "Wolontariusz",
+      "numer": "WOL-315",
+      "sektor": "Odcinek 4",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 140",
+      "lat": 50.29073739185318,
+      "lng": 18.97812813520432
+    },
+    {
+      "typ": "Kierowanie ruchem",
+      "numer": "RUCH-108",
+      "sektor": "Odcinek 1",
+      "liczba_osob": 1,
+      "telefon": "",
+      "uwagi": "Mapa 21",
+      "lat": 50.267570495664906,
+      "lng": 19.011304378509525
+    }
+  ]
+}

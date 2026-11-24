@@ -138,6 +138,25 @@ body {
     height: 80% !important;
 }
 
+.barrier-count-label {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 2px;
+    padding: 1px 4px;
+    background: rgba(255, 255, 255, 0.94);
+    border: 1px solid #212529;
+    border-radius: 3px;
+    color: #111111;
+    font-size: 10px;
+    font-weight: 700;
+    line-height: 1.1;
+    white-space: nowrap;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+    pointer-events: none;
+}
+
 .point-icon-badge.icon-ploty svg {
     width: 22.5px !important;
     height: 9.216px !important;
@@ -1532,9 +1551,16 @@ function buildIcon(point) {
         baseAnchor[1] - offset.y * scale
     ];
     const iconRotation = isLinearElement ? point.routeAngle : null;
-    const iconHtml = Number.isFinite(iconRotation)
+    const baseSvg = Number.isFinite(iconRotation)
         ? getIconHtml(cfg).replace("<svg ", `<svg style="transform:rotate(${iconRotation}deg);transform-origin:center;" `)
         : getIconHtml(cfg);
+
+    const barrierCount = Number(point.liczba_osob);
+    const showBarrierBadge = isBarierki && Number.isFinite(barrierCount) && barrierCount > 2;
+    const iconHtml = showBarrierBadge
+        ? `${baseSvg}<span class="barrier-count-label">B x ${escapeHtml(String(barrierCount))}</span>`
+        : baseSvg;
+
     return L.divIcon({
         className: `custom-marker-icon ${cfg.className}`,
         html: iconHtml,
@@ -1591,6 +1617,7 @@ function updateExistingMarker(id, p) {
     }
     if (existing.lat !== p.lat || existing.lng !== p.lng) existing.marker.setLatLng([p.lat, p.lng]);
     if (existing.routeAngle !== p.routeAngle ||
+        existing.liczba_osob !== p.liczba_osob ||
         existing.positionOffset.x !== p.positionOffset.x ||
         existing.positionOffset.y !== p.positionOffset.y) {
         existing.marker.setIcon(buildIcon(p));
@@ -2505,7 +2532,7 @@ async function prepareAtlasIcons() {
     return icons;
 }
 
-function drawAtlasMarker(ctx, x, y, k, type, icons, routeAngle = null) {
+function drawAtlasMarker(ctx, x, y, k, type, icons, routeAngle = null, count = 0) {
     const st = ATLAS_MARKER_STYLE[type] || { bg: "#ffffff", border: "#333333" };
     const r = ATLAS_MARKER_R_PX * k;
 
@@ -2540,9 +2567,37 @@ function drawAtlasMarker(ctx, x, y, k, type, icons, routeAngle = null) {
             ctx.rotate(routeAngle * Math.PI / 180);
             ctx.drawImage(img, -iconWidth / 2, -iconHeight / 2, iconWidth, iconHeight);
             ctx.restore();
-            return;
+        } else {
+            ctx.drawImage(img, x - iconWidth / 2, y - iconHeight / 2, iconWidth, iconHeight);
         }
-        ctx.drawImage(img, x - iconWidth / 2, y - iconHeight / 2, iconWidth, iconHeight);
+    }
+
+    const numericCount = Number(count);
+    if (type === "Barierki" && Number.isFinite(numericCount) && numericCount > 2) {
+        const label = `B x ${numericCount}`;
+        const fontSize = Math.max(9, 10 * k);
+        const barrierHalfH = ((ATLAS_ICON_SIZES["Barierki"]?.height) || 12) * k / 2;
+        ctx.save();
+        ctx.font = `700 ${fontSize}px Arial, sans-serif`;
+        ctx.textAlign = "center";
+        ctx.textBaseline = "top";
+        const textWidth = ctx.measureText(label).width;
+        const padX = 3 * k;
+        const padY = 1.5 * k;
+        const boxW = textWidth + padX * 2;
+        const boxH = fontSize + padY * 2;
+        const boxX = x - boxW / 2;
+        const boxY = y + barrierHalfH + 2 * k;
+
+        ctx.fillStyle = "rgba(255, 255, 255, 0.94)";
+        ctx.strokeStyle = "#212529";
+        ctx.lineWidth = Math.max(0.8, 1 * k);
+        ctx.fillRect(boxX, boxY, boxW, boxH);
+        ctx.strokeRect(boxX, boxY, boxW, boxH);
+
+        ctx.fillStyle = "#111111";
+        ctx.fillText(label, x, boxY + padY);
+        ctx.restore();
     }
 }
 
@@ -3275,7 +3330,7 @@ async function generateRouteAtlas() {
                             : p.typ === "Śluza" || p.typ === "Barierki"
                                 ? getRoutePerpendicularAngle(p.lat, p.lng, routeKey)
                                 : p.typ === "Taśma" ? getRouteAngle(p.lat, p.lng, routeKey) : null;
-                drawAtlasMarker(ctx, drawX * SC, drawY * SC, SC, p.typ, atlasIcons, routeAngle);
+                drawAtlasMarker(ctx, drawX * SC, drawY * SC, SC, p.typ, atlasIcons, routeAngle, p.liczba_osob);
                 const summaryType = removePolishDiacritics(p.typ);
                 summary[summaryType]++;
 

@@ -792,7 +792,7 @@ function toggleRouteLayer(key, isVisible) {
         if (!map.hasLayer(arrowLayer)) arrowLayer.addTo(map);
     } else {
         if (map.hasLayer(layer)) map.removeLayer(layer);
-        if (map.hasLayer(arrowLayer)) map.removeLayer(arrowLayer);
+        if (map.hasLayer(arrowLayer)) arrowLayer.removeLayer(arrowLayer);
     }
 }
 
@@ -1099,10 +1099,10 @@ async function loadGpxRoutes() {
 }
 
 function collectLineSegmentsFromGeoJson(geojson, targetArray) {
-    const collectGeometry = geometry => {
+    const collectGeometry = (geometry, streetName = "") => {
         if (!geometry) return;
         if (geometry.type === "GeometryCollection") {
-            geometry.geometries.forEach(collectGeometry);
+            geometry.geometries.forEach(g => collectGeometry(g, streetName));
             return;
         }
 
@@ -1115,6 +1115,7 @@ function collectLineSegmentsFromGeoJson(geojson, targetArray) {
                 if (Number.isFinite(start[0]) && Number.isFinite(start[1]) &&
                     Number.isFinite(end[0]) && Number.isFinite(end[1])) {
                     targetArray.push({
+                        name: streetName,
                         start: mercNorm(start[1], start[0]),
                         end: mercNorm(end[1], end[0])
                     });
@@ -1123,7 +1124,87 @@ function collectLineSegmentsFromGeoJson(geojson, targetArray) {
         });
     };
 
-    (geojson.features || []).forEach(feature => collectGeometry(feature.geometry));
+    (geojson.features || []).forEach(feature => {
+        const streetName = String(feature.properties?.name || "").trim();
+        collectGeometry(feature.geometry, streetName);
+    });
+}
+
+function findNearestStreetName(lat, lng, maxMeters = 120) {
+    if (!streetSegments.length) return "";
+    const point = mercNorm(lat, lng);
+    let bestName = "";
+    let bestDistSq = Infinity;
+
+    streetSegments.forEach(seg => {
+        if (!seg.name) return;
+        const dx = seg.end.x - seg.start.x, dy = seg.end.y - seg.start.y;
+        const lenSq = dx * dx + dy * dy;
+        if (!lenSq) return;
+        const t = Math.max(0, Math.min(1, ((point.x - seg.start.x) * dx + (point.y - seg.start.y) * dy) / lenSq));
+        const cx = seg.start.x + t * dx, cy = seg.start.y + t * dy;
+        const distSq = (point.x - cx) ** 2 + (point.y - cy) ** 2;
+        if (distSq < bestDistSq) {
+            bestDistSq = distSq;
+            bestName = seg.name;
+        }
+    });
+
+    if (!bestName || !Number.isFinite(bestDistSq)) return "";
+    const midLatRad = (lat * Math.PI) / 180;
+    const approxMeters = Math.sqrt(bestDistSq) * 40075016.686 * Math.cos(midLatRad);
+    return approxMeters <= maxMeters ? bestName : "";
+}
+
+const reverseGeocodeCache = new Map();
+
+async function reverseGeocodePoint(lat, lng) {
+    const key = `${lat.toFixed(5)},${lng.toFixed(5)}`;
+    if (reverseGeocodeCache.has(key)) return reverseGeocodeCache.get(key);
+
+    try {
+        const url = `https://nominatim.openstreetmap.org/reverse?format=jsonv2&lat=${encodeURIComponent(lat)}&lon=${encodeURIComponent(lng)}&zoom=18&addressdetails=1`;
+        const res = await fetch(url, { headers: { "Accept": "application/json" } });
+        if (res.ok) {
+            const data = await res.json();
+            const a = data.address || {};
+            const road = a.road || a.pedestrian || a.footway || a.cycleway || "";
+            const house = a.house_number ? ` ${a.house_number}` : "";
+            const city = a.city || a.town || a.village || a.municipality || "";
+            const formatted = [road ? `${road}${house}` : "", city].filter(Boolean).join(", ") || (data.display_name ? data.display_name.split(",").slice(0, 2).join(",").trim() : "");
+            if (formatted) {
+                reverseGeocodeCache.set(key, formatted);
+                return formatted;
+            }
+        }
+    } catch (_) {
+        // Fallback do najbliższej ulicy z siatki
+    }
+
+    const fallbackStreet = findNearestStreetName(lat, lng);
+    const result = fallbackStreet ? `ok. ul. ${fallbackStreet.replace(/^ul\.\s*/i, "")}` : "";
+    reverseGeocodeCache.set(key, result);
+    return result;
+}
+
+async function fillMissingAddressesForPoints(useNominatim = true) {
+    let updated = 0;
+    for (const point of pointsMap.values()) {
+        if (point.adres && point.adres.trim()) continue;
+        let addr = "";
+        if (useNominatim) {
+            addr = await reverseGeocodePoint(point.lat, point.lng);
+            await sleep(1100);
+        } else {
+            const street = findNearestStreetName(point.lat, point.lng);
+            addr = street ? `ok. ul. ${street.replace(/^ul\.\s*/i, "")}` : "";
+        }
+        if (addr) {
+            point.adres = addr;
+            updated++;
+        }
+    }
+    return updated;
 }
 
 function collectRouteSegments(geojson, routeKey) {
@@ -2153,6 +2234,10 @@ function createUpdatedPointsDocument() {
             point.przesuniecieX = offset.x;
             point.przesuniecieY = offset.y;
         }
+        const livePoint = pointsMap.get(pointId);
+        if (livePoint && livePoint.adres) {
+            point.adres = livePoint.adres;
+        }
     });
     return documentCopy;
 }
@@ -2382,7 +2467,7 @@ const ATLAS = {
     ICON_OFFSET_MAX_PX: 4,
     EDGE_PX: 20,
     OFFROUTE_MAX_M: 1500,
-    PAGES_PER_FILE: 40,
+    PAGES_PER_FILE: 20,
     MAX_PAGES: 5000
 };
 
@@ -3305,6 +3390,7 @@ async function generateRouteAtlas() {
 
             drawPageFooter(pdf, mapWidthMm, routeKey, page, idx + 1, pages.length, summary, edgeNotes, scale);
             addAtlasPointIndex(pdf, routeKey, page, idx + 1, metersPerPx, mapPagesByPoint);
+            await sleep(30);
         }
 
         if (!isAtlasCancelled) {

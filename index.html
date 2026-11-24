@@ -790,8 +790,10 @@ function toggleRouteLayer(key, isVisible) {
     if (isVisible) {
         if (!map.hasLayer(layer)) layer.addTo(map);
         if (!map.hasLayer(arrowLayer)) arrowLayer.addTo(map);
+        refreshRouteArrows();
     } else {
         if (map.hasLayer(layer)) map.removeLayer(layer);
+        arrowLayer.clearLayers();
         if (map.hasLayer(arrowLayer)) map.removeLayer(arrowLayer);
     }
 }
@@ -803,6 +805,15 @@ function refreshRouteArrows() {
         const route = CONFIG_ROUTES[key];
         if (!route.arrowLayer) return;
         route.arrowLayer.clearLayers();
+
+        const chk = document.getElementById(`route_chk_${key}`);
+        const isVisible = chk ? chk.checked : map.hasLayer(route.layer);
+        if (!isVisible) {
+            if (map.hasLayer(route.arrowLayer)) map.removeLayer(route.arrowLayer);
+            return;
+        }
+        if (!map.hasLayer(route.arrowLayer)) route.arrowLayer.addTo(map);
+
         collectSegments(route.layer).forEach(segment => {
             let distanceToNextArrow = spacing;
             for (let i = 1; i < segment.length; i++) {

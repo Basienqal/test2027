@@ -86,19 +86,23 @@ body {
 }
 
 .custom-marker-icon svg {
-    width: 16px;
-    height: 16px;
+    width: 62%;
+    height: 62%;
     display: block;
 }
 
-.custom-marker-icon.icon-ochrona svg,
 .point-icon-badge.icon-ochrona svg,
-.custom-marker-icon.icon-ruchem svg,
 .point-icon-badge.icon-ruchem svg,
-.custom-marker-icon.icon-wolontariusz svg,
 .point-icon-badge.icon-wolontariusz svg {
     width: 20px !important;
     height: 20px !important;
+}
+
+.custom-marker-icon.icon-ochrona svg,
+.custom-marker-icon.icon-ruchem svg,
+.custom-marker-icon.icon-wolontariusz svg {
+    width: 77% !important;
+    height: 77% !important;
 }
 
 .custom-marker-icon.icon-lider {
@@ -1086,11 +1090,26 @@ function getLinearIconScale() {
     return Math.max(0.35, Math.min(2.2, rawScale));
 }
 
+function buildLiveUserIcon() {
+    const scale = getLinearIconScale();
+    const size = 26 * scale;
+    return L.divIcon({
+        className: 'custom-marker-icon icon-live-user',
+        html: SVG_LIVE_USER,
+        iconSize: [size, size],
+        iconAnchor: [size / 2, size / 2]
+    });
+}
+
 function refreshLinearIconsOnZoom() {
     pointsMap.forEach(point => {
-        if (ORIENTED_TYPES.has(point.typ)) {
-            point.marker.setIcon(buildIcon(point));
-        }
+        point.marker.setIcon(buildIcon(point));
+    });
+    if (myMarker) {
+        myMarker.setIcon(buildLiveUserIcon());
+    }
+    liveUsersMarkers.forEach(marker => {
+        marker.setIcon(buildLiveUserIcon());
     });
 }
 
@@ -1186,10 +1205,7 @@ function toggleGPS() {
             btn.style.background = "#dc3545";
 
             if (!myMarker) {
-                const icon = L.divIcon({
-                    className: 'custom-marker-icon icon-live-user',
-                    html: SVG_LIVE_USER, iconSize: [26, 26], iconAnchor: [13, 13]
-                });
+                const icon = buildLiveUserIcon();
                 myMarker = L.marker([lat, lng], { icon, zIndexOffset: 1000 }).addTo(map);
                 myMarker.bindPopup(`<b>${escapeHtml(userId)}</b><br>Twoja pozycja`);
             } else {
@@ -1252,10 +1268,7 @@ async function fetchLiveGpsUsers() {
             if (liveUsersMarkers.has(u.userId)) {
                 liveUsersMarkers.get(u.userId).setLatLng([lat, lng]);
             } else {
-                const customIcon = L.divIcon({
-                    className: 'custom-marker-icon icon-live-user',
-                    html: SVG_LIVE_USER, iconSize: [26, 26], iconAnchor: [13, 13]
-                });
+                const customIcon = buildLiveUserIcon();
                 const marker = L.marker([lat, lng], { icon: customIcon }).addTo(map);
                 marker.bindPopup(`<b><i class="fa-solid fa-satellite"></i> ${escapeHtml(String(u.userId))}</b><br>Aktywny Patrol (GPS Live)`);
                 liveUsersMarkers.set(u.userId, marker);
@@ -1758,7 +1771,7 @@ function buildIcon(point) {
     const isBarierki = point.typ === "Barierki";
     const isSign = point.typ === "Znak drogowy";
     const isLinearElement = ORIENTED_TYPES.has(point.typ);
-    const scale = isLinearElement ? getLinearIconScale() : 1;
+    const scale = getLinearIconScale();
 
     const baseSize = isBarierki
         ? [36, 14.4]
@@ -1785,8 +1798,9 @@ function buildIcon(point) {
 
     const barrierCount = Number(point.liczba_osob);
     const showBarrierBadge = isBarierki && Number.isFinite(barrierCount) && barrierCount > 2;
+    const badgeFontSize = Math.max(7, Number((10 * scale).toFixed(1)));
     const iconHtml = showBarrierBadge
-        ? `${baseSvg}<span class="barrier-count-label">B x ${escapeHtml(String(barrierCount))}</span>`
+        ? `${baseSvg}<span class="barrier-count-label" style="font-size:${badgeFontSize}px;">B x ${escapeHtml(String(barrierCount))}</span>`
         : baseSvg;
 
     return L.divIcon({

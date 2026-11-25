@@ -164,11 +164,60 @@ body {
 
 .custom-marker-icon.icon-znak-drogowy {
     overflow: visible !important;
+    border: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
 }
 
 .custom-marker-icon.icon-znak-drogowy svg {
-    width: 85% !important;
-    height: 85% !important;
+    width: 100% !important;
+    height: 100% !important;
+    filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.45));
+}
+
+.point-icon-badge.icon-znak-drogowy {
+    border: 0 !important;
+    border-radius: 3px !important;
+    background: transparent !important;
+    box-shadow: none !important;
+}
+
+.point-icon-badge.icon-znak-drogowy svg {
+    width: 22px !important;
+    height: 22px !important;
+}
+
+.sign-picker-box {
+    margin-top: 8px;
+    padding: 8px;
+    background: #fffbeb;
+    border: 1px solid #f59e0b;
+    border-radius: 5px;
+}
+
+.sign-preview-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 6px;
+    padding: 4px 6px;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 4px;
+}
+
+.sign-preview-box {
+    width: 34px;
+    height: 34px;
+    flex: 0 0 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sign-preview-box svg {
+    width: 32px;
+    height: 32px;
 }
 
 .route-direction-arrow {
@@ -209,7 +258,7 @@ body {
     background: transparent !important;
     box-shadow: none !important;
 }
-.icon-znak-drogowy { background: #fff3cd; border: 2px solid #d97706 !important; }
+.icon-znak-drogowy { background: transparent; border: 0 !important; }
 
 /* Styl dla użytkowników z aktywnym GPS Live */
 .icon-live-user {
@@ -470,6 +519,41 @@ body.atlas-mode .icon-live-user { display: none !important; }
         <small style="display:block; font-size:10px; color:#666; margin-bottom:6px;">
             0° oznacza poziomo; dodatni kąt obraca zgodnie z ruchem wskazówek zegara.
         </small>
+        <div id="signEditorPanel" class="sign-picker-box" style="display:none;">
+            <div style="font-size:12px; font-weight:bold; color:#92400e; margin-bottom:5px;">
+                <i class="fa-solid fa-traffic-light"></i> Wzór znaku drogowego (A, B, C, D)
+            </div>
+            <div class="sign-preview-row">
+                <div id="signPreviewSvg" class="sign-preview-box"></div>
+                <div style="min-width:0; flex:1;">
+                    <div id="signPreviewCode" style="font-size:12px; font-weight:bold; color:#111;">Domyślny znak</div>
+                    <div id="signPreviewName" style="font-size:10px; color:#555; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">Wybierz symbol z katalogu A–D</div>
+                </div>
+            </div>
+            <div style="display:grid; grid-template-columns:72px 1fr; gap:5px; margin-bottom:5px;">
+                <select id="signGroupFilter" class="search-box" style="margin:0; padding:5px; font-size:11px;">
+                    <option value="ALL">A–D</option>
+                    <option value="A">A (Ostrz.)</option>
+                    <option value="B">B (Zakazu)</option>
+                    <option value="C">C (Nakazu)</option>
+                    <option value="D">D (Inform.)</option>
+                </select>
+                <input id="signCatalogSearch" class="input-box" type="text" placeholder="Szukaj np. A-7, B-20, B-33, parking..." style="margin:0; padding:5px 7px; font-size:11px;">
+            </div>
+            <select id="signCodeSelect" class="search-box" style="margin-bottom:5px; font-size:11px;"></select>
+            <div id="signValueRow" style="display:none; margin-bottom:5px;">
+                <label for="signValueInput" style="display:block; font-size:11px; margin-bottom:2px;">Wartość na tarczy znaku (np. 30, 50, 2,5m, 3,5t)</label>
+                <input id="signValueInput" class="input-box" type="text" maxlength="10" placeholder="np. 50" style="margin:0; padding:5px 7px; font-size:11px;">
+            </div>
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:5px;">
+                <button id="saveSignCodeBtn" type="button" style="padding:6px; background:#d97706; color:white; border:0; border-radius:4px; cursor:pointer; font-weight:bold; font-size:11px;">
+                    Zapisz znak
+                </button>
+                <button id="resetSignCodeBtn" type="button" style="padding:6px; background:#6c757d; color:white; border:0; border-radius:4px; cursor:pointer; font-size:11px;">
+                    Przywróć z danych
+                </button>
+            </div>
+        </div>
         <div style="display:grid; grid-template-columns:1fr 1fr; gap:6px;">
             <div>
                 <label for="rotationOffsetXInput" style="display:block; font-size:12px; margin-bottom:4px;">Przesunięcie poziome (px)</label>
@@ -486,8 +570,8 @@ body.atlas-mode .icon-live-user { display: none !important; }
         <button id="saveRotationBtn" type="button" disabled style="width:100%; padding:8px; background:#007bff; color:white; border:0; border-radius:4px; cursor:pointer; font-weight:bold;">
             Zapisz kąt w tej przeglądarce
         </button>
-        <button id="flipRotation180Btn" type="button" disabled style="width:100%; padding:7px; margin-top:5px; background:#495057; color:white; border:0; border-radius:4px; cursor:pointer; font-weight:bold;">
-            Obróć o 180° i zapisz
+        <button id="flipRotation90Btn" type="button" disabled style="width:100%; padding:7px; margin-top:5px; background:#495057; color:white; border:0; border-radius:4px; cursor:pointer; font-weight:bold;">
+            Obróć o 90° i zapisz
         </button>
         <button id="savePositionBtn" type="button" disabled style="width:100%; padding:8px; margin-top:5px; background:#17a2b8; color:white; border:0; border-radius:4px; cursor:pointer; font-weight:bold;">
             Zapisz korektę ikony w tej przeglądarce
@@ -627,6 +711,47 @@ function loadPointRotationOverrides() {
     }
 }
 
+function loadPointSignOverrides() {
+    try {
+        const stored = localStorage.getItem(POINT_SIGN_STORAGE_KEY);
+        const parsed = stored ? JSON.parse(stored) : {};
+        if (!parsed || typeof parsed !== "object" || Array.isArray(parsed)) {
+            throw new Error("Nieprawidłowy format zapisanych znaków drogowych.");
+        }
+        pointSignOverrides = {};
+        Object.entries(parsed).forEach(([id, spec]) => {
+            if (spec && typeof spec === "object") {
+                const code = normalizeSignCode(spec.code);
+                const value = spec.value !== undefined && spec.value !== null ? String(spec.value).trim() : "";
+                if (code) pointSignOverrides[id] = { code, value };
+            }
+        });
+        signStorageReady = true;
+        return true;
+    } catch (e) {
+        signStorageReady = false;
+        pointSignOverrides = {};
+        console.error("Nie udało się odczytać lokalnych znaków drogowych:", e);
+        return false;
+    }
+}
+
+function persistPointSignOverrides(nextOverrides) {
+    if (!signStorageReady) {
+        setRotationStatus("Nie można zapisać wzoru znaku — lokalne ustawienia nie zostały poprawnie odczytane.", true);
+        return false;
+    }
+    try {
+        localStorage.setItem(POINT_SIGN_STORAGE_KEY, JSON.stringify(nextOverrides));
+        pointSignOverrides = nextOverrides;
+        return true;
+    } catch (e) {
+        console.error("Nie udało się zapisać lokalnego znaku drogowego:", e);
+        setRotationStatus(`Nie udało się zapisać znaku drogowego: ${e.message}`, true);
+        return false;
+    }
+}
+
 function loadPointPositionOverrides() {
     try {
         const stored = localStorage.getItem(POINT_POSITION_STORAGE_KEY);
@@ -717,6 +842,89 @@ const SVG_TOALETA = `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'
 const SVG_ZYWIENIOWY = `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='16' height='16'><path d='M12 1.5C10.2 5 5 10.1 5 14.6a7 7 0 0 0 14 0C19 10.1 13.8 5 12 1.5z' fill='#007bff'/><path d='M8.2 14.5c0-1.4 1-3 2.1-4.5' fill='none' stroke='#ffffff' stroke-width='1.5' stroke-linecap='round'/></svg>`;
 const SVG_SEDZIA = `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='16' height='16' fill='#ffffff'><path d='M12 2c1.1 0 2 .9 2 2v1.17c3.41.44 6 3.32 6 6.83 0 3.87-3.13 7-7 7s-7-3.13-7-7c0-3.51 2.59-6.39 6-6.83V4c0-1.1.9-2 2-2zm0 16c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-1-8h2v3h-2v-3zm0 4h2v2h-2v-2z'/></svg>`;
 const SVG_ZNAK_DROGOWY = `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='16' height='16'><polygon points='12,3 22,20 2,20' fill='#ffc107' stroke='#dc3545' stroke-width='2.2' stroke-linejoin='round'/><line x1='12' y1='9' x2='12' y2='14.5' stroke='#111111' stroke-width='2' stroke-linecap='round'/><circle cx='12' cy='17.2' r='1.2' fill='#111111'/></svg>`;
+
+const ROAD_SIGNS_CATALOG = [{"code": "A-1", "name": "Niebezpieczny zakręt w prawo", "group": "A", "hasValue": false, "defaultValue": "", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><polygon points='32,5 60,55 4,55' fill='#FFCC00' stroke='#D40000' stroke-width='5.2' stroke-linejoin='round'/><path d='M28 50V36l8-9V21' fill='none' stroke='#111' stroke-width='4.5' stroke-linecap='round' stroke-linejoin='round'/></svg>"}, {"code": "A-2", "name": "Niebezpieczny zakręt w lewo", "group": "A", "hasValue": false, "defaultValue": "", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><polygon points='32,5 60,55 4,55' fill='#FFCC00' stroke='#D40000' stroke-width='5.2' stroke-linejoin='round'/><path d='M36 50V36l-8-9V21' fill='none' stroke='#111' stroke-width='4.5' stroke-linecap='round' stroke-linejoin='round'/></svg>"}, {"code": "A-3", "name": "Niebezpieczne zakręty - pierwszy w prawo", "group": "A", "hasValue": false, "defaultValue": "", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><polygon points='32,5 60,55 4,55' fill='#FFCC00' stroke='#D40000' stroke-width='5.2' stroke-linejoin='round'/><path d='M28 50v-6l8-6-8-7v-7' fill='none' stroke='#111' stroke-width='4.2' stroke-linecap='round' stroke-linejoin='round'/></svg>"}, {"code": "A-4", "name": "Niebezpieczne zakręty - pierwszy w lewo", "group": "A", "hasValue": false, "defaultValue": "", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><polygon points='32,5 60,55 4,55' fill='#FFCC00' stroke='#D40000' stroke-width='5.2' stroke-linejoin='round'/><path d='M36 50v-6l-8-6 8-7v-7' fill='none' stroke='#111' stroke-width='4.2' stroke-linecap='round' stroke-linejoin='round'/></svg>"}, {"code": "A-5", "name": "Skrzyżowanie dróg", "group": "A", "hasValue": false, "defaultValue": "", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><polygon points='32,5 60,55 4,55' fill='#FFCC00' stroke='#D40000' stroke-width='5.2' stroke-linejoin='round'/><path d='M25 29l14 14M39 29L25 43' stroke='#111' stroke-width='4.5' stroke-linecap='round'/></svg>"}, {"code": "A-6a", "name": "Skrzyżowanie z drogą podporządkowaną występującą po obu stronach", "group": "A", "hasValue": false, "defaultValue": "", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><polygon points='32,5 60,55 4,55' fill='#FFCC00' stroke='#D40000' stroke-width='5.2' stroke-linejoin='round'/><path d='M32 22v28M22 37h20' stroke='#111' stroke-width='4.5' stroke-linecap='round'/></svg>"}, {"code": "A-6b", "name": "Skrzyżowanie z drogą podporządkowaną występującą po prawej stronie", "group": "A", "hasValue": false, "defaultValue": "", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><polygon points='32,5 60,55 4,55' fill='#FFCC00' stroke='#D40000' stroke-width='5.2' stroke-linejoin='round'/><path d='M32 22v28M32 37h11' stroke='#111' stroke-width='4.5' stroke-linecap='round'/></svg>"}, {"code": "A-6c", "name": "Skrzyżowanie z drogą podporządkowaną występującą po lewej stronie", "group": "A", "hasValue": false, "defaultValue": "", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><polygon points='32,5 60,55 4,55' fill='#FFCC00' stroke='#D40000' stroke-width='5.2' stroke-linejoin='round'/><path d='M32 22v28M21 37h11' stroke='#111' stroke-width='4.5' stroke-linecap='round'/></svg>"}, {"code": "A-6d", "name": "Wlot drogi jednokierunkowej z prawej strony", "group": "A", "hasValue": false, "defaultValue": "", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><polygon points='32,5 60,55 4,55' fill='#FFCC00' stroke='#D40000' stroke-width='5.2' stroke-linejoin='round'/><path d='M32 22v28M42 30L32 40' stroke='#111' stroke-width='4.5' stroke-linecap='round'/></svg>"}, {"code": "A-6e", "name": "Wlot drogi jednokierunkowej z lewej strony", "group": "A", "hasValue": false, "defaultValue": "", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><polygon points='32,5 60,55 4,55' fill='#FFCC00' stroke='#D40000' stroke-width='5.2' stroke-linejoin='round'/><path d='M32 22v28M22 30l10 10' stroke='#111' stroke-width='4.5' stroke-linecap='round'/></svg>"}, {"code": "A-7", "name": "Ustąp pierwszeństwa", "group": "A", "hasValue": false, "defaultValue": "", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><polygon points='4,9 60,9 32,59' fill='#FFCC00' stroke='#D40000' stroke-width='5.2' stroke-linejoin='round'/></svg>"}, {"code": "A-8", "name": "Skrzyżowanie o ruchu okrężnym", "group": "A", "hasValue": false, "defaultValue": "", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><polygon points='32,5 60,55 4,55' fill='#FFCC00' stroke='#D40000' stroke-width='5.2' stroke-linejoin='round'/><circle cx='32' cy='38' r='8.5' fill='none' stroke='#111' stroke-width='3.5' stroke-dasharray='11 5'/></svg>"}, {"code": "A-9", "name": "Przejazd kolejowy z zaporami", "group": "A", "hasValue": false, "defaultValue": "", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><polygon points='32,5 60,55 4,55' fill='#FFCC00' stroke='#D40000' stroke-width='5.2' stroke-linejoin='round'/><path d='M21 34h22M24 30v12M32 30v12M40 30v12M21 38h22' stroke='#111' stroke-width='2.5'/></svg>"}, {"code": "A-10", "name": "Przejazd kolejowy bez zapór", "group": "A", "hasValue": false, "defaultValue": "", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><polygon points='32,5 60,55 4,55' fill='#FFCC00' stroke='#D40000' stroke-width='5.2' stroke-linejoin='round'/><g fill='#111'><rect x='25' y='34' width='14' height='8'/><rect x='23' y='28' width='4' height='6'/><circle cx='28' cy='44' r='2.5'/><circle cx='36' cy='44' r='2.5'/><path d='M25 25c2-3 7-3 10-2' fill='none' stroke='#111' stroke-width='2'/></g></svg>"}, {"code": "A-11", "name": "Nierówna droga", "group": "A", "hasValue": false, "defaultValue": "", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><polygon points='32,5 60,55 4,55' fill='#FFCC00' stroke='#D40000' stroke-width='5.2' stroke-linejoin='round'/><path d='M16 45h8q4-7 8 0t8 0h8' fill='none' stroke='#111' stroke-width='4'/></svg>"}, {"code": "A-11a", "name": "Próg zwalniający", "group": "A", "hasValue": false, "defaultValue": "", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><polygon points='32,5 60,55 4,55' fill='#FFCC00' stroke='#D40000' stroke-width='5.2' stroke-linejoin='round'/><path d='M16 46h10q6-9 12 0h10' fill='#111'/></svg>"}, {"code": "A-12a", "name": "Zwężenie jezdni - dwustronne", "group": "A", "hasValue": false, "defaultValue": "", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><polygon points='32,5 60,55 4,55' fill='#FFCC00' stroke='#D40000' stroke-width='5.2' stroke-linejoin='round'/><path d='M24 49V39l4-6V23M40 49V39l-4-6V23' fill='none' stroke='#111' stroke-width='3.8' stroke-linecap='round'/></svg>"}, {"code": "A-12b", "name": "Zwężenie jezdni - prawostronne", "group": "A", "hasValue": false, "defaultValue": "", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><polygon points='32,5 60,55 4,55' fill='#FFCC00' stroke='#D40000' stroke-width='5.2' stroke-linejoin='round'/><path d='M26 49V23M39 49V39l-5-6V23' fill='none' stroke='#111' stroke-width='3.8' stroke-linecap='round'/></svg>"}, {"code": "A-12c", "name": "Zwężenie jezdni - lewostronne", "group": "A", "hasValue": false, "defaultValue": "", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><polygon points='32,5 60,55 4,55' fill='#FFCC00' stroke='#D40000' stroke-width='5.2' stroke-linejoin='round'/><path d='M38 49V23M25 49V39l5-6V23' fill='none' stroke='#111' stroke-width='3.8' stroke-linecap='round'/></svg>"}, {"code": "A-13", "name": "Ruchomy most", "group": "A", "hasValue": false, "defaultValue": "", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><polygon points='32,5 60,55 4,55' fill='#FFCC00' stroke='#D40000' stroke-width='5.2' stroke-linejoin='round'/><path d='M17 44h9l7-9M38 44h9' fill='none' stroke='#111' stroke-width='3.8' stroke-linecap='round'/></svg>"}, {"code": "A-14", "name": "Roboty na drodze", "group": "A", "hasValue": false, "defaultValue": "", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><polygon points='32,5 60,55 4,55' fill='#FFCC00' stroke='#D40000' stroke-width='5.2' stroke-linejoin='round'/><circle cx='34' cy='26' r='2.8' fill='#111'/><path d='M33 30l-4 7 4 9M33 31l5 6-5 6' fill='none' stroke='#111' stroke-width='2.6' stroke-linecap='round'/><polygon points='20,48 27,48 23.5,41' fill='#111'/></svg>"}, {"code": "A-15", "name": "Śliska jezdnia", "group": "A", "hasValue": false, "defaultValue": "", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><polygon points='32,5 60,55 4,55' fill='#FFCC00' stroke='#D40000' stroke-width='5.2' stroke-linejoin='round'/><rect x='25' y='23' width='12' height='8' rx='2' fill='#111'/><path d='M25 34c-3 4 6 6 2 11M37 34c3 4-6 6-2 11' fill='none' stroke='#111' stroke-width='2.3'/></svg>"}, {"code": "A-16", "name": "Przejście dla pieszych", "group": "A", "hasValue": false, "defaultValue": "", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><polygon points='32,5 60,55 4,55' fill='#FFCC00' stroke='#D40000' stroke-width='5.2' stroke-linejoin='round'/><circle cx='32' cy='24' r='2.5' fill='#111'/><path d='M32 27v9l-4 7M32 36l4 7M27 31l5-2 5 2' fill='none' stroke='#111' stroke-width='2.3'/><path d='M18 47h28' stroke='#111' stroke-width='2.5' stroke-dasharray='4 3'/></svg>"}, {"code": "A-17", "name": "Dzieci", "group": "A", "hasValue": false, "defaultValue": "", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><polygon points='32,5 60,55 4,55' fill='#FFCC00' stroke='#D40000' stroke-width='5.2' stroke-linejoin='round'/><circle cx='28' cy='27' r='2.5' fill='#111'/><path d='M28 30v9l-3 7M28 39l4 7M23 33l9-2' fill='none' stroke='#111' stroke-width='2.3'/><circle cx='37' cy='31' r='2' fill='#111'/><path d='M37 33v8l-2 5M37 41l3 5' fill='none' stroke='#111' stroke-width='2'/></svg>"}, {"code": "A-18a", "name": "Zwierzęta gospodarskie", "group": "A", "hasValue": false, "defaultValue": "", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><polygon points='32,5 60,55 4,55' fill='#FFCC00' stroke='#D40000' stroke-width='5.2' stroke-linejoin='round'/><rect x='24' y='33' width='14' height='7' rx='2' fill='#111'/><rect x='36' y='29' width='6' height='6' rx='1' fill='#111'/><path d='M26 40v7M36 40v7' stroke='#111' stroke-width='2.5'/></svg>"}, {"code": "A-18b", "name": "Zwierzęta dzikie", "group": "A", "hasValue": false, "defaultValue": "", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><polygon points='32,5 60,55 4,55' fill='#FFCC00' stroke='#D40000' stroke-width='5.2' stroke-linejoin='round'/><ellipse cx='31' cy='36' rx='7' ry='4' fill='#111'/><path d='M36 33l4-6M39 27l-2-4M40 27l3-3M26 39v8M35 39v8' stroke='#111' stroke-width='2.2'/></svg>"}, {"code": "A-19", "name": "Boczny wiatr", "group": "A", "hasValue": false, "defaultValue": "", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><polygon points='32,5 60,55 4,55' fill='#FFCC00' stroke='#D40000' stroke-width='5.2' stroke-linejoin='round'/><line x1='23' y1='25' x2='23' y2='49' stroke='#111' stroke-width='2.8'/><polygon points='23,27 42,30 42,35 23,37' fill='#D40000'/></svg>"}, {"code": "A-20", "name": "Odcinek jezdni o ruchu dwukierunkowym", "group": "A", "hasValue": false, "defaultValue": "", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><polygon points='32,5 60,55 4,55' fill='#FFCC00' stroke='#D40000' stroke-width='5.2' stroke-linejoin='round'/><path d='M26 46V27M22 31l4-5 4 5M38 26v19M34 41l4 5 4-5' fill='none' stroke='#111' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/></svg>"}, {"code": "A-21", "name": "Tramwaj", "group": "A", "hasValue": false, "defaultValue": "", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><polygon points='32,5 60,55 4,55' fill='#FFCC00' stroke='#D40000' stroke-width='5.2' stroke-linejoin='round'/><rect x='25' y='26' width='14' height='16' rx='2' fill='#111'/><rect x='27' y='29' width='10' height='5' fill='#FFCC00'/><path d='M28 26l4-4 4 4M24 46h16' fill='none' stroke='#111' stroke-width='2'/></svg>"}, {"code": "A-22", "name": "Niebezpieczny zjazd", "group": "A", "hasValue": false, "defaultValue": "", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><polygon points='32,5 60,55 4,55' fill='#FFCC00' stroke='#D40000' stroke-width='5.2' stroke-linejoin='round'/><polygon points='17,48 47,48 17,33' fill='#111'/><text x='34' y='38' fill='#111' font-family='Arial' font-weight='700' font-size='9'>10%</text></svg>"}, {"code": "A-23", "name": "Stromy podjazd", "group": "A", "hasValue": false, "defaultValue": "", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><polygon points='32,5 60,55 4,55' fill='#FFCC00' stroke='#D40000' stroke-width='5.2' stroke-linejoin='round'/><polygon points='17,48 47,48 47,33' fill='#111'/><text x='20' y='38' fill='#111' font-family='Arial' font-weight='700' font-size='9'>10%</text></svg>"}, {"code": "A-24", "name": "Rowerzyści", "group": "A", "hasValue": false, "defaultValue": "", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><polygon points='32,5 60,55 4,55' fill='#FFCC00' stroke='#D40000' stroke-width='5.2' stroke-linejoin='round'/><circle cx='25' cy='43' r='4.5' fill='none' stroke='#111' stroke-width='2'/><circle cx='39' cy='43' r='4.5' fill='none' stroke='#111' stroke-width='2'/><path d='M25 43l6-8h6l2 8' fill='none' stroke='#111' stroke-width='2'/></svg>"}, {"code": "A-25", "name": "Spadające odłamki skalne", "group": "A", "hasValue": false, "defaultValue": "", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><polygon points='32,5 60,55 4,55' fill='#FFCC00' stroke='#D40000' stroke-width='5.2' stroke-linejoin='round'/><polygon points='36,22 46,48 31,48' fill='#111'/><circle cx='25' cy='38' r='2.5' fill='#111'/><circle cx='28' cy='45' r='3' fill='#111'/><circle cx='22' cy='45' r='2' fill='#111'/></svg>"}, {"code": "A-26", "name": "Lotnisko", "group": "A", "hasValue": false, "defaultValue": "", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><polygon points='32,5 60,55 4,55' fill='#FFCC00' stroke='#D40000' stroke-width='5.2' stroke-linejoin='round'/><path d='M32 23v24M21 35l11-4 11 4M27 45l5-2 5 2' fill='none' stroke='#111' stroke-width='2.8' stroke-linecap='round'/></svg>"}, {"code": "A-27", "name": "Nabrzeże lub brzeg rzeki", "group": "A", "hasValue": false, "defaultValue": "", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><polygon points='32,5 60,55 4,55' fill='#FFCC00' stroke='#D40000' stroke-width='5.2' stroke-linejoin='round'/><rect x='17' y='38' width='14' height='9' fill='#111'/><path d='M31 45q5-3 10 0t7 0' fill='none' stroke='#0055AA' stroke-width='2.5'/><rect x='30' y='28' width='11' height='6' rx='1' transform='rotate(25 35 31)' fill='#111'/></svg>"}, {"code": "A-28", "name": "Sypki żwir", "group": "A", "hasValue": false, "defaultValue": "", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><polygon points='32,5 60,55 4,55' fill='#FFCC00' stroke='#D40000' stroke-width='5.2' stroke-linejoin='round'/><rect x='25' y='25' width='14' height='10' rx='2' fill='#111'/><circle cx='23' cy='42' r='1.8' fill='#111'/><circle cx='28' cy='45' r='2' fill='#111'/><circle cx='36' cy='44' r='2' fill='#111'/><circle cx='41' cy='41' r='1.8' fill='#111'/></svg>"}, {"code": "A-29", "name": "Sygnały świetlne", "group": "A", "hasValue": false, "defaultValue": "", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><polygon points='32,5 60,55 4,55' fill='#FFCC00' stroke='#D40000' stroke-width='5.2' stroke-linejoin='round'/><rect x='27' y='21' width='10' height='27' rx='2' fill='#111'/><circle cx='32' cy='26.5' r='2.7' fill='#D40000'/><circle cx='32' cy='34.5' r='2.7' fill='#FFCC00'/><circle cx='32' cy='42.5' r='2.7' fill='#1E9E3E'/></svg>"}, {"code": "A-30", "name": "Inne niebezpieczeństwo", "group": "A", "hasValue": false, "defaultValue": "", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><polygon points='32,5 60,55 4,55' fill='#FFCC00' stroke='#D40000' stroke-width='5.2' stroke-linejoin='round'/><rect x='29.5' y='22' width='5' height='17' rx='2' fill='#111'/><circle cx='32' cy='44.5' r='2.8' fill='#111'/></svg>"}, {"code": "A-31", "name": "Niebezpieczne pobocze", "group": "A", "hasValue": false, "defaultValue": "", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><polygon points='32,5 60,55 4,55' fill='#FFCC00' stroke='#D40000' stroke-width='5.2' stroke-linejoin='round'/><rect x='18' y='38' width='14' height='9' fill='#111'/><polygon points='32,38 46,47 32,47' fill='#111'/><rect x='30' y='27' width='11' height='6' rx='1' transform='rotate(22 35 30)' fill='#111'/></svg>"}, {"code": "A-32", "name": "Oszronienie jezdni", "group": "A", "hasValue": false, "defaultValue": "", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><polygon points='32,5 60,55 4,55' fill='#FFCC00' stroke='#D40000' stroke-width='5.2' stroke-linejoin='round'/><g stroke='#0055AA' stroke-width='2.2' stroke-linecap='round'><line x1='32' y1='25' x2='32' y2='47'/><line x1='22' y1='31' x2='42' y2='41'/><line x1='42' y1='31' x2='22' y2='41'/></g></svg>"}, {"code": "A-33", "name": "Zator drogowy", "group": "A", "hasValue": false, "defaultValue": "", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><polygon points='32,5 60,55 4,55' fill='#FFCC00' stroke='#D40000' stroke-width='5.2' stroke-linejoin='round'/><rect x='27' y='24' width='10' height='6' rx='1' fill='#111'/><rect x='25' y='32' width='14' height='7' rx='1.5' fill='#111'/><rect x='23' y='41' width='18' height='7' rx='2' fill='#111'/></svg>"}, {"code": "A-34", "name": "Wypadek drogowy", "group": "A", "hasValue": false, "defaultValue": "", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><polygon points='32,5 60,55 4,55' fill='#FFCC00' stroke='#D40000' stroke-width='5.2' stroke-linejoin='round'/><rect x='21' y='35' width='11' height='7' fill='#111'/><rect x='33' y='33' width='11' height='7' transform='rotate(-18 38 36)' fill='#111'/><path d='M32 23l2 4 4-1-2 4' fill='none' stroke='#D40000' stroke-width='2'/></svg>"}, {"code": "B-1", "name": "Zakaz ruchu w obu kierunkach", "group": "B", "hasValue": false, "defaultValue": "", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><circle cx='32' cy='32' r='27.5' fill='#FFFFFF' stroke='#D40000' stroke-width='6'/></svg>"}, {"code": "B-2", "name": "Zakaz wjazdu", "group": "B", "hasValue": false, "defaultValue": "", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><circle cx='32' cy='32' r='28' fill='#D40000' stroke='#FFFFFF' stroke-width='2'/><rect x='12' y='26.5' width='40' height='11' rx='1.5' fill='#FFFFFF'/></svg>"}, {"code": "B-3", "name": "Zakaz wjazdu pojazdów silnikowych, z wyjątkiem motocykli jednośladowych", "group": "B", "hasValue": false, "defaultValue": "", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><circle cx='32' cy='32' r='27.5' fill='#FFFFFF' stroke='#D40000' stroke-width='6'/><rect x='22' y='28' width='20' height='10' rx='2' fill='#111'/><rect x='24' y='22' width='16' height='7' rx='2' fill='#111'/><rect x='26' y='24' width='12' height='4' fill='#fff'/><circle cx='25' cy='39' r='2.5' fill='#111'/><circle cx='39' cy='39' r='2.5' fill='#111'/></svg>"}, {"code": "B-3a", "name": "Zakaz wjazdu autobusów", "group": "B", "hasValue": false, "defaultValue": "", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><circle cx='32' cy='32' r='27.5' fill='#FFFFFF' stroke='#D40000' stroke-width='6'/><rect x='17' y='24' width='30' height='14' rx='2' fill='#111'/><rect x='20' y='26' width='6' height='5' fill='#fff'/><rect x='28' y='26' width='6' height='5' fill='#fff'/><rect x='36' y='26' width='8' height='5' fill='#fff'/><circle cx='23' cy='40' r='3' fill='#111'/><circle cx='41' cy='40' r='3' fill='#111'/></svg>"}, {"code": "B-4", "name": "Zakaz wjazdu motocykli", "group": "B", "hasValue": false, "defaultValue": "", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><circle cx='32' cy='32' r='27.5' fill='#FFFFFF' stroke='#D40000' stroke-width='6'/><circle cx='23' cy='39' r='5' fill='none' stroke='#111' stroke-width='2.5'/><circle cx='41' cy='39' r='5' fill='none' stroke='#111' stroke-width='2.5'/><path d='M23 39l8-10h7l3 10M30 25h6' fill='none' stroke='#111' stroke-width='2.8'/></svg>"}, {"code": "B-5", "name": "Zakaz wjazdu samochodów ciężarowych", "group": "B", "hasValue": false, "defaultValue": "", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><circle cx='32' cy='32' r='27.5' fill='#FFFFFF' stroke='#D40000' stroke-width='6'/><rect x='17' y='26' width='18' height='11' fill='#111'/><path d='M35 29h8l3 4v4H35z' fill='#111'/><circle cx='22' cy='39' r='2.8' fill='#111'/><circle cx='31' cy='39' r='2.8' fill='#111'/><circle cx='42' cy='39' r='2.8' fill='#111'/></svg>"}, {"code": "B-6", "name": "Zakaz wjazdu ciągników rolniczych", "group": "B", "hasValue": false, "defaultValue": "", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><circle cx='32' cy='32' r='27.5' fill='#FFFFFF' stroke='#D40000' stroke-width='6'/><circle cx='24' cy='37' r='6.5' fill='none' stroke='#111' stroke-width='3'/><circle cx='40' cy='40' r='3.5' fill='none' stroke='#111' stroke-width='2.5'/><rect x='24' y='26' width='9' height='8' fill='#111'/><rect x='33' y='30' width='9' height='7' fill='#111'/></svg>"}, {"code": "B-7", "name": "Zakaz wjazdu pojazdów silnikowych z przyczepą", "group": "B", "hasValue": false, "defaultValue": "", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><circle cx='32' cy='32' r='27.5' fill='#FFFFFF' stroke='#D40000' stroke-width='6'/><rect x='16' y='27' width='13' height='10' fill='#111'/><rect x='31' y='27' width='15' height='10' fill='#111'/><line x1='28' y1='34' x2='32' y2='34' stroke='#111' stroke-width='2.5'/><circle cx='21' cy='39' r='2.5' fill='#111'/><circle cx='35' cy='39' r='2.5' fill='#111'/><circle cx='43' cy='39' r='2.5' fill='#111'/></svg>"}, {"code": "B-8", "name": "Zakaz wjazdu pojazdów zaprzęgowych", "group": "B", "hasValue": false, "defaultValue": "", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><circle cx='32' cy='32' r='27.5' fill='#FFFFFF' stroke='#D40000' stroke-width='6'/><rect x='17' y='32' width='12' height='6' fill='#111'/><circle cx='21' cy='40' r='3' fill='#111'/><circle cx='27' cy='40' r='3' fill='#111'/><ellipse cx='38' cy='32' rx='5' ry='3' fill='#111'/><path d='M42 30l3-5M35 35v7M41 35v7' stroke='#111' stroke-width='2.2'/></svg>"}, {"code": "B-9", "name": "Zakaz wjazdu rowerów", "group": "B", "hasValue": false, "defaultValue": "", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><circle cx='32' cy='32' r='27.5' fill='#FFFFFF' stroke='#D40000' stroke-width='6'/><circle cx='23' cy='37' r='5.5' fill='none' stroke='#111' stroke-width='2.2'/><circle cx='41' cy='37' r='5.5' fill='none' stroke='#111' stroke-width='2.2'/><path d='M23 37l7-9h7l4 9M30 28l3 9h8' fill='none' stroke='#111' stroke-width='2'/></svg>"}, {"code": "B-10", "name": "Zakaz wjazdu motorowerów", "group": "B", "hasValue": false, "defaultValue": "", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><circle cx='32' cy='32' r='27.5' fill='#FFFFFF' stroke='#D40000' stroke-width='6'/><circle cx='23' cy='39' r='4.5' fill='none' stroke='#111' stroke-width='2.2'/><circle cx='41' cy='39' r='4.5' fill='none' stroke='#111' stroke-width='2.2'/><path d='M23 39h10l6-9M36 27h5' fill='none' stroke='#111' stroke-width='2.5'/></svg>"}, {"code": "B-11", "name": "Zakaz wjazdu wózków rowerowych", "group": "B", "hasValue": false, "defaultValue": "", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><circle cx='32' cy='32' r='27.5' fill='#FFFFFF' stroke='#D40000' stroke-width='6'/><circle cx='22' cy='39' r='4.5' fill='none' stroke='#111' stroke-width='2'/><circle cx='42' cy='39' r='4.5' fill='none' stroke='#111' stroke-width='2'/><rect x='22' y='28' width='12' height='8' fill='#111'/><path d='M34 34h6l2 5' fill='none' stroke='#111' stroke-width='2'/></svg>"}, {"code": "B-12", "name": "Zakaz wjazdu wózków ręcznych", "group": "B", "hasValue": false, "defaultValue": "", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><circle cx='32' cy='32' r='27.5' fill='#FFFFFF' stroke='#D40000' stroke-width='6'/><circle cx='28' cy='39' r='4.5' fill='none' stroke='#111' stroke-width='2.2'/><polygon points='22,29 36,29 33,36 24,36' fill='#111'/><path d='M36 29l6-4' stroke='#111' stroke-width='2.4'/></svg>"}, {"code": "B-13", "name": "Zakaz wjazdu pojazdów z towarami wybuchowymi lub łatwo zapalnymi", "group": "B", "hasValue": false, "defaultValue": "", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><circle cx='32' cy='32' r='27.5' fill='#FFFFFF' stroke='#D40000' stroke-width='6'/><rect x='22' y='32' width='20' height='9' rx='2' fill='#111'/><path d='M32 18l3 6 6-2-3 6 5 3-7 1-4 4-4-4-7-1 5-3-3-6 6 2z' fill='#FF6600' stroke='#D40000' stroke-width='1'/></svg>"}, {"code": "B-13a", "name": "Zakaz wjazdu pojazdów z towarami niebezpiecznymi", "group": "B", "hasValue": false, "defaultValue": "", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><circle cx='32' cy='32' r='27.5' fill='#FFFFFF' stroke='#D40000' stroke-width='6'/><rect x='22' y='33' width='20' height='9' rx='2' fill='#111'/><rect x='24' y='19' width='16' height='11' fill='#FF6600' stroke='#111' stroke-width='1.8'/></svg>"}, {"code": "B-14", "name": "Zakaz wjazdu pojazdów z towarami, które mogą skazić wodę", "group": "B", "hasValue": false, "defaultValue": "", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><circle cx='32' cy='32' r='27.5' fill='#FFFFFF' stroke='#D40000' stroke-width='6'/><rect x='22' y='22' width='20' height='11' rx='2' fill='#FF6600' stroke='#111' stroke-width='1.5'/><path d='M18 39q5-3 10 0t10 0 8 0M18 44q5-3 10 0t10 0 8 0' fill='none' stroke='#0055AA' stroke-width='2.4'/></svg>"}, {"code": "B-15", "name": "Zakaz wjazdu pojazdów o szerokości ponad ... m", "group": "B", "hasValue": true, "defaultValue": "2,5m", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><circle cx='32' cy='32' r='27.5' fill='#FFFFFF' stroke='#D40000' stroke-width='6'/><polygon points='13,32 19,27 19,37' fill='#111'/><polygon points='51,32 45,27 45,37' fill='#111'/><text x='32' y='36' text-anchor='middle' fill='#111' font-family='Arial' font-weight='700' font-size='11.5'>2,5m</text></svg>"}, {"code": "B-16", "name": "Zakaz wjazdu pojazdów o wysokości ponad ... m", "group": "B", "hasValue": true, "defaultValue": "3,5m", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><circle cx='32' cy='32' r='27.5' fill='#FFFFFF' stroke='#D40000' stroke-width='6'/><polygon points='32,12 27,18 37,18' fill='#111'/><polygon points='32,52 27,46 37,46' fill='#111'/><text x='32' y='36' text-anchor='middle' fill='#111' font-family='Arial' font-weight='700' font-size='12'>3,5m</text></svg>"}, {"code": "B-17", "name": "Zakaz wjazdu pojazdów o długości ponad ... m", "group": "B", "hasValue": true, "defaultValue": "10m", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><circle cx='32' cy='32' r='27.5' fill='#FFFFFF' stroke='#D40000' stroke-width='6'/><rect x='17' y='26' width='18' height='11' fill='#111'/><path d='M35 29h8l3 4v4H35z' fill='#111'/><circle cx='22' cy='39' r='2.8' fill='#111'/><circle cx='31' cy='39' r='2.8' fill='#111'/><circle cx='42' cy='39' r='2.8' fill='#111'/><text x='32' y='23' text-anchor='middle' fill='#111' font-family='Arial' font-weight='700' font-size='10.5'>10m</text></svg>"}, {"code": "B-18", "name": "Zakaz wjazdu pojazdów o rzeczywistej masie całkowitej ponad ... t", "group": "B", "hasValue": true, "defaultValue": "3,5t", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><circle cx='32' cy='32' r='27.5' fill='#FFFFFF' stroke='#D40000' stroke-width='6'/><text x='32' y='37.5' text-anchor='middle' fill='#111' font-family='Arial' font-weight='700' font-size='15.5'>3,5t</text></svg>"}, {"code": "B-19", "name": "Zakaz wjazdu pojazdów o nacisku osi większym niż ... t", "group": "B", "hasValue": true, "defaultValue": "8t", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><circle cx='32' cy='32' r='27.5' fill='#FFFFFF' stroke='#D40000' stroke-width='6'/><text x='32' y='33' text-anchor='middle' fill='#111' font-family='Arial' font-weight='700' font-size='15'>8t</text><line x1='18' y1='41' x2='46' y2='41' stroke='#111' stroke-width='3'/><circle cx='21' cy='41' r='3.5' fill='#111'/><circle cx='43' cy='41' r='3.5' fill='#111'/></svg>"}, {"code": "B-20", "name": "STOP", "group": "B", "hasValue": false, "defaultValue": "", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><polygon points='21,4 43,4 60,21 60,43 43,60 21,60 4,43 4,21' fill='#D40000' stroke='#FFFFFF' stroke-width='2.5'/><polygon points='22,6 42,6 58,22 58,42 42,58 22,58 6,42 6,22' fill='none' stroke='#D40000' stroke-width='1.5'/><text x='32' y='38.5' text-anchor='middle' fill='#FFFFFF' font-family='Arial,sans-serif' font-weight='900' font-size='17.5' letter-spacing='0.5'>STOP</text></svg>"}, {"code": "B-21", "name": "Zakaz skręcania w lewo", "group": "B", "hasValue": false, "defaultValue": "", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><circle cx='32' cy='32' r='27.5' fill='#FFFFFF' stroke='#D40000' stroke-width='6'/><path d='M36 45V30H23M27 25l-5 5 5 5' fill='none' stroke='#111' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'/><line x1='15' y1='15' x2='49' y2='49' stroke='#D40000' stroke-width='5.5'/></svg>"}, {"code": "B-22", "name": "Zakaz skręcania w prawo", "group": "B", "hasValue": false, "defaultValue": "", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><circle cx='32' cy='32' r='27.5' fill='#FFFFFF' stroke='#D40000' stroke-width='6'/><path d='M28 45V30h13M37 25l5 5-5 5' fill='none' stroke='#111' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'/><line x1='15' y1='15' x2='49' y2='49' stroke='#D40000' stroke-width='5.5'/></svg>"}, {"code": "B-23", "name": "Zakaz zawracania", "group": "B", "hasValue": false, "defaultValue": "", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><circle cx='32' cy='32' r='27.5' fill='#FFFFFF' stroke='#D40000' stroke-width='6'/><path d='M38 44V30a6 6 0 0 0-12 0v13M22 39l4 5 4-5' fill='none' stroke='#111' stroke-width='3.8' stroke-linecap='round' stroke-linejoin='round'/><line x1='15' y1='15' x2='49' y2='49' stroke='#D40000' stroke-width='5.5'/></svg>"}, {"code": "B-24", "name": "Koniec zakazu zawracania", "group": "B", "hasValue": false, "defaultValue": "", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><circle cx='32' cy='32' r='28' fill='#FFFFFF' stroke='#111111' stroke-width='2.5'/><g opacity='0.45'><path d='M38 44V30a6 6 0 0 0-12 0v13M22 39l4 5 4-5' fill='none' stroke='#111' stroke-width='3.8' stroke-linecap='round' stroke-linejoin='round'/></g><g stroke='#111111' stroke-width='2.2'><line x1='16' y1='48' x2='48' y2='16'/><line x1='13' y1='44' x2='44' y2='13'/><line x1='20' y1='51' x2='51' y2='20'/></g></svg>"}, {"code": "B-25", "name": "Zakaz wyprzedzania", "group": "B", "hasValue": false, "defaultValue": "", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><circle cx='32' cy='32' r='27.5' fill='#FFFFFF' stroke='#D40000' stroke-width='6'/><rect x='17' y='26' width='12' height='12' rx='2' fill='#D40000'/><rect x='35' y='26' width='12' height='12' rx='2' fill='#111'/></svg>"}, {"code": "B-26", "name": "Zakaz wyprzedzania przez samochody ciężarowe", "group": "B", "hasValue": false, "defaultValue": "", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><circle cx='32' cy='32' r='27.5' fill='#FFFFFF' stroke='#D40000' stroke-width='6'/><rect x='17' y='24' width='12' height='15' rx='2' fill='#D40000'/><rect x='35' y='27' width='12' height='11' rx='2' fill='#111'/></svg>"}, {"code": "B-27", "name": "Koniec zakazu wyprzedzania", "group": "B", "hasValue": false, "defaultValue": "", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><circle cx='32' cy='32' r='28' fill='#FFFFFF' stroke='#111111' stroke-width='2.5'/><g opacity='0.45'><rect x='17' y='26' width='12' height='12' rx='2' fill='#111'/><rect x='35' y='26' width='12' height='12' rx='2' fill='#111'/></g><g stroke='#111111' stroke-width='2.2'><line x1='16' y1='48' x2='48' y2='16'/><line x1='13' y1='44' x2='44' y2='13'/><line x1='20' y1='51' x2='51' y2='20'/></g></svg>"}, {"code": "B-28", "name": "Koniec zakazu wyprzedzania przez samochody ciężarowe", "group": "B", "hasValue": false, "defaultValue": "", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><circle cx='32' cy='32' r='28' fill='#FFFFFF' stroke='#111111' stroke-width='2.5'/><g opacity='0.45'><rect x='17' y='24' width='12' height='15' rx='2' fill='#111'/><rect x='35' y='27' width='12' height='11' rx='2' fill='#111'/></g><g stroke='#111111' stroke-width='2.2'><line x1='16' y1='48' x2='48' y2='16'/><line x1='13' y1='44' x2='44' y2='13'/><line x1='20' y1='51' x2='51' y2='20'/></g></svg>"}, {"code": "B-29", "name": "Zakaz używania sygnałów dźwiękowych", "group": "B", "hasValue": false, "defaultValue": "", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><circle cx='32' cy='32' r='27.5' fill='#FFFFFF' stroke='#D40000' stroke-width='6'/><path d='M19 34h14l11-6v14l-11-6H19z' fill='#111'/><circle cx='26' cy='38' r='3' fill='none' stroke='#111' stroke-width='2'/><line x1='15' y1='15' x2='49' y2='49' stroke='#D40000' stroke-width='5.5'/></svg>"}, {"code": "B-30", "name": "Koniec zakazu używania sygnałów dźwiękowych", "group": "B", "hasValue": false, "defaultValue": "", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><circle cx='32' cy='32' r='28' fill='#FFFFFF' stroke='#111111' stroke-width='2.5'/><g opacity='0.45'><path d='M19 34h14l11-6v14l-11-6H19z' fill='#111'/></g><g stroke='#111111' stroke-width='2.2'><line x1='16' y1='48' x2='48' y2='16'/><line x1='13' y1='44' x2='44' y2='13'/><line x1='20' y1='51' x2='51' y2='20'/></g></svg>"}, {"code": "B-31", "name": "Pierwszeństwo dla nadjeżdżających z przeciwka", "group": "B", "hasValue": false, "defaultValue": "", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><circle cx='32' cy='32' r='27.5' fill='#FFFFFF' stroke='#D40000' stroke-width='6'/><path d='M25 46V20M20 25l5-6 5 6' fill='none' stroke='#D40000' stroke-width='4.2' stroke-linecap='round'/><path d='M39 18v26M34 39l5 6 5-6' fill='none' stroke='#111' stroke-width='4.2' stroke-linecap='round'/></svg>"}, {"code": "B-32", "name": "Stój - kontrola celna / drogowa", "group": "B", "hasValue": true, "defaultValue": "STÓJ", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><circle cx='32' cy='32' r='27.5' fill='#FFFFFF' stroke='#D40000' stroke-width='6'/><line x1='12' y1='32' x2='52' y2='32' stroke='#111' stroke-width='3'/><text x='32' y='27' text-anchor='middle' fill='#111' font-family='Arial' font-weight='700' font-size='9'>STÓJ</text></svg>"}, {"code": "B-33", "name": "Ograniczenie prędkości", "group": "B", "hasValue": true, "defaultValue": "50", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><circle cx='32' cy='32' r='27.5' fill='#FFFFFF' stroke='#D40000' stroke-width='6'/><text x='32' y='39.5' text-anchor='middle' fill='#111111' font-family='Arial,sans-serif' font-weight='800' font-size='22'>50</text></svg>"}, {"code": "B-34", "name": "Koniec ograniczenia prędkości", "group": "B", "hasValue": true, "defaultValue": "50", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><circle cx='32' cy='32' r='28' fill='#FFFFFF' stroke='#111111' stroke-width='2.5'/><g opacity='0.45'><text x='32' y='39' text-anchor='middle' fill='#111111' font-family='Arial,sans-serif' font-weight='800' font-size='21'>50</text></g><g stroke='#111111' stroke-width='2.2'><line x1='16' y1='48' x2='48' y2='16'/><line x1='13' y1='44' x2='44' y2='13'/><line x1='20' y1='51' x2='51' y2='20'/></g></svg>"}, {"code": "B-35", "name": "Zakaz postoju", "group": "B", "hasValue": false, "defaultValue": "", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><circle cx='32' cy='32' r='27.5' fill='#0055AA' stroke='#D40000' stroke-width='6'/><line x1='14' y1='14' x2='50' y2='50' stroke='#D40000' stroke-width='5.5'/></svg>"}, {"code": "B-36", "name": "Zakaz zatrzymywania się", "group": "B", "hasValue": false, "defaultValue": "", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><circle cx='32' cy='32' r='27.5' fill='#0055AA' stroke='#D40000' stroke-width='6'/><line x1='14' y1='14' x2='50' y2='50' stroke='#D40000' stroke-width='5'/><line x1='50' y1='14' x2='14' y2='50' stroke='#D40000' stroke-width='5'/></svg>"}, {"code": "B-37", "name": "Zakaz postoju w dni nieparzyste", "group": "B", "hasValue": false, "defaultValue": "", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><circle cx='32' cy='32' r='27.5' fill='#0055AA' stroke='#D40000' stroke-width='6'/><rect x='30' y='19' width='4' height='26' fill='#FFFFFF'/><line x1='14' y1='14' x2='50' y2='50' stroke='#D40000' stroke-width='5.5'/></svg>"}, {"code": "B-38", "name": "Zakaz postoju w dni parzyste", "group": "B", "hasValue": false, "defaultValue": "", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><circle cx='32' cy='32' r='27.5' fill='#0055AA' stroke='#D40000' stroke-width='6'/><rect x='25' y='19' width='4' height='26' fill='#FFFFFF'/><rect x='35' y='19' width='4' height='26' fill='#FFFFFF'/><line x1='14' y1='14' x2='50' y2='50' stroke='#D40000' stroke-width='5.5'/></svg>"}, {"code": "B-39", "name": "Strefa ograniczonego postoju", "group": "B", "hasValue": false, "defaultValue": "", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><rect x='9' y='3' width='46' height='58' rx='3' fill='#FFFFFF' stroke='#111111' stroke-width='2.5'/><text x='32' y='13' text-anchor='middle' fill='#111111' font-family='Arial,sans-serif' font-weight='700' font-size='8'>STREFA</text><circle cx='32' cy='36' r='16' fill='#0055AA' stroke='#D40000' stroke-width='4'/><line x1='22' y1='26' x2='42' y2='46' stroke='#D40000' stroke-width='4'/></svg>"}, {"code": "B-40", "name": "Koniec strefy ograniczonego postoju", "group": "B", "hasValue": false, "defaultValue": "", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><rect x='9' y='3' width='46' height='58' rx='3' fill='#FFFFFF' stroke='#111111' stroke-width='2.5'/><text x='32' y='13' text-anchor='middle' fill='#111111' font-family='Arial,sans-serif' font-weight='700' font-size='8'>STREFA</text><circle cx='32' cy='36' r='16' fill='none' stroke='#666' stroke-width='3'/><line x1='22' y1='26' x2='42' y2='46' stroke='#666' stroke-width='3'/><g stroke='#111111' stroke-width='2.2'><line x1='12' y1='54' x2='52' y2='14'/><line x1='10' y1='49' x2='49' y2='10'/><line x1='15' y1='57' x2='54' y2='18'/></g></svg>"}, {"code": "B-41", "name": "Zakaz ruchu pieszych", "group": "B", "hasValue": false, "defaultValue": "", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><circle cx='32' cy='32' r='27.5' fill='#FFFFFF' stroke='#D40000' stroke-width='6'/><circle cx='32' cy='21' r='3' fill='#111'/><path d='M32 25v11l-5 9M32 36l5 9M26 30l6-3 6 3' fill='none' stroke='#111' stroke-width='2.5' stroke-linecap='round'/><line x1='15' y1='15' x2='49' y2='49' stroke='#D40000' stroke-width='5.5'/></svg>"}, {"code": "B-42", "name": "Koniec zakazów", "group": "B", "hasValue": false, "defaultValue": "", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><circle cx='32' cy='32' r='28' fill='#FFFFFF' stroke='#111111' stroke-width='2.5'/><g opacity='0.45'></g><g stroke='#111111' stroke-width='2.2'><line x1='16' y1='48' x2='48' y2='16'/><line x1='13' y1='44' x2='44' y2='13'/><line x1='20' y1='51' x2='51' y2='20'/></g></svg>"}, {"code": "B-43", "name": "Strefa ograniczonej prędkości", "group": "B", "hasValue": true, "defaultValue": "30", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><rect x='9' y='3' width='46' height='58' rx='3' fill='#FFFFFF' stroke='#111111' stroke-width='2.5'/><text x='32' y='13' text-anchor='middle' fill='#111111' font-family='Arial,sans-serif' font-weight='700' font-size='8'>STREFA</text><circle cx='32' cy='36' r='16' fill='#FFFFFF' stroke='#D40000' stroke-width='4'/><text x='32' y='41' text-anchor='middle' fill='#111' font-family='Arial' font-weight='800' font-size='14'>30</text></svg>"}, {"code": "B-44", "name": "Koniec strefy ograniczonej prędkości", "group": "B", "hasValue": true, "defaultValue": "30", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><rect x='9' y='3' width='46' height='58' rx='3' fill='#FFFFFF' stroke='#111111' stroke-width='2.5'/><text x='32' y='13' text-anchor='middle' fill='#111111' font-family='Arial,sans-serif' font-weight='700' font-size='8'>STREFA</text><circle cx='32' cy='36' r='16' fill='#FFFFFF' stroke='#666' stroke-width='3'/><text x='32' y='41' text-anchor='middle' fill='#666' font-family='Arial' font-weight='800' font-size='14'>30</text><g stroke='#111111' stroke-width='2.2'><line x1='12' y1='54' x2='52' y2='14'/><line x1='10' y1='49' x2='49' y2='10'/><line x1='15' y1='57' x2='54' y2='18'/></g></svg>"}, {"code": "C-1", "name": "Nakaz jazdy w prawo przed znakiem", "group": "C", "hasValue": false, "defaultValue": "", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><circle cx='32' cy='32' r='28' fill='#0055AA' stroke='#FFFFFF' stroke-width='2'/><path d='M18 32h26M36 24l9 8-9 8' fill='none' stroke='#FFFFFF' stroke-width='4.5' stroke-linecap='round' stroke-linejoin='round'/></svg>"}, {"code": "C-2", "name": "Nakaz jazdy w prawo za znakiem", "group": "C", "hasValue": false, "defaultValue": "", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><circle cx='32' cy='32' r='28' fill='#0055AA' stroke='#FFFFFF' stroke-width='2'/><path d='M25 46V30h19M37 23l8 7-8 7' fill='none' stroke='#FFFFFF' stroke-width='4.5' stroke-linecap='round' stroke-linejoin='round'/></svg>"}, {"code": "C-3", "name": "Nakaz jazdy w lewo przed znakiem", "group": "C", "hasValue": false, "defaultValue": "", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><circle cx='32' cy='32' r='28' fill='#0055AA' stroke='#FFFFFF' stroke-width='2'/><path d='M46 32H20M28 24l-9 8 9 8' fill='none' stroke='#FFFFFF' stroke-width='4.5' stroke-linecap='round' stroke-linejoin='round'/></svg>"}, {"code": "C-4", "name": "Nakaz jazdy w lewo za znakiem", "group": "C", "hasValue": false, "defaultValue": "", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><circle cx='32' cy='32' r='28' fill='#0055AA' stroke='#FFFFFF' stroke-width='2'/><path d='M39 46V30H20M27 23l-8 7 8 7' fill='none' stroke='#FFFFFF' stroke-width='4.5' stroke-linecap='round' stroke-linejoin='round'/></svg>"}, {"code": "C-5", "name": "Nakaz jazdy prosto", "group": "C", "hasValue": false, "defaultValue": "", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><circle cx='32' cy='32' r='28' fill='#0055AA' stroke='#FFFFFF' stroke-width='2'/><path d='M32 47V19M24 27l8-9 8 9' fill='none' stroke='#FFFFFF' stroke-width='4.5' stroke-linecap='round' stroke-linejoin='round'/></svg>"}, {"code": "C-6", "name": "Nakaz jazdy prosto lub w prawo", "group": "C", "hasValue": false, "defaultValue": "", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><circle cx='32' cy='32' r='28' fill='#0055AA' stroke='#FFFFFF' stroke-width='2'/><path d='M26 47V19M19 26l7-8 7 8M26 32h18M38 26l7 6-7 6' fill='none' stroke='#FFFFFF' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'/></svg>"}, {"code": "C-7", "name": "Nakaz jazdy prosto lub w lewo", "group": "C", "hasValue": false, "defaultValue": "", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><circle cx='32' cy='32' r='28' fill='#0055AA' stroke='#FFFFFF' stroke-width='2'/><path d='M38 47V19M31 26l7-8 7 8M38 32H20M26 26l-7 6 7 6' fill='none' stroke='#FFFFFF' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'/></svg>"}, {"code": "C-8", "name": "Nakaz jazdy w prawo lub w lewo", "group": "C", "hasValue": false, "defaultValue": "", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><circle cx='32' cy='32' r='28' fill='#0055AA' stroke='#FFFFFF' stroke-width='2'/><path d='M32 46V31M18 31h28M24 25l-7 6 7 6M40 25l7 6-7 6' fill='none' stroke='#FFFFFF' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'/></svg>"}, {"code": "C-9", "name": "Nakaz jazdy z prawej strony znaku", "group": "C", "hasValue": false, "defaultValue": "", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><circle cx='32' cy='32' r='28' fill='#0055AA' stroke='#FFFFFF' stroke-width='2'/><path d='M22 21l20 20M31 41h11V30' fill='none' stroke='#FFFFFF' stroke-width='4.5' stroke-linecap='round' stroke-linejoin='round'/></svg>"}, {"code": "C-10", "name": "Nakaz jazdy z lewej strony znaku", "group": "C", "hasValue": false, "defaultValue": "", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><circle cx='32' cy='32' r='28' fill='#0055AA' stroke='#FFFFFF' stroke-width='2'/><path d='M42 21L22 41M33 41H22V30' fill='none' stroke='#FFFFFF' stroke-width='4.5' stroke-linecap='round' stroke-linejoin='round'/></svg>"}, {"code": "C-11", "name": "Nakaz jazdy z prawej lub lewej strony znaku", "group": "C", "hasValue": false, "defaultValue": "", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><circle cx='32' cy='32' r='28' fill='#0055AA' stroke='#FFFFFF' stroke-width='2'/><path d='M32 19v10M32 29L20 42M32 29l12 13M20 33v9h9M44 33v9h-9' fill='none' stroke='#FFFFFF' stroke-width='3.8' stroke-linecap='round' stroke-linejoin='round'/></svg>"}, {"code": "C-12", "name": "Ruch okrężny", "group": "C", "hasValue": false, "defaultValue": "", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><circle cx='32' cy='32' r='28' fill='#0055AA' stroke='#FFFFFF' stroke-width='2'/><circle cx='32' cy='32' r='13' fill='none' stroke='#FFFFFF' stroke-width='4' stroke-dasharray='17 10'/><polygon points='32,15 38,20 31,23' fill='#FFFFFF'/><polygon points='47,36 42,42 39,35' fill='#FFFFFF'/><polygon points='17,33 21,26 25,33' fill='#FFFFFF'/></svg>"}, {"code": "C-13", "name": "Droga dla rowerów", "group": "C", "hasValue": false, "defaultValue": "", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><circle cx='32' cy='32' r='28' fill='#0055AA' stroke='#FFFFFF' stroke-width='2'/><circle cx='23' cy='37' r='5.5' fill='none' stroke='#FFFFFF' stroke-width='2.2'/><circle cx='41' cy='37' r='5.5' fill='none' stroke='#FFFFFF' stroke-width='2.2'/><path d='M23 37l7-9h7l4 9M30 28l3 9h8' fill='none' stroke='#FFFFFF' stroke-width='2'/></svg>"}, {"code": "C-13a", "name": "Koniec drogi dla rowerów", "group": "C", "hasValue": false, "defaultValue": "", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><circle cx='32' cy='32' r='28' fill='#0055AA' stroke='#FFFFFF' stroke-width='2'/><circle cx='23' cy='37' r='5.5' fill='none' stroke='#FFFFFF' stroke-width='2.2'/><circle cx='41' cy='37' r='5.5' fill='none' stroke='#FFFFFF' stroke-width='2.2'/><path d='M23 37l7-9h7l4 9M30 28l3 9h8' fill='none' stroke='#FFFFFF' stroke-width='2'/><line x1='14' y1='50' x2='50' y2='14' stroke='#D40000' stroke-width='5.5'/></svg>"}, {"code": "C-13/C-16", "name": "Droga dla pieszych i rowerów (wspólna)", "group": "C", "hasValue": false, "defaultValue": "", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><circle cx='32' cy='32' r='28' fill='#0055AA' stroke='#FFFFFF' stroke-width='2'/><g transform='translate(0,-9) scale(0.72) translate(12,6)'><circle cx='32' cy='21' r='3' fill='#FFFFFF'/><path d='M32 25v11l-5 9M32 36l5 9M26 30l6-3 6 3' fill='none' stroke='#FFFFFF' stroke-width='2.5' stroke-linecap='round'/></g><line x1='11' y1='32' x2='53' y2='32' stroke='#FFFFFF' stroke-width='2.5'/><g transform='translate(0,9) scale(0.75) translate(11,10)'><circle cx='23' cy='37' r='5.5' fill='none' stroke='#FFFFFF' stroke-width='2.2'/><circle cx='41' cy='37' r='5.5' fill='none' stroke='#FFFFFF' stroke-width='2.2'/><path d='M23 37l7-9h7l4 9M30 28l3 9h8' fill='none' stroke='#FFFFFF' stroke-width='2'/></g></svg>"}, {"code": "C-13|C-16", "name": "Droga dla rowerów i droga dla pieszych (obok siebie)", "group": "C", "hasValue": false, "defaultValue": "", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><circle cx='32' cy='32' r='28' fill='#0055AA' stroke='#FFFFFF' stroke-width='2'/><g transform='translate(-10,0) scale(0.75) translate(10,10)'><circle cx='23' cy='37' r='5.5' fill='none' stroke='#FFFFFF' stroke-width='2.2'/><circle cx='41' cy='37' r='5.5' fill='none' stroke='#FFFFFF' stroke-width='2.2'/><path d='M23 37l7-9h7l4 9M30 28l3 9h8' fill='none' stroke='#FFFFFF' stroke-width='2'/></g><line x1='32' y1='8' x2='32' y2='56' stroke='#FFFFFF' stroke-width='2.5'/><g transform='translate(11,0) scale(0.82) translate(7,7)'><circle cx='32' cy='21' r='3' fill='#FFFFFF'/><path d='M32 25v11l-5 9M32 36l5 9M26 30l6-3 6 3' fill='none' stroke='#FFFFFF' stroke-width='2.5' stroke-linecap='round'/></g></svg>"}, {"code": "C-14", "name": "Prędkość minimalna", "group": "C", "hasValue": true, "defaultValue": "40", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><circle cx='32' cy='32' r='28' fill='#0055AA' stroke='#FFFFFF' stroke-width='2'/><text x='32' y='39.5' text-anchor='middle' fill='#FFFFFF' font-family='Arial,sans-serif' font-weight='800' font-size='21'>40</text></svg>"}, {"code": "C-15", "name": "Koniec minimalnej prędkości", "group": "C", "hasValue": true, "defaultValue": "40", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><circle cx='32' cy='32' r='28' fill='#0055AA' stroke='#FFFFFF' stroke-width='2'/><text x='32' y='39.5' text-anchor='middle' fill='#FFFFFF' font-family='Arial,sans-serif' font-weight='800' font-size='21'>40</text><line x1='14' y1='50' x2='50' y2='14' stroke='#D40000' stroke-width='5.5'/></svg>"}, {"code": "C-16", "name": "Droga dla pieszych", "group": "C", "hasValue": false, "defaultValue": "", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><circle cx='32' cy='32' r='28' fill='#0055AA' stroke='#FFFFFF' stroke-width='2'/><circle cx='32' cy='21' r='3' fill='#FFFFFF'/><path d='M32 25v11l-5 9M32 36l5 9M26 30l6-3 6 3' fill='none' stroke='#FFFFFF' stroke-width='2.5' stroke-linecap='round'/></svg>"}, {"code": "C-16a", "name": "Koniec drogi dla pieszych", "group": "C", "hasValue": false, "defaultValue": "", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><circle cx='32' cy='32' r='28' fill='#0055AA' stroke='#FFFFFF' stroke-width='2'/><circle cx='32' cy='21' r='3' fill='#FFFFFF'/><path d='M32 25v11l-5 9M32 36l5 9M26 30l6-3 6 3' fill='none' stroke='#FFFFFF' stroke-width='2.5' stroke-linecap='round'/><line x1='14' y1='50' x2='50' y2='14' stroke='#D40000' stroke-width='5.5'/></svg>"}, {"code": "C-17", "name": "Nakazany kierunek jazdy dla pojazdów z towarami niebezpiecznymi", "group": "C", "hasValue": false, "defaultValue": "", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><circle cx='32' cy='32' r='28' fill='#0055AA' stroke='#FFFFFF' stroke-width='2'/><rect x='23' y='36' width='18' height='8' rx='1.5' fill='#FF6600' stroke='#FFFFFF' stroke-width='1.5'/><path d='M32 32V17M26 23l6-6 6 6' fill='none' stroke='#FFFFFF' stroke-width='3.5' stroke-linecap='round'/></svg>"}, {"code": "C-18", "name": "Nakaz używania łańcuchów przeciwpoślizgowych", "group": "C", "hasValue": false, "defaultValue": "", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><circle cx='32' cy='32' r='28' fill='#0055AA' stroke='#FFFFFF' stroke-width='2'/><circle cx='32' cy='32' r='13' fill='none' stroke='#FFFFFF' stroke-width='5' stroke-dasharray='4 3'/><circle cx='32' cy='32' r='6' fill='none' stroke='#FFFFFF' stroke-width='2.5'/></svg>"}, {"code": "C-19", "name": "Koniec nakazu używania łańcuchów przeciwpoślizgowych", "group": "C", "hasValue": false, "defaultValue": "", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><circle cx='32' cy='32' r='28' fill='#0055AA' stroke='#FFFFFF' stroke-width='2'/><circle cx='32' cy='32' r='13' fill='none' stroke='#FFFFFF' stroke-width='5' stroke-dasharray='4 3'/><circle cx='32' cy='32' r='6' fill='none' stroke='#FFFFFF' stroke-width='2.5'/><line x1='14' y1='50' x2='50' y2='14' stroke='#D40000' stroke-width='5.5'/></svg>"}, {"code": "D-1", "name": "Droga z pierwszeństwem", "group": "D", "hasValue": false, "defaultValue": "", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><polygon points='32,3 61,32 32,61 3,32' fill='#FFFFFF' stroke='#111111' stroke-width='2'/><polygon points='32,12 52,32 32,52 12,32' fill='#FFCC00' stroke='#111111' stroke-width='1.5'/></svg>"}, {"code": "D-2", "name": "Koniec drogi z pierwszeństwem", "group": "D", "hasValue": false, "defaultValue": "", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><polygon points='32,3 61,32 32,61 3,32' fill='#FFFFFF' stroke='#111111' stroke-width='2'/><polygon points='32,12 52,32 32,52 12,32' fill='#FFCC00' stroke='#111111' stroke-width='1.5'/><line x1='15' y1='49' x2='49' y2='15' stroke='#111111' stroke-width='5'/></svg>"}, {"code": "D-3", "name": "Droga jednokierunkowa", "group": "D", "hasValue": false, "defaultValue": "", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><rect x='5' y='5' width='54' height='54' rx='4' fill='#0055AA' stroke='#FFFFFF' stroke-width='2.5'/><path d='M32 51V16M21 27l11-12 11 12' fill='none' stroke='#FFFFFF' stroke-width='5.5' stroke-linecap='round' stroke-linejoin='round'/></svg>"}, {"code": "D-4a", "name": "Droga bez przejazdu", "group": "D", "hasValue": false, "defaultValue": "", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><rect x='5' y='5' width='54' height='54' rx='4' fill='#0055AA' stroke='#FFFFFF' stroke-width='2.5'/><path d='M32 51V22' stroke='#FFFFFF' stroke-width='6'/><rect x='21' y='16' width='22' height='6' fill='#D40000' stroke='#FFFFFF' stroke-width='1'/></svg>"}, {"code": "D-4b", "name": "Wjazd na drogę bez przejazdu", "group": "D", "hasValue": false, "defaultValue": "", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><rect x='5' y='5' width='54' height='54' rx='4' fill='#0055AA' stroke='#FFFFFF' stroke-width='2.5'/><path d='M23 51V15M23 32h18' stroke='#FFFFFF' stroke-width='5.5'/><rect x='39' y='24' width='5' height='16' fill='#D40000' stroke='#FFFFFF' stroke-width='1'/></svg>"}, {"code": "D-5", "name": "Pierwszeństwo na zwężonym odcinku jezdni", "group": "D", "hasValue": false, "defaultValue": "", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><rect x='5' y='5' width='54' height='54' rx='4' fill='#0055AA' stroke='#FFFFFF' stroke-width='2.5'/><path d='M25 18v28M20 41l5 6 5-6' fill='none' stroke='#D40000' stroke-width='4.5' stroke-linecap='round'/><path d='M39 46V18M34 23l5-6 5 6' fill='none' stroke='#FFFFFF' stroke-width='4.5' stroke-linecap='round'/></svg>"}, {"code": "D-6", "name": "Przejście dla pieszych", "group": "D", "hasValue": false, "defaultValue": "", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><rect x='5' y='5' width='54' height='54' rx='4' fill='#0055AA' stroke='#FFFFFF' stroke-width='2.5'/><polygon points='32,10 54,52 10,52' fill='#FFFFFF'/><circle cx='32' cy='25' r='2.5' fill='#111'/><path d='M32 28v9l-4 7M32 37l4 7M27 32l5-2 5 2' fill='none' stroke='#111' stroke-width='2.3'/><path d='M18 48h28' stroke='#111' stroke-width='2.5' stroke-dasharray='4 3'/></svg>"}, {"code": "D-6a", "name": "Przejazd dla rowerzystów", "group": "D", "hasValue": false, "defaultValue": "", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><rect x='5' y='5' width='54' height='54' rx='4' fill='#0055AA' stroke='#FFFFFF' stroke-width='2.5'/><polygon points='32,10 54,52 10,52' fill='#FFFFFF'/><circle cx='23' cy='37' r='5.5' fill='none' stroke='#111' stroke-width='2.2'/><circle cx='41' cy='37' r='5.5' fill='none' stroke='#111' stroke-width='2.2'/><path d='M23 37l7-9h7l4 9M30 28l3 9h8' fill='none' stroke='#111' stroke-width='2'/></svg>"}, {"code": "D-6b", "name": "Przejście dla pieszych i przejazd dla rowerzystów", "group": "D", "hasValue": false, "defaultValue": "", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><rect x='5' y='5' width='54' height='54' rx='4' fill='#0055AA' stroke='#FFFFFF' stroke-width='2.5'/><polygon points='32,10 54,52 10,52' fill='#FFFFFF'/><circle cx='28' cy='25' r='2.2' fill='#111'/><path d='M28 28v8l-3 6M28 36l3 6' fill='none' stroke='#111' stroke-width='2'/><circle cx='35' cy='45' r='3.5' fill='none' stroke='#111' stroke-width='1.8'/><circle cx='44' cy='45' r='3.5' fill='none' stroke='#111' stroke-width='1.8'/></svg>"}, {"code": "D-7", "name": "Droga ekspresowa", "group": "D", "hasValue": false, "defaultValue": "", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><rect x='5' y='5' width='54' height='54' rx='4' fill='#0055AA' stroke='#FFFFFF' stroke-width='2.5'/><rect x='14' y='28' width='36' height='12' rx='2' fill='#FFFFFF'/><rect x='18' y='20' width='28' height='9' rx='2' fill='#FFFFFF'/><rect x='21' y='22' width='22' height='5' fill='#0055AA'/><circle cx='21' cy='41' r='3.5' fill='#FFFFFF'/><circle cx='43' cy='41' r='3.5' fill='#FFFFFF'/></svg>"}, {"code": "D-8", "name": "Koniec drogi ekspresowej", "group": "D", "hasValue": false, "defaultValue": "", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><rect x='5' y='5' width='54' height='54' rx='4' fill='#0055AA' stroke='#FFFFFF' stroke-width='2.5'/><rect x='14' y='28' width='36' height='12' rx='2' fill='#FFFFFF'/><rect x='18' y='20' width='28' height='9' rx='2' fill='#FFFFFF'/><circle cx='21' cy='41' r='3.5' fill='#FFFFFF'/><circle cx='43' cy='41' r='3.5' fill='#FFFFFF'/><line x1='9' y1='55' x2='55' y2='9' stroke='#D40000' stroke-width='5.5'/></svg>"}, {"code": "D-9", "name": "Autostrada", "group": "D", "hasValue": false, "defaultValue": "", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><rect x='5' y='5' width='54' height='54' rx='4' fill='#0055AA' stroke='#FFFFFF' stroke-width='2.5'/><polygon points='16,52 25,14 29,14 23,52' fill='#FFFFFF'/><polygon points='48,52 39,14 35,14 41,52' fill='#FFFFFF'/><rect x='13' y='29' width='38' height='5' fill='#FFFFFF'/></svg>"}, {"code": "D-10", "name": "Koniec autostrady", "group": "D", "hasValue": false, "defaultValue": "", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><rect x='5' y='5' width='54' height='54' rx='4' fill='#0055AA' stroke='#FFFFFF' stroke-width='2.5'/><polygon points='16,52 25,14 29,14 23,52' fill='#FFFFFF'/><polygon points='48,52 39,14 35,14 41,52' fill='#FFFFFF'/><rect x='13' y='29' width='38' height='5' fill='#FFFFFF'/><line x1='9' y1='55' x2='55' y2='9' stroke='#D40000' stroke-width='5.5'/></svg>"}, {"code": "D-11", "name": "Początek pasa ruchu dla autobusów", "group": "D", "hasValue": false, "defaultValue": "", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><rect x='5' y='5' width='54' height='54' rx='4' fill='#0055AA' stroke='#FFFFFF' stroke-width='2.5'/><line x1='24' y1='13' x2='24' y2='51' stroke='#FFFFFF' stroke-width='2.5' stroke-dasharray='5 4'/><line x1='40' y1='13' x2='40' y2='51' stroke='#FFFFFF' stroke-width='2.5'/><text x='32' y='35' text-anchor='middle' fill='#FFFFFF' font-family='Arial' font-weight='700' font-size='7.5'>BUS</text></svg>"}, {"code": "D-12", "name": "Pas ruchu dla autobusów", "group": "D", "hasValue": false, "defaultValue": "", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><rect x='5' y='5' width='54' height='54' rx='4' fill='#0055AA' stroke='#FFFFFF' stroke-width='2.5'/><line x1='24' y1='13' x2='24' y2='51' stroke='#FFFFFF' stroke-width='2.5' stroke-dasharray='5 4'/><line x1='40' y1='13' x2='40' y2='51' stroke='#FFFFFF' stroke-width='2.5'/><text x='32' y='35' text-anchor='middle' fill='#FFFFFF' font-family='Arial' font-weight='700' font-size='7.5'>BUS</text></svg>"}, {"code": "D-13", "name": "Początek pasa ruchu powolnego", "group": "D", "hasValue": false, "defaultValue": "", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><rect x='5' y='5' width='54' height='54' rx='4' fill='#0055AA' stroke='#FFFFFF' stroke-width='2.5'/><path d='M22 51V14M32 51V14M42 51V32l-10-12' fill='none' stroke='#FFFFFF' stroke-width='3'/></svg>"}, {"code": "D-13a", "name": "Początek pasa ruchu", "group": "D", "hasValue": false, "defaultValue": "", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><rect x='5' y='5' width='54' height='54' rx='4' fill='#0055AA' stroke='#FFFFFF' stroke-width='2.5'/><path d='M22 51V14M32 51V14M42 51V32l-10-12' fill='none' stroke='#FFFFFF' stroke-width='3'/></svg>"}, {"code": "D-14", "name": "Koniec pasa ruchu", "group": "D", "hasValue": false, "defaultValue": "", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><rect x='5' y='5' width='54' height='54' rx='4' fill='#0055AA' stroke='#FFFFFF' stroke-width='2.5'/><path d='M22 51V14M32 51V14M42 51V32l-10-12' fill='none' stroke='#FFFFFF' stroke-width='3'/><line x1='9' y1='55' x2='55' y2='9' stroke='#D40000' stroke-width='5.5'/></svg>"}, {"code": "D-15", "name": "Przystanek autobusowy", "group": "D", "hasValue": false, "defaultValue": "", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><rect x='5' y='5' width='54' height='54' rx='4' fill='#0055AA' stroke='#FFFFFF' stroke-width='2.5'/><rect x='16' y='23' width='32' height='15' rx='2' fill='#FFFFFF'/><rect x='20' y='26' width='6' height='5' fill='#0055AA'/><rect x='29' y='26' width='6' height='5' fill='#0055AA'/><rect x='38' y='26' width='7' height='5' fill='#0055AA'/><circle cx='23' cy='40' r='3' fill='#FFFFFF'/><circle cx='41' cy='40' r='3' fill='#FFFFFF'/></svg>"}, {"code": "D-16", "name": "Przystanek trolejbusowy", "group": "D", "hasValue": false, "defaultValue": "", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><rect x='5' y='5' width='54' height='54' rx='4' fill='#0055AA' stroke='#FFFFFF' stroke-width='2.5'/><path d='M26 23l6-7 6 7' fill='none' stroke='#FFFFFF' stroke-width='2'/><rect x='16' y='23' width='32' height='15' rx='2' fill='#FFFFFF'/><circle cx='23' cy='40' r='3' fill='#FFFFFF'/><circle cx='41' cy='40' r='3' fill='#FFFFFF'/></svg>"}, {"code": "D-17", "name": "Przystanek tramwajowy", "group": "D", "hasValue": false, "defaultValue": "", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><rect x='5' y='5' width='54' height='54' rx='4' fill='#0055AA' stroke='#FFFFFF' stroke-width='2.5'/><path d='M27 21l5-5 5 5' fill='none' stroke='#FFFFFF' stroke-width='2'/><rect x='22' y='21' width='20' height='21' rx='2' fill='#FFFFFF'/><rect x='25' y='24' width='14' height='7' fill='#0055AA'/></svg>"}, {"code": "D-18", "name": "Parking", "group": "D", "hasValue": false, "defaultValue": "", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><rect x='5' y='5' width='54' height='54' rx='4' fill='#0055AA' stroke='#FFFFFF' stroke-width='2.5'/><text x='32' y='46' text-anchor='middle' fill='#FFFFFF' font-family='Arial,sans-serif' font-weight='800' font-size='38'>P</text></svg>"}, {"code": "D-18a", "name": "Parking - miejsce zastrzeżone", "group": "D", "hasValue": false, "defaultValue": "", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><rect x='5' y='5' width='54' height='54' rx='4' fill='#0055AA' stroke='#FFFFFF' stroke-width='2.5'/><text x='32' y='39' text-anchor='middle' fill='#FFFFFF' font-family='Arial,sans-serif' font-weight='800' font-size='30'>P</text><rect x='14' y='45' width='36' height='7' fill='#FFFFFF'/></svg>"}, {"code": "D-18b", "name": "Parking zadaszony", "group": "D", "hasValue": false, "defaultValue": "", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><rect x='5' y='5' width='54' height='54' rx='4' fill='#0055AA' stroke='#FFFFFF' stroke-width='2.5'/><path d='M16 22l16-8 16 8' fill='none' stroke='#FFFFFF' stroke-width='3'/><text x='32' y='48' text-anchor='middle' fill='#FFFFFF' font-family='Arial,sans-serif' font-weight='800' font-size='32'>P</text></svg>"}, {"code": "D-19", "name": "Postój taksówek", "group": "D", "hasValue": false, "defaultValue": "", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><rect x='5' y='5' width='54' height='54' rx='4' fill='#0055AA' stroke='#FFFFFF' stroke-width='2.5'/><text x='32' y='38' text-anchor='middle' fill='#FFFFFF' font-family='Arial,sans-serif' font-weight='800' font-size='16'>TAXI</text></svg>"}, {"code": "D-20", "name": "Koniec postoju taksówek", "group": "D", "hasValue": false, "defaultValue": "", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><rect x='5' y='5' width='54' height='54' rx='4' fill='#0055AA' stroke='#FFFFFF' stroke-width='2.5'/><text x='32' y='38' text-anchor='middle' fill='#FFFFFF' font-family='Arial,sans-serif' font-weight='800' font-size='16'>TAXI</text><line x1='9' y1='55' x2='55' y2='9' stroke='#D40000' stroke-width='5.5'/></svg>"}, {"code": "D-21", "name": "Szpital", "group": "D", "hasValue": false, "defaultValue": "", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><rect x='5' y='5' width='54' height='54' rx='4' fill='#0055AA' stroke='#FFFFFF' stroke-width='2.5'/><text x='23' y='39' text-anchor='middle' fill='#FFFFFF' font-family='Arial' font-weight='800' font-size='22'>H</text><rect x='39' y='23' width='5' height='16' fill='#FFFFFF'/><rect x='33.5' y='28.5' width='16' height='5' fill='#FFFFFF'/></svg>"}, {"code": "D-21a", "name": "Policja", "group": "D", "hasValue": false, "defaultValue": "", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><rect x='5' y='5' width='54' height='54' rx='4' fill='#0055AA' stroke='#FFFFFF' stroke-width='2.5'/><text x='32' y='36' text-anchor='middle' fill='#FFFFFF' font-family='Arial' font-weight='800' font-size='12'>POLICJA</text></svg>"}, {"code": "D-22", "name": "Punkt opatrunkowy", "group": "D", "hasValue": false, "defaultValue": "", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><rect x='5' y='5' width='54' height='54' rx='4' fill='#0055AA' stroke='#FFFFFF' stroke-width='2.5'/><rect x='13' y='13' width='38' height='38' rx='2' fill='#FFFFFF'/><rect x='29' y='19' width='6' height='26' fill='#D40000'/><rect x='19' y='29' width='26' height='6' fill='#D40000'/></svg>"}, {"code": "D-23", "name": "Stacja paliwowa", "group": "D", "hasValue": false, "defaultValue": "", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><rect x='5' y='5' width='54' height='54' rx='4' fill='#0055AA' stroke='#FFFFFF' stroke-width='2.5'/><rect x='13' y='13' width='38' height='38' rx='2' fill='#FFFFFF'/><rect x='23' y='21' width='14' height='22' rx='2' fill='#111'/><rect x='26' y='24' width='8' height='5' fill='#fff'/><path d='M37 25h4v13h-3' fill='none' stroke='#111' stroke-width='2.2'/></svg>"}, {"code": "D-23a", "name": "Stacja paliwowa tylko z gazem do napędu pojazdów", "group": "D", "hasValue": false, "defaultValue": "", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><rect x='5' y='5' width='54' height='54' rx='4' fill='#0055AA' stroke='#FFFFFF' stroke-width='2.5'/><rect x='13' y='13' width='38' height='38' rx='2' fill='#FFFFFF'/><text x='32' y='37' text-anchor='middle' fill='#111' font-family='Arial' font-weight='800' font-size='15'>LPG</text></svg>"}, {"code": "D-24", "name": "Telefon", "group": "D", "hasValue": false, "defaultValue": "", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><rect x='5' y='5' width='54' height='54' rx='4' fill='#0055AA' stroke='#FFFFFF' stroke-width='2.5'/><rect x='13' y='13' width='38' height='38' rx='2' fill='#FFFFFF'/><path d='M23 23c3-2 7 2 6 5l-2 2c2 3 5 6 8 8l2-2c3-1 7 3 5 6-2 3-8 2-15-5s-8-13-4-14z' fill='#111'/></svg>"}, {"code": "D-25", "name": "Poczta", "group": "D", "hasValue": false, "defaultValue": "", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><rect x='5' y='5' width='54' height='54' rx='4' fill='#0055AA' stroke='#FFFFFF' stroke-width='2.5'/><rect x='13' y='13' width='38' height='38' rx='2' fill='#FFFFFF'/><path d='M18 33h15l11-6v12l-11-6H18z' fill='#111'/><circle cx='28' cy='37' r='3' fill='none' stroke='#111' stroke-width='2'/></svg>"}, {"code": "D-26", "name": "Stacja obsługi technicznej", "group": "D", "hasValue": false, "defaultValue": "", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><rect x='5' y='5' width='54' height='54' rx='4' fill='#0055AA' stroke='#FFFFFF' stroke-width='2.5'/><rect x='13' y='13' width='38' height='38' rx='2' fill='#FFFFFF'/><path d='M24 24l16 16M22 26a4 4 0 0 1 5-5M37 41a4 4 0 0 0 5-5' stroke='#111' stroke-width='3.5' stroke-linecap='round'/></svg>"}, {"code": "D-26a", "name": "Wulkanizacja", "group": "D", "hasValue": false, "defaultValue": "", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><rect x='5' y='5' width='54' height='54' rx='4' fill='#0055AA' stroke='#FFFFFF' stroke-width='2.5'/><rect x='13' y='13' width='38' height='38' rx='2' fill='#FFFFFF'/><circle cx='32' cy='32' r='11' fill='none' stroke='#111' stroke-width='4.5'/><circle cx='32' cy='32' r='4' fill='#111'/></svg>"}, {"code": "D-26b", "name": "Myjnia", "group": "D", "hasValue": false, "defaultValue": "", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><rect x='5' y='5' width='54' height='54' rx='4' fill='#0055AA' stroke='#FFFFFF' stroke-width='2.5'/><rect x='13' y='13' width='38' height='38' rx='2' fill='#FFFFFF'/><rect x='23' y='32' width='18' height='9' rx='2' fill='#111'/><circle cx='27' cy='24' r='2' fill='#0055AA'/><circle cx='32' cy='21' r='2' fill='#0055AA'/><circle cx='37' cy='24' r='2' fill='#0055AA'/></svg>"}, {"code": "D-26c", "name": "Toaleta publiczna", "group": "D", "hasValue": false, "defaultValue": "", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><rect x='5' y='5' width='54' height='54' rx='4' fill='#0055AA' stroke='#FFFFFF' stroke-width='2.5'/><rect x='13' y='13' width='38' height='38' rx='2' fill='#FFFFFF'/><text x='32' y='38' text-anchor='middle' fill='#111' font-family='Arial' font-weight='800' font-size='18'>WC</text></svg>"}, {"code": "D-26d", "name": "Natrysk", "group": "D", "hasValue": false, "defaultValue": "", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><rect x='5' y='5' width='54' height='54' rx='4' fill='#0055AA' stroke='#FFFFFF' stroke-width='2.5'/><rect x='13' y='13' width='38' height='38' rx='2' fill='#FFFFFF'/><path d='M24 22h11l3 4H24z' fill='#111'/><path d='M26 30v12M31 30v12M36 30v12' stroke='#0055AA' stroke-width='2' stroke-dasharray='3 2'/></svg>"}, {"code": "D-27", "name": "Bufet lub kawiarnia", "group": "D", "hasValue": false, "defaultValue": "", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><rect x='5' y='5' width='54' height='54' rx='4' fill='#0055AA' stroke='#FFFFFF' stroke-width='2.5'/><rect x='13' y='13' width='38' height='38' rx='2' fill='#FFFFFF'/><path d='M23 27h14v9a5 5 0 0 1-5 5h-4a5 5 0 0 1-5-5z' fill='#111'/><path d='M37 29h3a3 3 0 0 1 0 6h-3' fill='none' stroke='#111' stroke-width='2'/></svg>"}, {"code": "D-28", "name": "Restauracja", "group": "D", "hasValue": false, "defaultValue": "", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><rect x='5' y='5' width='54' height='54' rx='4' fill='#0055AA' stroke='#FFFFFF' stroke-width='2.5'/><rect x='13' y='13' width='38' height='38' rx='2' fill='#FFFFFF'/><path d='M26 20v24M23 20v8h6v-8M38 20v24M38 20c3 0 3 10 0 10' fill='none' stroke='#111' stroke-width='2.3'/></svg>"}, {"code": "D-29", "name": "Hotel (motel)", "group": "D", "hasValue": false, "defaultValue": "", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><rect x='5' y='5' width='54' height='54' rx='4' fill='#0055AA' stroke='#FFFFFF' stroke-width='2.5'/><rect x='13' y='13' width='38' height='38' rx='2' fill='#FFFFFF'/><path d='M19 25v16M45 31v10M19 36h26' stroke='#111' stroke-width='3'/><rect x='23' y='30' width='18' height='4' fill='#111'/></svg>"}, {"code": "D-30", "name": "Obozowisko (kemping)", "group": "D", "hasValue": false, "defaultValue": "", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><rect x='5' y='5' width='54' height='54' rx='4' fill='#0055AA' stroke='#FFFFFF' stroke-width='2.5'/><rect x='13' y='13' width='38' height='38' rx='2' fill='#FFFFFF'/><polygon points='32,20 45,42 19,42' fill='none' stroke='#111' stroke-width='3'/></svg>"}, {"code": "D-31", "name": "Obozowisko (kemping) z podłączeniem elektrycznym", "group": "D", "hasValue": false, "defaultValue": "", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><rect x='5' y='5' width='54' height='54' rx='4' fill='#0055AA' stroke='#FFFFFF' stroke-width='2.5'/><rect x='13' y='13' width='38' height='38' rx='2' fill='#FFFFFF'/><polygon points='28,22 39,42 17,42' fill='none' stroke='#111' stroke-width='2.5'/><path d='M43 22l-3 7h4l-3 7' fill='none' stroke='#D40000' stroke-width='2'/></svg>"}, {"code": "D-32", "name": "Pole biwakowe", "group": "D", "hasValue": false, "defaultValue": "", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><rect x='5' y='5' width='54' height='54' rx='4' fill='#0055AA' stroke='#FFFFFF' stroke-width='2.5'/><rect x='13' y='13' width='38' height='38' rx='2' fill='#FFFFFF'/><rect x='20' y='26' width='22' height='12' rx='2' fill='#111'/><circle cx='26' cy='40' r='3' fill='#111'/></svg>"}, {"code": "D-33", "name": "Schronisko młodzieżowe", "group": "D", "hasValue": false, "defaultValue": "", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><rect x='5' y='5' width='54' height='54' rx='4' fill='#0055AA' stroke='#FFFFFF' stroke-width='2.5'/><rect x='13' y='13' width='38' height='38' rx='2' fill='#FFFFFF'/><path d='M19 30l13-9 13 9v13H19z' fill='none' stroke='#111' stroke-width='2.5'/></svg>"}, {"code": "D-34", "name": "Punkt informacji turystycznej", "group": "D", "hasValue": false, "defaultValue": "", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><rect x='5' y='5' width='54' height='54' rx='4' fill='#0055AA' stroke='#FFFFFF' stroke-width='2.5'/><rect x='13' y='13' width='38' height='38' rx='2' fill='#FFFFFF'/><text x='32' y='43' text-anchor='middle' fill='#0055AA' font-family='Georgia,serif' font-weight='800' font-size='32'>i</text></svg>"}, {"code": "D-34a", "name": "Informacja radiowa o ruchu drogowym", "group": "D", "hasValue": false, "defaultValue": "", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><rect x='5' y='5' width='54' height='54' rx='4' fill='#0055AA' stroke='#FFFFFF' stroke-width='2.5'/><text x='32' y='30' text-anchor='middle' fill='#FFFFFF' font-family='Arial' font-weight='800' font-size='11'>RADIO</text><text x='32' y='43' text-anchor='middle' fill='#FFCC00' font-family='Arial' font-weight='800' font-size='10'>FM</text></svg>"}, {"code": "D-35", "name": "Przejście podziemne dla pieszych", "group": "D", "hasValue": false, "defaultValue": "", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><rect x='5' y='5' width='54' height='54' rx='4' fill='#0055AA' stroke='#FFFFFF' stroke-width='2.5'/><path d='M18 24h7v6h7v6h7v6h7' fill='none' stroke='#FFFFFF' stroke-width='3'/><circle cx='28' cy='18' r='2.5' fill='#FFFFFF'/></svg>"}, {"code": "D-35a", "name": "Schody ruchome w dół", "group": "D", "hasValue": false, "defaultValue": "", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><rect x='5' y='5' width='54' height='54' rx='4' fill='#0055AA' stroke='#FFFFFF' stroke-width='2.5'/><path d='M18 24h7v6h7v6h7v6h7' fill='none' stroke='#FFFFFF' stroke-width='3'/><circle cx='28' cy='18' r='2.5' fill='#FFFFFF'/></svg>"}, {"code": "D-36", "name": "Przejście nadziemne dla pieszych", "group": "D", "hasValue": false, "defaultValue": "", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><rect x='5' y='5' width='54' height='54' rx='4' fill='#0055AA' stroke='#FFFFFF' stroke-width='2.5'/><path d='M18 42h7v-6h7v-6h7v-6h7' fill='none' stroke='#FFFFFF' stroke-width='3'/><circle cx='34' cy='18' r='2.5' fill='#FFFFFF'/></svg>"}, {"code": "D-36a", "name": "Schody ruchome w górę", "group": "D", "hasValue": false, "defaultValue": "", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><rect x='5' y='5' width='54' height='54' rx='4' fill='#0055AA' stroke='#FFFFFF' stroke-width='2.5'/><path d='M18 42h7v-6h7v-6h7v-6h7' fill='none' stroke='#FFFFFF' stroke-width='3'/><circle cx='34' cy='18' r='2.5' fill='#FFFFFF'/></svg>"}, {"code": "D-37", "name": "Tunel", "group": "D", "hasValue": false, "defaultValue": "", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><rect x='5' y='5' width='54' height='54' rx='4' fill='#0055AA' stroke='#FFFFFF' stroke-width='2.5'/><path d='M16 48V28a16 16 0 0 1 32 0v20H37V31a5 5 0 0 0-10 0v17z' fill='#FFFFFF'/></svg>"}, {"code": "D-38", "name": "Koniec tunelu", "group": "D", "hasValue": false, "defaultValue": "", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><rect x='5' y='5' width='54' height='54' rx='4' fill='#0055AA' stroke='#FFFFFF' stroke-width='2.5'/><path d='M16 48V28a16 16 0 0 1 32 0v20H37V31a5 5 0 0 0-10 0v17z' fill='#FFFFFF'/><line x1='9' y1='55' x2='55' y2='9' stroke='#D40000' stroke-width='5.5'/></svg>"}, {"code": "D-39", "name": "Dopuszczalne prędkości", "group": "D", "hasValue": false, "defaultValue": "", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><rect x='5' y='5' width='54' height='54' rx='4' fill='#0055AA' stroke='#FFFFFF' stroke-width='2.5'/><rect x='13' y='13' width='38' height='38' rx='2' fill='#FFFFFF'/><circle cx='24' cy='24' r='6.5' fill='none' stroke='#D40000' stroke-width='2'/><text x='24' y='26.5' text-anchor='middle' fill='#111' font-size='7' font-weight='700'>50</text><circle cx='40' cy='24' r='6.5' fill='none' stroke='#D40000' stroke-width='2'/><text x='40' y='26.5' text-anchor='middle' fill='#111' font-size='7' font-weight='700'>90</text><circle cx='32' cy='40' r='7.5' fill='none' stroke='#D40000' stroke-width='2'/><text x='32' y='43' text-anchor='middle' fill='#111' font-size='7.5' font-weight='700'>140</text></svg>"}, {"code": "D-39a", "name": "Opłaty drogowe", "group": "D", "hasValue": false, "defaultValue": "", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><rect x='5' y='5' width='54' height='54' rx='4' fill='#0055AA' stroke='#FFFFFF' stroke-width='2.5'/><rect x='13' y='13' width='38' height='38' rx='2' fill='#FFFFFF'/><text x='32' y='36' text-anchor='middle' fill='#111' font-family='Arial' font-weight='800' font-size='11'>OPŁATY</text></svg>"}, {"code": "D-40", "name": "Strefa zamieszkania", "group": "D", "hasValue": false, "defaultValue": "", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><rect x='5' y='5' width='54' height='54' rx='4' fill='#0055AA' stroke='#FFFFFF' stroke-width='2.5'/><path d='M13 31l11-9 11 9v15H13z' fill='#FFFFFF'/><circle cx='44' cy='25' r='2.5' fill='#FFFFFF'/><path d='M44 28v9l-3 7M44 37l3 7' fill='none' stroke='#FFFFFF' stroke-width='2.2'/></svg>"}, {"code": "D-41", "name": "Koniec strefy zamieszkania", "group": "D", "hasValue": false, "defaultValue": "", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><rect x='5' y='5' width='54' height='54' rx='4' fill='#0055AA' stroke='#FFFFFF' stroke-width='2.5'/><path d='M13 31l11-9 11 9v15H13z' fill='#FFFFFF'/><circle cx='44' cy='25' r='2.5' fill='#FFFFFF'/><path d='M44 28v9l-3 7M44 37l3 7' fill='none' stroke='#FFFFFF' stroke-width='2.2'/><line x1='9' y1='55' x2='55' y2='9' stroke='#D40000' stroke-width='5.5'/></svg>"}, {"code": "D-42", "name": "Obszar zabudowany", "group": "D", "hasValue": false, "defaultValue": "", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><rect x='5' y='12' width='54' height='40' rx='3' fill='#FFFFFF' stroke='#111111' stroke-width='3'/><path d='M12 45V27l7-5 7 5v18M28 45V23h9v22M39 45V30l6-4 6 4v15' fill='#111111'/></svg>"}, {"code": "D-43", "name": "Koniec obszaru zabudowanego", "group": "D", "hasValue": false, "defaultValue": "", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><rect x='5' y='12' width='54' height='40' rx='3' fill='#FFFFFF' stroke='#111111' stroke-width='3'/><path d='M12 45V27l7-5 7 5v18M28 45V23h9v22M39 45V30l6-4 6 4v15' fill='#111111'/><line x1='8' y1='50' x2='56' y2='14' stroke='#D40000' stroke-width='5'/></svg>"}, {"code": "D-44", "name": "Strefa płatnego parkowania", "group": "D", "hasValue": false, "defaultValue": "", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><rect x='9' y='3' width='46' height='58' rx='3' fill='#FFFFFF' stroke='#111111' stroke-width='2.5'/><text x='32' y='13' text-anchor='middle' fill='#111111' font-family='Arial,sans-serif' font-weight='700' font-size='8'>STREFA</text><circle cx='32' cy='35' r='15' fill='#0055AA'/><text x='32' y='41' text-anchor='middle' fill='#FFFFFF' font-family='Arial' font-weight='800' font-size='18'>P</text></svg>"}, {"code": "D-45", "name": "Koniec strefy płatnego parkowania", "group": "D", "hasValue": false, "defaultValue": "", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><rect x='9' y='3' width='46' height='58' rx='3' fill='#FFFFFF' stroke='#111111' stroke-width='2.5'/><text x='32' y='13' text-anchor='middle' fill='#111111' font-family='Arial,sans-serif' font-weight='700' font-size='8'>STREFA</text><circle cx='32' cy='35' r='15' fill='#666'/><text x='32' y='41' text-anchor='middle' fill='#FFFFFF' font-family='Arial' font-weight='800' font-size='18'>P</text><g stroke='#111111' stroke-width='2.2'><line x1='12' y1='54' x2='52' y2='14'/><line x1='10' y1='49' x2='49' y2='10'/><line x1='15' y1='57' x2='54' y2='18'/></g></svg>"}, {"code": "D-46", "name": "Droga wewnętrzna", "group": "D", "hasValue": false, "defaultValue": "", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><rect x='4' y='16' width='56' height='32' rx='3' fill='#FFFFFF' stroke='#111111' stroke-width='3'/><text x='32' y='30' text-anchor='middle' fill='#111' font-family='Arial' font-weight='800' font-size='10'>DROGA</text><text x='32' y='42' text-anchor='middle' fill='#111' font-family='Arial' font-weight='800' font-size='8.5'>WEWNĘTRZNA</text></svg>"}, {"code": "D-47", "name": "Koniec drogi wewnętrznej", "group": "D", "hasValue": false, "defaultValue": "", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><rect x='4' y='16' width='56' height='32' rx='3' fill='#FFFFFF' stroke='#111111' stroke-width='3'/><text x='32' y='30' text-anchor='middle' fill='#111' font-family='Arial' font-weight='800' font-size='10'>DROGA</text><text x='32' y='42' text-anchor='middle' fill='#111' font-family='Arial' font-weight='800' font-size='8.5'>WEWNĘTRZNA</text><line x1='8' y1='46' x2='56' y2='18' stroke='#D40000' stroke-width='4.5'/></svg>"}, {"code": "D-48", "name": "Zmiana pierwszeństwa", "group": "D", "hasValue": false, "defaultValue": "", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><rect x='5' y='5' width='54' height='54' rx='4' fill='#0055AA' stroke='#FFFFFF' stroke-width='2.5'/><polygon points='32,12 43,23 32,34 21,23' fill='#FFCC00' stroke='#FFFFFF' stroke-width='2'/><polygon points='23,38 41,38 32,53' fill='#FFCC00' stroke='#D40000' stroke-width='2.5'/></svg>"}, {"code": "D-49", "name": "Pobór opłat", "group": "D", "hasValue": false, "defaultValue": "", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><rect x='5' y='5' width='54' height='54' rx='4' fill='#0055AA' stroke='#FFFFFF' stroke-width='2.5'/><text x='32' y='37' text-anchor='middle' fill='#FFFFFF' font-family='Arial' font-weight='800' font-size='14'>TOLL</text></svg>"}, {"code": "D-50", "name": "Zatoka", "group": "D", "hasValue": false, "defaultValue": "", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><rect x='5' y='5' width='54' height='54' rx='4' fill='#0055AA' stroke='#FFFFFF' stroke-width='2.5'/><path d='M23 51V13M35 51V40l6-6V26l-6-6V13' fill='none' stroke='#FFFFFF' stroke-width='3'/></svg>"}, {"code": "D-51", "name": "Automatyczna kontrola prędkości", "group": "D", "hasValue": false, "defaultValue": "", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><rect x='5' y='5' width='54' height='54' rx='4' fill='#0055AA' stroke='#FFFFFF' stroke-width='2.5'/><rect x='22' y='21' width='20' height='16' rx='2' fill='#FFFFFF'/><circle cx='32' cy='29' r='5' fill='#0055AA'/><path d='M25 41l-4 7M39 41l4 7' stroke='#FFFFFF' stroke-width='2.5'/></svg>"}, {"code": "D-51a", "name": "Automatyczna kontrola średniej prędkości", "group": "D", "hasValue": false, "defaultValue": "", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><rect x='5' y='5' width='54' height='54' rx='4' fill='#0055AA' stroke='#FFFFFF' stroke-width='2.5'/><rect x='17' y='18' width='13' height='10' rx='1.5' fill='#FFFFFF'/><rect x='34' y='34' width='13' height='10' rx='1.5' fill='#FFFFFF'/><line x1='24' y1='32' x2='40' y2='32' stroke='#FFCC00' stroke-width='2.5'/></svg>"}, {"code": "D-51b", "name": "Koniec automatycznej kontroli średniej prędkości", "group": "D", "hasValue": false, "defaultValue": "", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><rect x='5' y='5' width='54' height='54' rx='4' fill='#0055AA' stroke='#FFFFFF' stroke-width='2.5'/><rect x='17' y='18' width='13' height='10' rx='1.5' fill='#FFFFFF'/><rect x='34' y='34' width='13' height='10' rx='1.5' fill='#FFFFFF'/><line x1='24' y1='32' x2='40' y2='32' stroke='#FFCC00' stroke-width='2.5'/><line x1='9' y1='55' x2='55' y2='9' stroke='#D40000' stroke-width='5.5'/></svg>"}, {"code": "D-52", "name": "Strefa ruchu", "group": "D", "hasValue": false, "defaultValue": "", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><rect x='9' y='3' width='46' height='58' rx='3' fill='#FFFFFF' stroke='#111111' stroke-width='2.5'/><text x='32' y='13' text-anchor='middle' fill='#111111' font-family='Arial,sans-serif' font-weight='700' font-size='8'>STREFA</text><rect x='21' y='33' width='22' height='10' rx='2' fill='#111'/><rect x='24' y='27' width='16' height='7' rx='2' fill='#111'/><circle cx='25' cy='44' r='2.5' fill='#111'/><circle cx='39' cy='44' r='2.5' fill='#111'/></svg>"}, {"code": "D-53", "name": "Koniec strefy ruchu", "group": "D", "hasValue": false, "defaultValue": "", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><rect x='9' y='3' width='46' height='58' rx='3' fill='#FFFFFF' stroke='#111111' stroke-width='2.5'/><text x='32' y='13' text-anchor='middle' fill='#111111' font-family='Arial,sans-serif' font-weight='700' font-size='8'>STREFA</text><rect x='21' y='33' width='22' height='10' rx='2' fill='#666'/><rect x='24' y='27' width='16' height='7' rx='2' fill='#666'/><g stroke='#111111' stroke-width='2.2'><line x1='12' y1='54' x2='52' y2='14'/><line x1='10' y1='49' x2='49' y2='10'/><line x1='15' y1='57' x2='54' y2='18'/></g></svg>"}, {"code": "D-54", "name": "Strefa czystego transportu", "group": "D", "hasValue": false, "defaultValue": "", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><rect x='9' y='3' width='46' height='58' rx='3' fill='#FFFFFF' stroke='#111111' stroke-width='2.5'/><text x='32' y='13' text-anchor='middle' fill='#111111' font-family='Arial,sans-serif' font-weight='700' font-size='8'>STREFA</text><circle cx='32' cy='36' r='16' fill='#FFFFFF' stroke='#1E9E3E' stroke-width='4'/><text x='32' y='40' text-anchor='middle' fill='#1E9E3E' font-family='Arial' font-weight='800' font-size='11'>SCT</text></svg>"}, {"code": "D-55", "name": "Koniec strefy czystego transportu", "group": "D", "hasValue": false, "defaultValue": "", "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='16' height='16'><rect x='9' y='3' width='46' height='58' rx='3' fill='#FFFFFF' stroke='#111111' stroke-width='2.5'/><text x='32' y='13' text-anchor='middle' fill='#111111' font-family='Arial,sans-serif' font-weight='700' font-size='8'>STREFA</text><circle cx='32' cy='36' r='16' fill='#FFFFFF' stroke='#666' stroke-width='3'/><text x='32' y='40' text-anchor='middle' fill='#666' font-family='Arial' font-weight='800' font-size='11'>SCT</text><g stroke='#111111' stroke-width='2.2'><line x1='12' y1='54' x2='52' y2='14'/><line x1='10' y1='49' x2='49' y2='10'/><line x1='15' y1='57' x2='54' y2='18'/></g></svg>"}];
+const ROAD_SIGNS_BY_CODE = new Map(ROAD_SIGNS_CATALOG.map(item => [item.code.toUpperCase(), item]));
+const POINT_SIGN_STORAGE_KEY = "map-point-sign-overrides-v1";
+let pointSignOverrides = {};
+let signStorageReady = false;
+
+function normalizeSignCode(rawCode) {
+    if (!rawCode) return "";
+    let cleaned = String(rawCode).trim().toUpperCase().replace(/\s+/g, "");
+    if (cleaned === "C-13/16" || cleaned === "C13/C16" || cleaned === "C13/16") cleaned = "C-13/C-16";
+    if (cleaned === "C-13|16" || cleaned === "C13|C16" || cleaned === "C13|16") cleaned = "C-13|C-16";
+    const m = cleaned.match(/^([ABCD])[-_]?(\d+[A-Z]?(?:[\/|][ABCD]?[-_]?\d+[A-Z]?)?)$/);
+    if (m) {
+        const candidate = `${m[1]}-${m[2]}`;
+        if (ROAD_SIGNS_BY_CODE.has(candidate)) return candidate;
+    }
+    return ROAD_SIGNS_BY_CODE.has(cleaned) ? cleaned : "";
+}
+
+function extractSignSpecFromPoint(rawPoint) {
+    if (!rawPoint || typeof rawPoint !== "object") return { code: "", value: "" };
+    const explicitCode = normalizeSignCode(rawPoint.znak || rawPoint.kod_znaku || rawPoint.kodZnaku || rawPoint.symbol);
+    const explicitVal = rawPoint.znakWartosc !== undefined && rawPoint.znakWartosc !== null
+        ? String(rawPoint.znakWartosc).trim()
+        : (rawPoint.wartosc_znaku !== undefined && rawPoint.wartosc_znaku !== null ? String(rawPoint.wartosc_znaku).trim() : "");
+    if (explicitCode) {
+        return { code: explicitCode, value: explicitVal };
+    }
+    const sources = [rawPoint.numer, rawPoint.uwagi].filter(Boolean).map(String);
+    for (const text of sources) {
+        const match = text.match(/\b([ABCD])[-\s]?(\d+[a-eA-E]?(?:[\/|][ABCD]?[-\s]?\d+[a-eA-E]?)?)\b(?:\s*[(]?([0-9]+(?:[.,][0-9]+)?\s*(?:m|t|km\/h)?|STÓJ)[)]?)?/i);
+        if (match) {
+            const code = normalizeSignCode(`${match[1]}-${match[2]}`);
+            if (code) {
+                const val = explicitVal || (match[3] ? match[3].trim() : "");
+                return { code, value: val };
+            }
+        }
+    }
+    return { code: "", value: explicitVal };
+}
+
+function getRoadSignSvg(code, customValue = "") {
+    const normCode = normalizeSignCode(code);
+    const entry = normCode ? ROAD_SIGNS_BY_CODE.get(normCode) : null;
+    if (!entry) return SVG_ZNAK_DROGOWY;
+    const val = String(customValue || "").trim();
+    if (!entry.hasValue || !val || val === entry.defaultValue) {
+        return entry.svg;
+    }
+    const safeVal = escapeHtml(val);
+    if (normCode === "B-33" || normCode === "B-34") {
+        const fs = val.length <= 2 ? "22" : "17";
+        return entry.svg.replace(/<text[^>]*>.*?<\/text>/, `<text x='32' y='39.5' text-anchor='middle' fill='#111111' font-family='Arial,sans-serif' font-weight='800' font-size='${fs}'>${safeVal}</text>`);
+    }
+    if (normCode === "B-43" || normCode === "B-44") {
+        const fill = normCode === "B-43" ? "#111" : "#666";
+        return entry.svg.replace(/(<circle[^>]*\/>)<text[^>]*>.*?<\/text>/, `$1<text x='32' y='41' text-anchor='middle' fill='${fill}' font-family='Arial' font-weight='800' font-size='14'>${safeVal}</text>`);
+    }
+    if (normCode === "C-14" || normCode === "C-15") {
+        return entry.svg.replace(/<text[^>]*>.*?<\/text>/, `<text x='32' y='39.5' text-anchor='middle' fill='#FFFFFF' font-family='Arial,sans-serif' font-weight='800' font-size='21'>${safeVal}</text>`);
+    }
+    if (normCode === "B-15" || normCode === "B-16" || normCode === "B-17" || normCode === "B-18" || normCode === "B-19") {
+        return entry.svg.replace(/<text[^>]*>.*?<\/text>/, `<text x='32' y='36' text-anchor='middle' fill='#111' font-family='Arial' font-weight='700' font-size='12'>${safeVal}</text>`);
+    }
+    if (normCode === "B-32") {
+        return entry.svg.replace(/<text[^>]*>.*?<\/text>/, `<text x='32' y='27' text-anchor='middle' fill='#111' font-family='Arial' font-weight='700' font-size='9'>${safeVal}</text>`);
+    }
+    return entry.svg;
+}
+
+function getPointSignSvg(point) {
+    if (!point || point.typ !== "Znak drogowy") return SVG_ZNAK_DROGOWY;
+    return getRoadSignSvg(point.signCode, point.signValue);
+}
+
+function getPointSignLabel(point) {
+    if (!point || point.typ !== "Znak drogowy" || !point.signCode) return "";
+    const entry = ROAD_SIGNS_BY_CODE.get(point.signCode);
+    const valPart = point.signValue ? ` (${point.signValue})` : "";
+    return entry ? `${entry.code}${valPart} – ${entry.name}` : `${point.signCode}${valPart}`;
+}
 const SVG_LIVE_USER = `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='16' height='16' fill='#ffffff'><path d='M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z'/></svg>`;
 
 const CONFIG_TYPES = {
@@ -1462,12 +1670,22 @@ async function syncPointsData() {
                     ? { x: jsonOffsetX, y: jsonOffsetY }
                     : { x: 0, y: 0 };
 
+                const jsonSignSpec = typ === "Znak drogowy" ? extractSignSpecFromPoint(p) : { code: "", value: "" };
+                const signOverride = (typ === "Znak drogowy" && Object.prototype.hasOwnProperty.call(pointSignOverrides, pointId))
+                    ? pointSignOverrides[pointId]
+                    : null;
+                const activeSignSpec = signOverride || jsonSignSpec;
+
                 const safeData = {
                     id: pointId, typ: typ, numer: escapeHtml(String(p.numer || "")),
                     numerRaw: String(p.numer || ""),
                     sektor: escapeHtml(String(p.sektor || "")), liczba_osob: Number(p.liczba_osob) || 0,
                     telefon: escapeHtml(String(p.telefon || "")), uwagi: escapeHtml(String(p.uwagi || "")),
                     adres: String(p.adres || ""),
+                    signCode: activeSignSpec.code || "",
+                    signValue: activeSignSpec.value || "",
+                    jsonSignCode: jsonSignSpec.code || "",
+                    jsonSignValue: jsonSignSpec.value || "",
                     rotationOverride,
                     jsonRotationOverride,
                     automaticAngleSource,
@@ -1517,7 +1735,16 @@ async function syncPointsData() {
 }
 
 function popupHtml(p) {
-    let h = `<b>${p.typ}</b> - ${p.numer}<br>Obsada: ${p.liczba_osob} os.`;
+    let h = `<b>${p.typ}</b> - ${p.numer}`;
+    if (p.typ === "Znak drogowy" && p.signCode) {
+        const signEntry = ROAD_SIGNS_BY_CODE.get(p.signCode);
+        const valText = p.signValue ? ` (${escapeHtml(p.signValue)})` : "";
+        const descText = signEntry ? ` — ${escapeHtml(signEntry.name)}` : "";
+        h += `<br>Znak: <b>${escapeHtml(p.signCode)}${valText}</b>${descText}`;
+    }
+    if (p.liczba_osob > 0 || p.typ !== "Znak drogowy") {
+        h += `<br>Obsada: ${p.liczba_osob} os.`;
+    }
     if (p.sektor) h += `<br>Sektor: ${p.sektor}`;
     if (p.telefon) h += `<br>Tel: ${p.telefon}`;
     if (p.uwagi) h += `<br>Uwagi: ${p.uwagi}`;
@@ -1540,7 +1767,7 @@ function buildIcon(point) {
             : isSluza
                 ? [48, 48]
                 : isSign
-                    ? [30, 30]
+                    ? [32, 32]
                     : [26, 26];
 
     const markerSize = [baseSize[0] * scale, baseSize[1] * scale];
@@ -1551,9 +1778,10 @@ function buildIcon(point) {
         baseAnchor[1] - offset.y * scale
     ];
     const iconRotation = isLinearElement ? point.routeAngle : null;
+    const rawSvg = isSign ? getPointSignSvg(point) : getIconHtml(cfg);
     const baseSvg = Number.isFinite(iconRotation)
-        ? getIconHtml(cfg).replace("<svg ", `<svg style="transform:rotate(${iconRotation}deg);transform-origin:center;" `)
-        : getIconHtml(cfg);
+        ? rawSvg.replace("<svg ", `<svg style="transform:rotate(${iconRotation}deg);transform-origin:center;" `)
+        : rawSvg;
 
     const barrierCount = Number(point.liczba_osob);
     const showBarrierBadge = isBarierki && Number.isFinite(barrierCount) && barrierCount > 2;
@@ -1618,6 +1846,8 @@ function updateExistingMarker(id, p) {
     if (existing.lat !== p.lat || existing.lng !== p.lng) existing.marker.setLatLng([p.lat, p.lng]);
     if (existing.routeAngle !== p.routeAngle ||
         existing.liczba_osob !== p.liczba_osob ||
+        existing.signCode !== p.signCode ||
+        existing.signValue !== p.signValue ||
         existing.positionOffset.x !== p.positionOffset.x ||
         existing.positionOffset.y !== p.positionOffset.y) {
         existing.marker.setIcon(buildIcon(p));
@@ -1643,16 +1873,28 @@ function refreshList() {
 
     pointsMap.forEach((p, id) => {
         if (!activeFilters[p.typ]) return;
-        if (searchVal && !p.numer.toLowerCase().includes(searchVal)) return;
+        const signText = p.typ === "Znak drogowy" && p.signCode
+            ? `${p.signCode} ${p.signValue || ""} ${(ROAD_SIGNS_BY_CODE.get(p.signCode)?.name || "")}`.toLowerCase()
+            : "";
+        if (searchVal &&
+            !p.numer.toLowerCase().includes(searchVal) &&
+            !p.uwagi.toLowerCase().includes(searchVal) &&
+            !signText.includes(searchVal)) return;
 
         visibleCount++;
         const cfg = CONFIG_TYPES[p.typ];
+        const badgeHtml = p.typ === "Znak drogowy"
+            ? `<span class="point-icon-badge icon-znak-drogowy" aria-hidden="true">${getPointSignSvg(p)}</span>`
+            : getIconBadgeHtml(cfg);
+        const signBadge = p.typ === "Znak drogowy" && p.signCode
+            ? ` <span style="display:inline-block;padding:1px 5px;background:#fef3c7;border:1px solid #f59e0b;border-radius:3px;font-size:10px;font-weight:bold;color:#92400e;">${escapeHtml(p.signCode)}${p.signValue ? " (" + escapeHtml(p.signValue) + ")" : ""}</span>`
+            : "";
 
         rows += `
         <tr class="pointItem" data-id="${escapeHtml(id)}" style="border-left: 5px solid ${cfg.color};">
             <td><div class="point-name-cell">
-                ${getIconBadgeHtml(cfg)}
-                <b>${p.typ}</b> - <span>${p.numer}</span>
+                ${badgeHtml}
+                <b>${p.typ}</b> - <span>${p.numer}</span>${signBadge}
             </div></td>
             <td class="point-notes-cell">${p.uwagi || ""}</td>
         </tr>`;
@@ -1700,7 +1942,7 @@ function refreshRotationEditor() {
     document.getElementById("rotationOffsetXInput").disabled = !hasSelection;
     document.getElementById("rotationOffsetYInput").disabled = !hasSelection;
     document.getElementById("saveRotationBtn").disabled = !canSave;
-    document.getElementById("flipRotation180Btn").disabled = !canSave;
+    document.getElementById("flipRotation90Btn").disabled = !canSave;
     document.getElementById("resetRotationBtn").disabled = !canSave;
     document.getElementById("savePositionBtn").disabled = !canSavePosition;
     document.getElementById("resetPositionBtn").disabled = !canSavePosition;
@@ -1710,6 +1952,7 @@ function refreshRotationEditor() {
     if (activeDraggedPointId && (!hasSelection || activeDraggedPointId !== select.value)) {
         setSelectedPointDragging(false);
     }
+    syncSignEditorPanel();
 
     if (hasSelection) {
         const point = pointsMap.get(select.value);
@@ -1749,6 +1992,141 @@ function refreshRotationEditor() {
         input.dataset.pointId = "";
         setRotationStatus("Wybierz punkt Taśma, Barierki lub Znak drogowy, aby ustawić jego kąt.");
     }
+}
+
+function populateSignCatalogSelect(selectedCode = "") {
+    const select = document.getElementById("signCodeSelect");
+    const groupFilter = document.getElementById("signGroupFilter").value;
+    const query = document.getElementById("signCatalogSearch").value.toLowerCase().trim();
+
+    const filtered = ROAD_SIGNS_CATALOG.filter(item => {
+        if (groupFilter !== "ALL" && item.group !== groupFilter) return false;
+        if (query && !item.code.toLowerCase().includes(query) && !item.name.toLowerCase().includes(query)) return false;
+        return true;
+    });
+
+    const options = [`<option value="">-- Domyślny znak ostrzegawczy --</option>`];
+    const groupsOrder = [
+        ["A", "Grupa A — Znaki ostrzegawcze"],
+        ["B", "Grupa B — Znaki zakazu"],
+        ["C", "Grupa C — Znaki nakazu"],
+        ["D", "Grupa D — Znaki informacyjne"]
+    ];
+    groupsOrder.forEach(([grpKey, grpLabel]) => {
+        const items = filtered.filter(i => i.group === grpKey);
+        if (!items.length) return;
+        options.push(`<optgroup label="${grpLabel}">`);
+        items.forEach(i => {
+            options.push(`<option value="${escapeHtml(i.code)}">${escapeHtml(i.code)} — ${escapeHtml(i.name)}</option>`);
+        });
+        options.push(`</optgroup>`);
+    });
+    select.innerHTML = options.join("");
+    if (selectedCode && filtered.some(i => i.code === selectedCode)) {
+        select.value = selectedCode;
+    } else if (selectedCode && ROAD_SIGNS_BY_CODE.has(selectedCode)) {
+        const entry = ROAD_SIGNS_BY_CODE.get(selectedCode);
+        const opt = document.createElement("option");
+        opt.value = entry.code;
+        opt.textContent = `${entry.code} — ${entry.name}`;
+        select.appendChild(opt);
+        select.value = entry.code;
+    }
+}
+
+function updateSignPreviewPanel() {
+    const code = normalizeSignCode(document.getElementById("signCodeSelect").value);
+    const entry = code ? ROAD_SIGNS_BY_CODE.get(code) : null;
+    const valueRow = document.getElementById("signValueRow");
+    const valueInput = document.getElementById("signValueInput");
+
+    if (entry && entry.hasValue) {
+        valueRow.style.display = "block";
+        if (!valueInput.value.trim()) valueInput.value = entry.defaultValue || "";
+    } else {
+        valueRow.style.display = "none";
+    }
+
+    const activeVal = entry && entry.hasValue ? valueInput.value.trim() : "";
+    document.getElementById("signPreviewSvg").innerHTML = getRoadSignSvg(code, activeVal);
+    document.getElementById("signPreviewCode").textContent = entry
+        ? `${entry.code}${activeVal ? " (" + activeVal + ")" : ""}`
+        : "Domyślny znak";
+    document.getElementById("signPreviewName").textContent = entry
+        ? entry.name
+        : "Wybierz symbol z katalogu A–D";
+}
+
+function syncSignEditorPanel() {
+    const panel = document.getElementById("signEditorPanel");
+    const select = document.getElementById("rotationPointSelect");
+    const point = pointsMap.get(select.value);
+    if (!point || point.typ !== "Znak drogowy") {
+        panel.style.display = "none";
+        panel.dataset.pointId = "";
+        return;
+    }
+    panel.style.display = "block";
+    if (panel.dataset.pointId !== point.id) {
+        panel.dataset.pointId = point.id;
+        document.getElementById("signGroupFilter").value = "ALL";
+        document.getElementById("signCatalogSearch").value = "";
+        populateSignCatalogSelect(point.signCode || "");
+        document.getElementById("signValueInput").value = point.signValue || "";
+    }
+    updateSignPreviewPanel();
+}
+
+function saveSelectedPointSign() {
+    const pointId = document.getElementById("rotationPointSelect").value;
+    const point = pointsMap.get(pointId);
+    if (!point || point.typ !== "Znak drogowy") {
+        setRotationStatus("Wybierz punkt typu Znak drogowy.", true);
+        return;
+    }
+    const code = normalizeSignCode(document.getElementById("signCodeSelect").value);
+    const entry = code ? ROAD_SIGNS_BY_CODE.get(code) : null;
+    const value = entry && entry.hasValue ? document.getElementById("signValueInput").value.trim() : "";
+
+    const nextOverrides = { ...pointSignOverrides };
+    if (code) {
+        nextOverrides[pointId] = { code, value };
+    } else {
+        delete nextOverrides[pointId];
+    }
+    if (!persistPointSignOverrides(nextOverrides)) return;
+
+    point.signCode = code;
+    point.signValue = value;
+    point.marker.setIcon(buildIcon(point));
+    point.marker.setPopupContent(popupHtml(point));
+    pointsMap.set(pointId, point);
+    refreshList();
+    updateSignPreviewPanel();
+    setRotationStatus(code
+        ? `Zapisano znak ${code}${value ? " (" + value + ")" : ""} dla punktu ${point.numerRaw || point.id}.`
+        : `Przywrócono domyślny znak dla punktu ${point.numerRaw || point.id}.`
+    );
+}
+
+function resetSelectedPointSign() {
+    const pointId = document.getElementById("rotationPointSelect").value;
+    const point = pointsMap.get(pointId);
+    if (!point || point.typ !== "Znak drogowy") return;
+
+    const nextOverrides = { ...pointSignOverrides };
+    delete nextOverrides[pointId];
+    if (!persistPointSignOverrides(nextOverrides)) return;
+
+    point.signCode = point.jsonSignCode || "";
+    point.signValue = point.jsonSignValue || "";
+    point.marker.setIcon(buildIcon(point));
+    point.marker.setPopupContent(popupHtml(point));
+    pointsMap.set(pointId, point);
+    document.getElementById("signEditorPanel").dataset.pointId = "";
+    syncSignEditorPanel();
+    refreshList();
+    setRotationStatus(`Przywrócono wzór znaku z danych dla punktu ${point.numerRaw || point.id}.`);
 }
 
 function handleRotationPointChange() {
@@ -1959,7 +2337,7 @@ function saveSelectedPointRotation() {
     setRotationStatus(`Zapisano kąt ${angle}° dla punktu ${point.typ} - ${point.numerRaw}.`);
 }
 
-function flipSelectedPointRotation180() {
+function flipSelectedPointRotation90() {
     const pointId = document.getElementById("rotationPointSelect").value;
     const point = pointsMap.get(pointId);
     const angleInput = document.getElementById("rotationAngleInput");
@@ -1972,7 +2350,7 @@ function flipSelectedPointRotation180() {
         ? Number(angleInput.value)
         : (Number.isFinite(point.routeAngle) ? point.routeAngle : 0);
 
-    let flipped = (currentAngle + 180) % 360;
+    let flipped = (currentAngle + 90) % 360;
     if (flipped > 180) flipped -= 360;
     if (flipped < -180) flipped += 360;
     const rounded = Number(flipped.toFixed(1));
@@ -1981,7 +2359,7 @@ function flipSelectedPointRotation180() {
     if (!persistPointRotationOverrides(nextOverrides)) return;
     applyPointRotation(point, rounded);
     angleInput.value = String(rounded);
-    setRotationStatus(`Obrócono o 180° (nowy kąt: ${rounded}°) dla punktu ${point.typ} - ${point.numerRaw}.`);
+    setRotationStatus(`Obrócono o 90° (nowy kąt: ${rounded}°) dla punktu ${point.typ} - ${point.numerRaw}.`);
 }
 
 function resetSelectedPointRotation() {
@@ -2191,6 +2569,12 @@ function createUpdatedPointsDocument() {
             point.przesuniecieX = offset.x;
             point.przesuniecieY = offset.y;
         }
+        if (Object.prototype.hasOwnProperty.call(pointSignOverrides, pointId)) {
+            const signSpec = pointSignOverrides[pointId];
+            point.znak = signSpec.code;
+            if (signSpec.value) point.znakWartosc = signSpec.value;
+            else delete point.znakWartosc;
+        }
     });
     return documentCopy;
 }
@@ -2235,6 +2619,7 @@ function importPointsDocument(documentData) {
     const importedAngles = {};
     const importedOffsets = {};
     const importedCoordinates = {};
+    const importedSigns = {};
     points.forEach((point, index) => {
         const type = normalizeType(point.typ);
         const id = getExportPointId(point, index);
@@ -2247,19 +2632,25 @@ function importPointsDocument(documentData) {
             const y = Number(point.przesuniecieY ?? 0);
             if (x !== 0 || y !== 0) importedOffsets[id] = { x, y };
         }
+        if (type === "Znak drogowy") {
+            const spec = extractSignSpecFromPoint(point);
+            if (spec.code) importedSigns[id] = spec;
+        }
     });
 
     const storageKeys = [
         IMPORTED_POINTS_DOCUMENT_STORAGE_KEY,
         POINT_ROTATION_STORAGE_KEY,
         POINT_POSITION_STORAGE_KEY,
-        POINT_COORDINATE_STORAGE_KEY
+        POINT_COORDINATE_STORAGE_KEY,
+        POINT_SIGN_STORAGE_KEY
     ];
     const previousValues = storageKeys.map(key => localStorage.getItem(key));
     try {
         localStorage.setItem(POINT_ROTATION_STORAGE_KEY, JSON.stringify(importedAngles));
         localStorage.setItem(POINT_POSITION_STORAGE_KEY, JSON.stringify(importedOffsets));
         localStorage.setItem(POINT_COORDINATE_STORAGE_KEY, JSON.stringify(importedCoordinates));
+        localStorage.setItem(POINT_SIGN_STORAGE_KEY, JSON.stringify(importedSigns));
         localStorage.setItem(IMPORTED_POINTS_DOCUMENT_STORAGE_KEY, JSON.stringify(documentData));
     } catch (e) {
         storageKeys.forEach((key, index) => {
@@ -2276,6 +2667,8 @@ function importPointsDocument(documentData) {
     pointRotationOverrides = importedAngles;
     pointPositionOverrides = importedOffsets;
     pointCoordinateOverrides = importedCoordinates;
+    pointSignOverrides = importedSigns;
+    signStorageReady = true;
     rotationStorageReady = true;
     positionStorageReady = true;
     coordinateStorageReady = true;
@@ -2351,9 +2744,14 @@ function exportPointsXlsx() {
             const angle = Object.prototype.hasOwnProperty.call(pointRotationOverrides, pointId)
                 ? pointRotationOverrides[pointId]
                 : point.kat ?? (livePoint && (livePoint.rotationOverride ?? livePoint.automaticRouteAngle));
+            const signOverride = pointSignOverrides[pointId];
+            const signCode = signOverride ? signOverride.code : (point.znak || (livePoint && livePoint.signCode) || "");
+            const signValue = signOverride ? signOverride.value : (point.znakWartosc || (livePoint && livePoint.signValue) || "");
             return {
                 "Typ": point.typ || "",
                 "Numer": point.numer || "",
+                "Kod znaku": signCode,
+                "Wartość znaku": signValue,
                 "Sektor": point.sektor || "",
                 "Liczba osób": point.liczba_osob ?? "",
                 "Telefon": point.telefon || "",
@@ -2368,7 +2766,7 @@ function exportPointsXlsx() {
         });
         const worksheet = XLSX.utils.json_to_sheet(rows);
         worksheet["!cols"] = [
-            { wch: 26 }, { wch: 16 }, { wch: 20 }, { wch: 14 },
+            { wch: 26 }, { wch: 16 }, { wch: 14 }, { wch: 14 }, { wch: 20 }, { wch: 14 },
             { wch: 18 }, { wch: 30 }, { wch: 45 }, { wch: 16 },
             { wch: 16 }, { wch: 18 }, { wch: 22 }, { wch: 22 }
         ];
@@ -2384,7 +2782,7 @@ function exportPointsXlsx() {
 
 document.getElementById("rotationPointSelect").addEventListener("change", handleRotationPointChange);
 document.getElementById("saveRotationBtn").addEventListener("click", saveSelectedPointRotation);
-document.getElementById("flipRotation180Btn").addEventListener("click", flipSelectedPointRotation180);
+document.getElementById("flipRotation90Btn").addEventListener("click", flipSelectedPointRotation90);
 document.getElementById("resetRotationBtn").addEventListener("click", resetSelectedPointRotation);
 document.getElementById("savePositionBtn").addEventListener("click", saveSelectedPointPosition);
 document.getElementById("resetPositionBtn").addEventListener("click", resetSelectedPointPosition);
@@ -2393,6 +2791,18 @@ document.getElementById("resetCoordinatesBtn").addEventListener("click", resetSe
 document.getElementById("autoAlignBarriersBtn").addEventListener("click", autoAlignBarriersAndTapes);
 document.getElementById("importPointsJsonBtn").addEventListener("click", importPointsJson);
 document.getElementById("exportPointsJsonBtn").addEventListener("click", exportPointsJson);
+document.getElementById("signGroupFilter").addEventListener("change", () => {
+    populateSignCatalogSelect(document.getElementById("signCodeSelect").value);
+    updateSignPreviewPanel();
+});
+document.getElementById("signCatalogSearch").addEventListener("input", () => {
+    populateSignCatalogSelect(document.getElementById("signCodeSelect").value);
+    updateSignPreviewPanel();
+});
+document.getElementById("signCodeSelect").addEventListener("change", updateSignPreviewPanel);
+document.getElementById("signValueInput").addEventListener("input", updateSignPreviewPanel);
+document.getElementById("saveSignCodeBtn").addEventListener("click", saveSelectedPointSign);
+document.getElementById("resetSignCodeBtn").addEventListener("click", resetSelectedPointSign);
 document.getElementById("exportPointsXlsxBtn").addEventListener("click", exportPointsXlsx);
 
 function updateStats() {
@@ -2414,7 +2824,7 @@ const ATLAS = {
     MM_PER_PX: 0.2645833,
     FIT_RATIO: 0.9,
     SAMPLE_KM: 0.01,
-    OVERLAP_SAMPLES: 1,
+    OVERLAP_SAMPLES: 4,
     ICON_HALF_PX: 30,
     ICON_GAP_PX: 2,
     ICON_OFFSET_MAX_PX: 4,
@@ -2509,7 +2919,7 @@ const ATLAS_MARKER_STYLE = {
     "Punkt żywieniowy":         { bg: "#ffffff", border: "#007bff" },
     "Sędzia":                   { bg: "#e0a800", border: "#ffffff" },
     "Śluza":                    { bg: null, border: null },
-    "Znak drogowy":             { bg: "#fff3cd", border: "#d97706" }
+    "Znak drogowy":             { bg: null, border: null }
 };
 const ATLAS_MARKER_R_PX = 14;
 const ATLAS_MARKER_ICON_PX = 16;
@@ -2522,17 +2932,36 @@ const ATLAS_ICON_SIZES = {
 
 async function prepareAtlasIcons() {
     const icons = {};
-    await Promise.all(Object.keys(CONFIG_TYPES).map(type => new Promise(resolve => {
+    const tasks = Object.keys(CONFIG_TYPES).map(type => new Promise(resolve => {
         const svg = (CONFIG_TYPES[type].svgContent || "").replace(/width='16' height='16'/, "width='96' height='96'");
         const img = new Image();
         img.onload = () => { icons[type] = img; resolve(); };
         img.onerror = () => { console.warn("Nie udało się wczytać ikony dla typu:", type); icons[type] = null; resolve(); };
         img.src = 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(svg);
-    })));
+    }));
+
+    const signSpecs = new Map();
+    pointsMap.forEach(p => {
+        if (p.typ === "Znak drogowy" && p.signCode) {
+            const key = `Znak drogowy:${p.signCode}:${p.signValue || ""}`;
+            if (!signSpecs.has(key)) signSpecs.set(key, { code: p.signCode, value: p.signValue || "" });
+        }
+    });
+    signSpecs.forEach((spec, key) => {
+        tasks.push(new Promise(resolve => {
+            const svg = getRoadSignSvg(spec.code, spec.value).replace(/width='16' height='16'/, "width='96' height='96'");
+            const img = new Image();
+            img.onload = () => { icons[key] = img; resolve(); };
+            img.onerror = () => { console.warn("Nie udało się wczytać ikony znaku:", key); icons[key] = null; resolve(); };
+            img.src = 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(svg);
+        }));
+    });
+
+    await Promise.all(tasks);
     return icons;
 }
 
-function drawAtlasMarker(ctx, x, y, k, type, icons, routeAngle = null, count = 0) {
+function drawAtlasMarker(ctx, x, y, k, type, icons, routeAngle = null, count = 0, signKey = null) {
     const st = ATLAS_MARKER_STYLE[type] || { bg: "#ffffff", border: "#333333" };
     const r = ATLAS_MARKER_R_PX * k;
 
@@ -2554,7 +2983,7 @@ function drawAtlasMarker(ctx, x, y, k, type, icons, routeAngle = null, count = 0
         ctx.stroke();
     }
 
-    const img = icons[type];
+    const img = (type === "Znak drogowy" && signKey && icons[signKey]) ? icons[signKey] : icons[type];
     if (img) {
         const iconSize = ATLAS_ICON_SIZES[type] || {
             width: ATLAS_LARGE_ICON_TYPES.includes(type) ? 20 : ATLAS_MARKER_ICON_PX,
@@ -3330,7 +3759,8 @@ async function generateRouteAtlas() {
                             : p.typ === "Śluza" || p.typ === "Barierki"
                                 ? getRoutePerpendicularAngle(p.lat, p.lng, routeKey)
                                 : p.typ === "Taśma" ? getRouteAngle(p.lat, p.lng, routeKey) : null;
-                drawAtlasMarker(ctx, drawX * SC, drawY * SC, SC, p.typ, atlasIcons, routeAngle, p.liczba_osob);
+                const signKey = (p.typ === "Znak drogowy" && p.signCode) ? `Znak drogowy:${p.signCode}:${p.signValue || ""}` : null;
+                drawAtlasMarker(ctx, drawX * SC, drawY * SC, SC, p.typ, atlasIcons, routeAngle, p.liczba_osob, signKey);
                 const summaryType = removePolishDiacritics(p.typ);
                 summary[summaryType]++;
 
@@ -3394,6 +3824,7 @@ window.onload = async function () {
     loadPointRotationOverrides();
     loadPointPositionOverrides();
     loadPointCoordinateOverrides();
+    loadPointSignOverrides();
     await loadGpxRoutes();
     await loadStreetsData(false);
     await syncPointsData();
